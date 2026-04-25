@@ -1,7 +1,7 @@
 // js/footer-loader.js
 async function loadFooter() {
     try {
-        const response = await fetch('../elements/footer.html');
+        const response = await fetch('./elements/footer.html');
         const footerHtml = await response.text();
         
         // Find where to place the footer
