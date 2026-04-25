@@ -1,0 +1,132 @@
+.ranStrips {
+            font-size: 0.9rem;
+            padding-block: 8px;
+            border-block: 1px solid;
+            overflow: hidden;
+            user-select: none;
+            --gap: 150px;
+            display: flex;
+            gap: var(--gap);
+            white-space: nowrap;
+            position: relative;
+        }
+
+        /* Smooth fade edges for better visual */
+        .ranStrips::before,
+        .ranStrips::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 80px;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .ranStrips::before {
+            left: 0;
+            background: linear-gradient(to right, white, transparent);
+        }
+
+        .ranStrips::after {
+            right: 0;
+            background: linear-gradient(to left, white, transparent);
+        }
+
+        /* Show fade edges on hover */
+        .ranStrips:hover::before,
+        .ranStrips:hover::after {
+            opacity: 1;
+        }
+
+        .ranStrips ul {
+            list-style: none;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            flex-shrink: 0;
+            min-width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--gap);
+            padding: 0;
+            margin: 0;
+            animation: scroll 20s linear infinite;
+            transition: animation-play-state 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: transform;
+        }
+
+        /* Smooth pause with scale effect */
+        .ranStrips:hover ul {
+            animation-play-state: paused;
+            transform: scale(0.99);
+            transition: transform 0.3s ease;
+        }
+
+        /* Smooth resume */
+        .ranStrips:not(:hover) ul {
+            animation-play-state: running;
+            transform: scale(1);
+            transition: transform 0.3s ease;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Fix for list items */
+        .ranStrips li {
+            display: inline-flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0.5rem;
+            white-space: nowrap;
+            flex-shrink: 0;
+            transition: transform 0.2s ease;
+        }
+
+        /* Individual item scale on hover */
+        .ranStrips li:hover {
+            transform: scale(1.05);
+        }
+
+        /* Pseudo-elements styling */
+        .ranStrips .plus::before {
+            content: '↑';
+            display: inline-block;
+            color: green;
+            font-weight: bold;
+            transition: transform 0.2s ease;
+        }
+
+        .ranStrips .minus::before {
+            content: '↓';
+            display: inline-block;
+            color: red;
+            font-weight: bold;
+            transition: transform 0.2s ease;
+        }
+
+        .ranStrips li:hover .plus::before {
+            transform: translateY(-2px);
+        }
+
+        .ranStrips li:hover .minus::before {
+            transform: translateY(2px);
+        }
+
+        .ranStrips .advantages,
+        .ranStrips .benefits {
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .ranStrips .benefits {
+            margin-inline: 4px;
+        }
