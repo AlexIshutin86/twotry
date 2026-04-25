@@ -2,6 +2,8 @@
 
 @import "./styles/firstPage/about.css";
 @import "./styles/firstPage/carousel-turs.css";
+@import "./styles/firstPage/fotoGallery.css";
+@import "./styles/firstPage/opinionCarousel.css";
 
 @import "./styles/footer.css";
 @import "./styles/header.css";
