@@ -10,82 +10,68 @@ function hideSidebar() {
 
 
 
-// ========== ПЕРВАЯ КАРУСЕЛЬ (Carousel-turs) ==========
-const Carousel-turs = document.querySelector(".Carousel-turs-container"); // Fixed spelling!
-const videoArrowBtns = document.querySelectorAll("#scrollLeft, #scrollRight");
-let firstVideoCardWidth;
+ <section id="videoCarousel" class="videoCarousel">
+    
+        <div class="carousel-header">
 
-document.addEventListener("DOMContentLoaded", () => {
-    if (Carousel-turs) {
-        const firstCard = Carousel-turs.querySelector(".card");
-        if (firstCard) {
-            firstVideoCardWidth = firstCard.offsetWidth;
-        }
-    }
-});
+            <div class="text1">
+                <h1>Записывайся в поход</h1>
+            </div>
+            
+            <div class="carousel-buttons">
+                <i id="scrollLeft" class="fa-solid fa-arrow-left"></i>
+                <i id="scrollRight" class="fa-solid fa-arrow-right"></i>
+            </div>
 
-if (videoArrowBtns.length > 0 && Carousel-turs) {
-    videoArrowBtns.forEach(btn => {
-        btn.addEventListener("click", () => {
-            const scrollAmount = btn.id === "scrollLeft" ? -firstVideoCardWidth : firstVideoCardWidth;
-            Carousel-turs.scrollBy({
-                left: scrollAmount,
-                behavior: "smooth"
-            });
-        });
-    });
-}
+        </div>
 
-if (Carousel-turs) {
-    let isDragging = false;
-    let startX;
-    let startScrollLeft;
-    
-    const dragStart = (e) => {
-        isDragging = true;
-        Carousel-turs.classList.add("dragging");
-        startX = e.pageX - Carousel-turs.offsetLeft;
-        startScrollLeft = Carousel-turs.scrollLeft;
-        Carousel-turs.style.cursor = 'grabbing';
-    }
-    
-    const dragging = (e) => {
-        if (!isDragging) return;
-        e.preventDefault();
-        
-        const x = e.pageX - Carousel-turs.offsetLeft;
-        const walk = (x - startX) * 1.5;
-        Carousel-turs.scrollLeft = startScrollLeft - walk;
-    }
-    
-    const dragStop = () => {
-        isDragging = false;
-        Carousel-turs.classList.remove("dragging");
-        Carousel-turs.style.cursor = 'grab';
-    }
-    
-    const touchStart = (e) => {
-        isDragging = true;
-        Carousel-turs.classList.add("dragging");
-        startX = e.touches[0].pageX - Carousel-turs.offsetLeft;
-        startScrollLeft = Carousel-turs.scrollLeft;
-    }
-    
-    const touchMove = (e) => {
-        if (!isDragging) return;
-        e.preventDefault();
-        
-        const x = e.touches[0].pageX - Carousel-turs.offsetLeft;
-        const walk = (x - startX) * 1.5;
-        Carousel-turs.scrollLeft = startScrollLeft - walk;
-    }
-    
-    Carousel-turs.addEventListener("mousedown", dragStart);
-    window.addEventListener("mousemove", dragging);
-    window.addEventListener("mouseup", dragStop);
-    Carousel-turs.addEventListener("touchstart", touchStart);
-    window.addEventListener("touchmove", touchMove);
-    window.addEventListener("touchend", dragStop);
-    
-    Carousel-turs.style.cursor = 'grab';
-}
+        <ul class="videoCarousel-container">
+
+            <li class="card" onclick="window.location.href='volgaMore.html'">
+            <div class="img">
+                <img src="/fotoForOne/first.jpg" alt="img" draggable="false">
+            </div>
+            <h2>Волга море</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
+            </li>
+
+            <li class="card">
+                <div class="img">
+                    <img src="/video/two.jpg" alt="img" draggable="false">
+                </div>
+                <h2>Lorem ipsum dolor sit amet.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
+            </li>
+
+            <li class="card">
+                <div class="img">
+                    <img src="/video/three.jpg" alt="img" draggable="false">
+                </div>
+                <h2>Lorem ipsum dolor sit amet.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
+            </li>
+
+            <li class="card">
+                <div class="img">
+                    <img src="/video/fore.jpg" alt="img" draggable="false">
+                </div>
+                <h2>Lorem ipsum dolor sit amet.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
+            </li>
+
+            <li class="card">
+                <div class="img">
+                    <img src="/video/five.jpg" alt="img" draggable="false">
+                </div>
+                <h2>Lorem ipsum dolor sit amet.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
+            </li>
+        </ul>
+
+        <div class="btn2-container">
+            <div class="btn2">
+                <i class="fa-solid fa-arrow-down"></i>
+                <a href="/schedule.html">Расписание походов</a>
+            </div>
+        </div>
+    </section>
