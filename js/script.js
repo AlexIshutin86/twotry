@@ -10,82 +10,83 @@ function hideSidebar() {
 
 
 
- // ========== ПЕРВАЯ КАРУСЕЛЬ (carouselPoxod) ==========
-const carouselPoxod = document.querySelector(".carouselPoxod-container"); // Fixed spelling!
-const videoArrowBtns = document.querySelectorAll("#scrollLeft, #scrollRight");
-let firstVideoCardWidth;
+ document.addEventListener("DOMContentLoaded", () => {
+    // ========== ПЕРВАЯ КАРУСЕЛЬ (carouselPoxod) ==========
+    const carousel = document.querySelector(".carouselPoxod-container");
+    const arrowBtns = document.querySelectorAll("#scrollLeft, #scrollRight");
+    let cardWidth;
+    let isDragging = false;
+    let startX;
+    let scrollLeft;
 
-document.addEventListener("DOMContentLoaded", () => {
-    if (carouselPoxod) {
-        const firstCard = carouselPoxod.querySelector(".card");
-        if (firstCard) {
-            firstVideoCardWidth = firstCard.offsetWidth;
-        }
+    if (!carousel) {
+        console.error("Карусель не найдена!");
+        return;
     }
-});
 
-if (videoArrowBtns.length > 0 && carouselPoxod) {
-    videoArrowBtns.forEach(btn => {
+    const firstCard = carousel.querySelector(".card");
+    if (firstCard) {
+        cardWidth = firstCard.offsetWidth;
+    }
+
+    // Пересчёт ширины карточки при изменении размера окна
+    window.addEventListener("resize", () => {
+        if (firstCard) {
+            cardWidth = firstCard.offsetWidth;
+        }
+    });
+
+    // Обработчики для кнопок навигации
+    arrowBtns.forEach(btn => {
         btn.addEventListener("click", () => {
-            const scrollAmount = btn.id === "scrollLeft" ? -firstVideoCardWidth : firstVideoCardWidth;
-            carouselPoxod.scrollBy({
+            const scrollAmount = btn.id === "scrollLeft" ? -cardWidth : cardWidth;
+            carousel.scrollBy({
                 left: scrollAmount,
                 behavior: "smooth"
             });
         });
     });
-}
 
-if (carouselPoxod) {
-    let isDragging = false;
-    let startX;
-    let startScrollLeft;
-    
-    const dragStart = (e) => {
+    // Обработчики жестов касания
+    carousel.addEventListener("touchstart", (e) => {
         isDragging = true;
-        carouselPoxod.classList.add("dragging");
-        startX = e.pageX - carouselPoxod.offsetLeft;
-        startScrollLeft = carouselPoxod.scrollLeft;
-        carouselPoxod.style.cursor = 'grabbing';
-    }
-    
-    const dragging = (e) => {
-        if (!isDragging) return;
-        e.preventDefault();
-        
-        const x = e.pageX - carouselPoxod.offsetLeft;
-        const walk = (x - startX) * 1.5;
-        carouselPoxod.scrollLeft = startScrollLeft - walk;
-    }
-    
-    const dragStop = () => {
+        startX = e.touches[0].pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+    }, { passive: true }); // passive: true — здесь preventDefault не вызывается
+
+    carousel.addEventListener("touchend", () => {
         isDragging = false;
-        carouselPoxod.classList.remove("dragging");
-        carouselPoxod.style.cursor = 'grab';
-    }
-    
-    const touchStart = (e) => {
-        isDragging = true;
-        carouselPoxod.classList.add("dragging");
-        startX = e.touches[0].pageX - carouselPoxod.offsetLeft;
-        startScrollLeft = carouselPoxod.scrollLeft;
-    }
-    
-    const touchMove = (e) => {
+    });
+    carousel.addEventListener("touchmove", (e) => {
         if (!isDragging) return;
+        e.preventDefault(); // Теперь это допустимо, т. к. обработчик не пассивный
+        const x = e.touches[0].pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 2; // Коэффициент для плавности
+        carousel.scrollLeft = scrollLeft - walk;
+    }, { passive: false }); // Ключевое исправление: passive: false
+
+
+    // Альтернатива: обработка мыши для десктопа
+    let isMouseDown = false;
+    let startMouseX;
+    let scrollMouseLeft;
+
+    carousel.addEventListener("mousedown", (e) => {
+        isMouseDown = true;
+        startMouseX = e.pageX - carousel.offsetLeft;
+        scrollMouseLeft = carousel.scrollLeft;
+    });
+    carousel.addEventListener("mouseleave", () => {
+        isMouseDown = false;
+    });
+    carousel.addEventListener("mouseup", () => {
+        isMouseDown = false;
+    });
+    carousel.addEventListener("mousemove", (e) => {
+        if (!isMouseDown) return;
         e.preventDefault();
-        
-        const x = e.touches[0].pageX - carouselPoxod.offsetLeft;
-        const walk = (x - startX) * 1.5;
-        carouselPoxod.scrollLeft = startScrollLeft - walk;
-    }
-    
-    carouselPoxod.addEventListener("mousedown", dragStart);
-    window.addEventListener("mousemove", dragging);
-    window.addEventListener("mouseup", dragStop);
-    carouselPoxod.addEventListener("touchstart", touchStart);
-    window.addEventListener("touchmove", touchMove);
-    window.addEventListener("touchend", dragStop);
-    
-    carouselPoxod.style.cursor = 'grab';
-}
+        const x = e.pageX - carousel.offsetLeft;
+        const walk = (x - startMouseX) * 2;
+        carousel.scrollLeft = scrollMouseLeft - walk;
+    });
+});
