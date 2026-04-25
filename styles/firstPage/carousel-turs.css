@@ -6,7 +6,7 @@
 
 
 /* Основные стили карусели */
-.Carousel-turs {
+.carouselPoxod {
     
     height: auto;
     max-width: 100%;
@@ -21,7 +21,7 @@
 }
 
 /* Адаптация содержимого внутри */
-.Carousel-turs .carousel-header {
+.carouselPoxod .carousel-header {
    max-width: 1700px;
     width: 100%;
     justify-content: space-between;
@@ -33,7 +33,7 @@
 
 
 /* Заголовок */
-.Carousel-turs .text1 {
+.carouselPoxod .text1 {
     
     margin-left: 9.5rem;
     margin-bottom: 2rem;
@@ -79,7 +79,7 @@
 /* Контейнер карточек */
 
 
-.Carousel-turs-container {
+.carouselPoxod-container {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: repeat(auto-fit, minmax (300px,1fr));
@@ -98,13 +98,13 @@
 }
 
 /* Стили для dragging */
-.Carousel-turs-container.dragging {
+.carouselPoxod-container.dragging {
     scroll-behavior: auto;
     scroll-snap-type: none;
     cursor: grabbing;
 }
 
-.Carousel-turs-container.dragging .card {
+.carouselPoxod-container.dragging .card {
     
     cursor: grabbing;
     user-select: none;
@@ -114,7 +114,7 @@
 
 /* Карточки */
 
-.Carousel-turs-container li.card {
+.carouselPoxod-container li.card {
     
     min-height: 25rem;
     width: 25rem;
@@ -130,7 +130,7 @@
     transform: translateZ(0);
 }
 
-.Carousel-turs-container .card:hover {
+.carouselPoxod-container .card:hover {
     transform: translateY(-10px);
 }
 
@@ -154,28 +154,28 @@
     transform: scale(1.05);
 }
 
-.Carousel-turs-container .card:hover {
+.carouselPoxod-container .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 
 /* Скрыть скроллбар для красоты */
-.Carousel-turs-container::-webkit-scrollbar {
+.carouselPoxod-container::-webkit-scrollbar {
     height: 0px;
 }
 
-.Carousel-turs-container::-webkit-scrollbar-track {
+.carouselPoxod-container::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
 }
 
-.Carousel-turs-container::-webkit-scrollbar-thumb {
+.carouselPoxod-container::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
 }
 
-.Carousel-turs-container::-webkit-scrollbar-thumb:hover {
+.carouselPoxod-container::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.8);
 }
 
@@ -201,13 +201,13 @@
         gap: 1.5rem ;
     }
     
-    .Carousel-turs-container {
+    .carouselPoxod-container {
         grid-auto-columns: calc(50% - 30px) ;
         gap: 1.5rem ;
         padding: 1.5rem 1.5rem 3rem 1.5rem ;
     }
     
-    .Carousel-turs-container .card {
+    .carouselPoxod-container .card {
         min-height: 30rem ;
         width: auto ;
     }
@@ -247,7 +247,7 @@
         line-height: 2.5rem ;
     }
     
-    .Carousel-turs-container {
+    .carouselPoxod-container {
         grid-auto-columns: calc(85% - 20px) ;
         gap: 1.2rem ;
         padding: 1rem 1rem 2rem 1rem ;
@@ -266,7 +266,7 @@
 
 /* ДЛЯ МОБИЛЬНЫХ ТЕЛЕФОНОВ (481px - 576px) */
 @media (max-width: 576px) {
-    .Carousel-turs {
+    .carouselPoxod {
        
         padding: 0.8rem 0.5rem ;
     }
@@ -292,7 +292,7 @@
         font-size: 0.9rem ;
     }
     
-    .Carousel-turs-container {
+    .carouselPoxod-container {
         grid-auto-columns: calc(92% - 15px) ;
         gap: 1rem ;
         padding: 0.8rem 0.8rem 1.5rem 0.8rem ;
@@ -321,11 +321,11 @@
 /* ДЛЯ ОЧЕНЬ ШИРОКИХ ЭКРАНОВ (1440px+) */
 @media (min-width: 1440px) {
    
-    .Carousel-turs-container {
+    .carouselPoxod-container {
         grid-auto-columns: calc((100% / 3) - 50px) ;
     }
     
-    .Carousel-turs-container .card {
+    .carouselPoxod-container .card {
         width: 28rem ;
         min-height: 35rem ;
     }
@@ -338,12 +338,12 @@
 /* ДОПОЛНИТЕЛЬНЫЕ ФИКСЫ ДЛЯ УДОБСТВА */
 @media (max-width: 468px) {
     /* Скрываем скроллбар на мобильных */
-    .Carousel-turs-container::-webkit-scrollbar {
+    .carouselPoxod-container::-webkit-scrollbar {
         height: 3px ;
     }
     
     /* Убираем hover-эффекты на тач-устройствах */
-    .Carousel-turs-container .card:hover {
+    .carouselPoxod-container .card:hover {
         transform: translateY(-5px) ;
     }
     
@@ -354,7 +354,7 @@
 
 /* ДЛЯ ТЕЛЕФОНОВ С ВЫСОКИМ ЭКРАНОМ (типа iPhone 12/13/14 Pro) */
 @media (max-width: 390px) and (min-height: 800px) {
-    .Carousel-turs-container .card {
+    .carouselPoxod-container .card {
         min-height: 22rem ;
     }
     
