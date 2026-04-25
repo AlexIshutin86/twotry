@@ -1,7 +1,7 @@
 
 
 
-@import "/elements/header/header.css";
+/*@import "/elements/header/header.css";
 @import "/elements/runStrok/runStrips.css";
 @import "/elements/footer/footer.css";
 
@@ -29,13 +29,13 @@
 
 
 @import "/fotoSection/fotoStylesMain.css";
-@import "/fotoSection/forGeneralFotoAlbom.css";
+@import "/fotoSection/forGeneralFotoAlbom.css";*/
 
 
 
 
 
-
+@import "./styles/root";
 
 
 
