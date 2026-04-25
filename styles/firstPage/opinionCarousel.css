@@ -1,0 +1,386 @@
+/* Основные стили карусели отзывов */
+.opinionCarousel {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding: 2rem 0rem 2rem 2rem;
+    background: rgb(44, 53, 77);
+    border-radius: 3rem;
+    position: relative;
+    z-index: 6;
+   
+    overflow: visible;
+}
+
+
+.opinionCarousel .carousel-header {
+   max-width: 1700px;
+    width: 100%;
+    justify-content: space-between;
+    margin: 1rem auto;
+    gap: 1.5rem;
+}
+
+
+
+/* Контейнер для кнопок */
+
+.opinionCarousel .carousel-buttons {
+    display: flex;
+    gap: 1.5rem;
+   
+}
+
+/* Кнопки навигации - ИСПРАВЛЕНО */
+.opinionCarousel .carousel-buttons #scrollLeftOpinion,
+.opinionCarousel .carousel-buttons #scrollRightOpinion {
+    color: #fff;
+    height: 3rem;
+    width: 3rem;
+    background: hsl(215, 31%, 12%);
+    text-align: center;
+    line-height: 3rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+    transition: 0.3s ease;
+    box-shadow: 0 3px 6px rgb(18, 18, 26);
+    position: static;
+}
+
+/* ИСПРАВЛЕНО: правильные ID в hover */
+.opinionCarousel .carousel-buttons #scrollLeftOpinion:hover,
+.opinionCarousel .carousel-buttons #scrollRightOpinion:hover {
+    background: #ffffff;
+    transform: scale(1.1);
+    color: rgb(141, 36, 36);
+}
+
+/* Контейнер карточек */
+.opinionCarousel-container {
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 1) - 25rempx);
+    gap: 1rem;
+    align-items: center;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding:1rem 1rem 3rem 1rem;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    will-change: scroll-position;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Стили для dragging - ИСПРАВЛЕНО */
+.opinionCarousel-container.dragging {
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+    cursor: grabbing;
+}
+
+
+
+.opinionCarousel-container.dragging .card-Opinion {
+    cursor: grabbing;
+    user-select: none;
+    pointer-events: none;
+    transition: none;
+}
+
+
+
+
+
+
+/* Карточки */
+
+
+
+
+.opinionCarousel-container .card-Opinion {
+    display: grid;
+    grid-template-rows: auto;
+    min-height: 20rem;
+    width: 35rem;
+    list-style: none;
+    background: #262636;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    scroll-snap-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+
+
+
+
+
+
+.opinionCarousel-container .card-Opinion:hover {
+    transform: translateY(-10px);
+}
+
+/* Изображения */
+.opinionCarousel-container .card-Opinion .avatar {
+    width: 5rem;
+    height: 5rem;
+    overflow: hidden;
+    border-radius: 5rem;
+    margin-bottom: 1rem;
+}
+
+.opinionCarousel-container .card-Opinion .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.opinionCarousel-container .card-Opinion .opinion img:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+/* Текст карточек */
+
+
+
+
+.opinionCarousel-container .card-Opinion h2 {
+   
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+  
+}
+
+
+.opinionCarousel-container .card-Opinion .avatarDiskr .diskr h3 {
+    
+    display: grid;
+    gap: 3rem;
+
+   
+}
+
+.opinionCarousel-container .card-Opinion p {
+    padding: 2rem 2rem 2rem 0rem;
+}
+
+
+
+
+
+
+
+
+.avatarDiskr {
+    position: relative;
+    display: flex;
+    height: 6rem;
+    gap: 1.5rem;
+     padding: 1rem;
+    
+}
+
+.diskr {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: left;
+    height: 5rem;
+}
+
+
+
+
+
+
+                                                    /* Стили для диалогов */
+.opinion-dialog {
+    border: none;
+    border-radius: 2rem;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    padding: 0;
+    max-width: 500px;
+    width: 90%;
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10001;
+}
+
+.opinion-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.dialogOpinion-content {
+    position: relative;
+    padding: 2rem;
+    color: white;
+}
+
+.closeDialog {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.closeDialog:hover {
+    background: #ff4444;
+    transform: scale(1.1);
+}
+
+.dialogOpinion-content h2 {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+
+
+
+
+/* Кнопка "Читать полностью" */
+.buttonOpinion {
+    position: relative;
+    z-index: 10;
+    background: linear-gradient(90deg, #039b03, #05c405);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+   
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    pointer-events: auto; /* Явно разрешаем клики */
+    user-select: none;
+}
+
+.buttonOpinion:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(3, 155, 3, 0.4);
+}
+
+
+
+
+
+/* Скроллбар */
+.opinionCarousel-container::-webkit-scrollbar {
+    height: 0px;
+}
+
+.opinionCarousel-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.opinionCarousel-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.opinionCarousel-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+
+
+
+
+
+@media (max-width: 900px) {
+   
+
+    .opinionCarousel-container .card-Opinion h2{
+        font-size: 1.5rem;
+        font-weight: 100;
+
+
+    }
+        .opinionCarousel-container .card-Opinion p {
+            padding: 1rem 1rem 1rem 0rem;
+}
+    }
+
+
+
+ 
+
+@media (max-width: 360px){
+    .opinionCarousel-container .card-Opinion {
+    display: grid;
+    grid-template-rows: auto;
+    max-height: 65rem;
+    width: 15rem;
+    list-style: none;
+    background: #262636;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    scroll-snap-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.opinionCarousel .carousel-header {
+    max-height: 6rem;
+    display: grid;
+    grid-column: auto;
+    
+    padding-top: 2rem;
+    text-align: left;
+    
+    
+}
+
+.opinionCarousel-container {
+
+    
+    gap: 0.5rem;
+    align-items: center;
+    overflow-x: auto;
+   
+    padding:0.5rem 0.5rem 1rem 0.5rem;
+  
+   
+
+}
+
+
+
+.opinionCarousel-container .card-Opinion h1{
+    
+    font-size: 3rem;
+}
+}
