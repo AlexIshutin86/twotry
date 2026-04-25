@@ -1,0 +1,148 @@
+
+
+
+@import "/elements/header/header.css";
+@import "/elements/runStrok/runStrips.css";
+@import "/elements/footer/footer.css";
+
+
+
+
+
+@import "/styles/videoCarousel.css";
+@import "/styles/about.css";
+@import "/styles/respons.css";
+@import "/styles/header.css";
+@import "/styles/navForPoxod.css";
+@import "/styles/contactFormSection.css";
+@import "/styles/fotoFromBento.css";
+@import "/styles/footer.css";
+@import "/styles/opinion.css";
+@import "/styles/video-carousel.css";
+@import "/styles/schedule/schedule.css";
+@import "/styles/schedule/discription.css";
+@import "/styles/roors/root.css";
+
+
+@import "/videoSection/videoMain.css";
+
+
+
+@import "/fotoSection/fotoStylesMain.css";
+@import "/fotoSection/forGeneralFotoAlbom.css";
+
+
+
+
+
+
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    text-decoration: none;
+    scroll-behavior: smooth;
+    list-style: none;
+    
+    
+}
+
+
+html{
+     height: 100%;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(65, 80, 116);
+}
+
+
+
+section{
+   
+    min-height: 50rem;
+    width: 100%;
+    position: relative;
+    
+
+    
+}
+
+.topDescription {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Make section full viewport height */
+     z-index: 1;
+
+}
+
+.topDescription .topDescription-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%; /* Take full height of parent */
+}
+
+.topDescription-container img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover; /* Cover entire area without distortion */
+    display: block;
+    margin-top: -10rem;
+    filter: brightness(0.8) contrast(1.1); /* Darker with slightly more contrast */
+}
+
+.info-box {
+    position: absolute;
+    top: 15%; /* Center vertically */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfect centering */
+    text-align: center;
+    z-index: 10;
+    width: 100%;
+    padding: 2rem;
+}
+
+.info-box .text h1 {
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+
+
+
+
+
+@media (maxwidth: 360px) {
+    
+    .section{
+    max-height: 30rem;
+    width: 100%;
+    color: blueviolet;
+    
+}
+}
