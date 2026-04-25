@@ -1,4 +1,5 @@
-@import "../../styles/stile.css";
+@import url("./styles/root.css");
+@import url("./styles/videoCarousel.css");
 
 header{
     position: fixed;
