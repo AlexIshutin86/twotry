@@ -63,7 +63,7 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: rgb(65, 80, 116);
+    background: rgb(65, 80, 116);
 }
 
 
@@ -91,7 +91,7 @@ section{
 
 }
 
-.topDescription .topDescription-container {
+.topDescription-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -137,7 +137,7 @@ section{
 
 
 
-@media (maxwidth: 360px) {
+@media (max-width: 360px) {
     
     .section{
     max-height: 30rem;
