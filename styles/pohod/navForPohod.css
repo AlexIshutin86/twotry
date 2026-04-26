@@ -110,7 +110,7 @@
  .nav-linksPoxod{
     position: sticky;
     
-    top: 20px; /* Основной отступ от верха */
+    top: 100px; /* Основной отступ от верха */
     display: flex;
     align-items: center;
     justify-content: center;
