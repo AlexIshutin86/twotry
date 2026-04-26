@@ -1,161 +1,139 @@
-
-
 /* Основные стили карусели */
-.videoCarousel {
-    max-width: 100%;
-    width: 100%;
-    padding: 1rem;
-    background: rgb(65, 80, 116);
-    border-radius: 3rem;
-    position: relative;
-    
-    
-    overflow: visible;
+.carouselDlyDney {
+  max-width: 100%;
+  width: 100%;
+  padding: 1rem;
+  background: rgb(65, 80, 116);
+  border-radius: 3rem;
+  position: relative;
+  overflow: visible;
+}
+
+/* Скрыть скроллбар во всех браузерах */
+.carouselDlyDney {
+  -ms-overflow-style: none;  /* IE и Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.carouselDlyDney::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 /* Хедер карусели */
 .carousel-header {
-    display: flex;
-    justify-content: space-between;
-     align-items: center;
-    align-content: center;
-    padding: 0 2rem;
-    margin-bottom:  0rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  margin-bottom: 0rem;
 }
 
 /* Заголовок */
-.text2 {
-    color: #fff;
-    margin-left: 9.5rem;
-    margin-bottom: 3rem;
-    padding: 0;
+.text1 {
+  color: #fff;
+  margin-left: 9.5rem;
+  margin-bottom: 3rem;
+  padding: 0;
 }
 
-.text2 h1 {
-    font-size: 1.5rem;
-    margin: 0;
+.text1 h1 {
+  font-size: 1.5rem;
+  margin: 0;
 }
 
 /* Контейнер для кнопок */
 .carousel-buttons {
-    display: flex;
-    gap: 3rem;
-    margin-right: 11rem;
+  display: flex;
+  gap: 3rem;
+  margin-right: 11rem;
 }
 
 /* Кнопки навигации */
-.carousel-buttons #scrollLeft,
-.carousel-buttons #scrollRight {
-    color: #fff;
-    height: 3rem;
-    width: 3rem;
-    background:  hsl(215, 31%, 12%);
-    text-align: center;
-    line-height: 3rem;
-    border-radius: 3rem;
-    cursor: pointer;
-    font-size: 1.25rem;
-    transition: 0.3s ease;
-    box-shadow: 0 3px 6px rgb(18, 18, 26);
-    position: static;
+.carousel-buttons #scrollLeftPohod,
+.carousel-buttons #scrollRightPohod {
+  color: #fff;
+  height: 3rem;
+  width: 3rem;
+  background: hsl(215, 31%, 12%);
+  text-align: center;
+  line-height: 3rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  font-size: 1.25rem;
+  transition: 0.3s ease;
+  box-shadow: 0 3px 6px rgb(18, 18, 26);
 }
 
-.carousel-buttons #scrollLeft:hover,
-.carousel-buttons #scrollRight:hover {
-    background: #ffffff;
-    transform: scale(1.1);
-    color: black;
+.carousel-buttons #scrollLeftPohod:hover,
+.carousel-buttons #scrollRightPohod:hover {
+  background: #ffffff;
+  transform: scale(1.1);
+  color: black;
 }
 
 /* Контейнер карточек */
-.videoCarousel-container {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 3) - 50px);
-    gap: 2.5rem;
-    align-items: center;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding: 2rem 2rem 4rem 2rem;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    
-    /* Улучшение производительности */
-    will-change: transform, scroll-position;
-    transform: translateZ(0);
-    backface-visibility: hidden;
+.carouselDlyDney-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(250px, 1fr);
+  gap: 2.5rem;
+  align-items: start;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 2rem 2rem 4rem 2rem;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  will-change: transform;
 }
 
 /* Стили для dragging */
-.videoCarousel.dragging {
-    scroll-behavior: auto;
-    scroll-snap-type: none;
-    cursor: grabbing;
+.carouselDlyDney.dragging {
+  scroll-behavior: auto;
+  cursor: grabbing;
 }
 
-.videoCarousel.dragging .card {
-    cursor: grabbing;
-    user-select: none;
-    pointer-events: none;
-    transition: none;
+.carouselDlyDney.dragging .cardPohod {
+  cursor: grabbing;
+  user-select: none;
+  pointer-events: none;
+  transition: none;
 }
 
 /* Карточки */
-.videoCarousel .card {
-    min-height: 25rem;
-    width: 25rem;
-    list-style: none;
-    background: #fff;
-    border-radius: 2rem;
-    padding: 1rem;
-    scroll-snap-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    will-change: transform;
-    transform: translateZ(0);
+.cardPohod {
+  min-height: 25rem;
+  list-style: none;
+  background: #fff;
+  border-radius: 2rem;
+  padding: 1rem;
+  scroll-snap-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  will-change: transform;
+  position: relative;
 }
 
-.videoCarousel .card:hover {
-    transform: translateY(-10px);
+.cardPohod:hover {
+  transform: translateY(-10px);
 }
 
 /* Изображения */
-.card .img {
-    width: 100%;
-    height: 20rem;
-    overflow: hidden;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
+.cardPohod .img {
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
 }
 
-.card .img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+.cardPohod .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-.card .img img:hover {
-    transform: scale(1.05);
-}
-
-
-/* Скрыть скроллбар для красоты */
-.videoCarousel::-webkit-scrollbar {
-    height: 0px;
-}
-
-.videoCarousel::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 0px;
-}
-
-.videoCarousel::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 0px;
-}
-
-.videoCarousel::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.8);
+.cardPohod:hover .img img {
+  transform: scale(1.05);
 }

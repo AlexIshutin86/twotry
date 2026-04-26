@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VolgaMore</title>
+
     <link rel="stylesheet" href="./style.css">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">v
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
    
 </head>
 
@@ -178,67 +179,60 @@
 
     </section>
  
-    <section id="videoCarousel" class="videoCarousel">
-    
-
+   <section id="carouselDlyDney" class="carouselDlyDney">
     <div class="carousel-header">
-
         <div class="text1">
             <h1>Программа по дням</h1>
         </div>
-        
         <div class="carousel-buttons">
-            <i id="scrollLeft" class="fa-solid fa-arrow-left"></i>
-            <i id="scrollRight" class="fa-solid fa-arrow-right"></i>
+            <i id="scrollLeftPohod" class="fa-solid fa-arrow-left" aria-label="Прокрутить влево"></i>
+            <i id="scrollRightPohod" class="fa-solid fa-arrow-right" aria-label="Прокрутить вправо"></i>
         </div>
-
     </div>
 
-
-    <ul class="videoCarousel-container">
-
-    <li class="card" onclick="window.location.href='volgaMore.html'">
-        <div class="img">
-            <img src="./video/one.jpg" alt="img" draggable="false">
-        </div>
-        <h2>Волга море</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
-    </li>
-
-        <li class="card">
+    <ul class="carouselDlyDney-container" tabindex="0" aria-live="polite">
+        <li class="cardPohod" tabindex="0" role="button" aria-label="День 1: Волга море">
             <div class="img">
-                <img src="./video/two.jpg" alt="img" draggable="false">
+                <img src="./video/one.jpg" alt="День 1: Волга море" draggable="false">
             </div>
-            <h2>Lorem ipsum dolor sit amet.</h2>
-            <p>Lorem ipsum dolor sit amet consecteturjnjnjnjn  adipisicing elit. Ipsum earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
+            <h2>Волга море</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
         </li>
 
-        <li class="card">
+        <li class="cardPohod" tabindex="0" role="button" aria-label="День 2">
             <div class="img">
-                <img src="./video/three.jpg" alt="img" draggable="false">
+                <img src="./video/two.jpg" alt="День 2" draggable="false">
+            </div>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum dolor sit amet consecteturjnjnjnjn adipisicing elit. Ipsum earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
+        </li>
+
+        <li class="cardPohod" tabindex="0" role="button" aria-label="День 3">
+            <div class="img">
+                <img src="./video/three.jpg" alt="День 3" draggable="false">
             </div>
             <h2>Lorem ipsum dolor sit amet.</h2>
             <p>Lorem ipsum dolor sit ameugbygt consectetur adipisicing elit. Ipsum earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
         </li>
 
-        <li class="card">
+        <li class="cardPohod" tabindex="0" role="button" aria-label="День 4">
             <div class="img">
-                <img src="./video/fore.jpg" alt="img" draggable="false">
+                <img src="./video/fore.jpg" alt="День 4" draggable="false">
             </div>
             <h2>Lorem ipsum dolor sit amet.</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
         </li>
 
-        <li class="card">
+        <li class="cardPohod" tabindex="0" role="button" aria-label="День 5">
             <div class="img">
-                <img src="./video/five.jpg" alt="img" draggable="false">
+                <img src="./video/five.jpg" alt="День 5" draggable="false">
             </div>
             <h2>Lorem ipsum dolor sit amet.</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
         </li>
     </ul>
+</section>
 
-    </section>
 
     <section class="bezopasnost">
 
@@ -518,7 +512,6 @@
 <div id="footer-placeholder"></div>
 
 </main>
-
 
     <script src="./js/pohod.js" defer></script>
     <script src="./js/script.js" defer></script>
