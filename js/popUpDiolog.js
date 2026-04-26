@@ -13,3 +13,4 @@ if (enrolButton && enrolDialog && closeModel) {
         enrolDialog.close();
     });
 }
+
