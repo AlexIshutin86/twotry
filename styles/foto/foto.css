@@ -1,0 +1,273 @@
+
+
+
+
+
+.topDescription {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Make section full viewport height */
+     z-index: 1;
+}
+
+.topDescription .topDescription-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%; /* Take full height of parent */
+}
+
+.topDescription-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover entire area without distortion */
+    display: block;
+    margin-top: -10rem;
+}
+
+/* Изображения */
+.cardFotoMain .img {
+    width: 100%;
+    height:  auto;
+    overflow: hidden;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cardFotoMain .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.cardFotoMain .img img:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+.info-box {
+    position: absolute;
+    top: 10%; /* Center vertically */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfect centering */
+    text-align: center;
+    z-index: 10;
+    width: 100%;
+    padding: 2rem;
+}
+
+.info-box .text h1 {
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+
+
+
+
+.fotoItemsMain {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    justify-content: center;
+    align-content: center;
+    gap: 0.5rem;
+  
+   
+    background-color: rgb(16, 51, 44);
+    margin-top: -10rem;
+    padding: 2rem;
+  
+    z-index: 10;
+   
+
+
+     height: auto;
+    max-width: 100%;
+    width: 100%;
+    padding: 1rem 1rem;
+  
+   
+   
+    position: relative;
+}
+
+
+
+
+
+.fotoItemsMain-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: repeat(auto-fit, minmax (300px,1fr));
+    gap: 0.5rem;
+    align-items: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+   
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    
+    /* Улучшение производительности */
+    will-change: scroll-position;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Стили для dragging */
+.fotoItemsMain-container.dragging {
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+    cursor: grabbing;
+}
+
+.fotoItemsMain-container.dragging .cardFotoMain {
+    
+    cursor: grabbing;
+    user-select: none;
+    pointer-events: none;
+    transition: none;
+}
+
+
+.fotoItemsMain-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+/* Карточки */
+
+.fotoItemsMain-container li.cardFotoMain {
+    display: flex;
+    
+    min-height: 35rem;
+    
+    list-style: none;
+    background: #ffffff;
+    border-radius: 2rem;
+    padding: 1rem;
+    scroll-snap-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.fotoItemsMain-container .cardFotoMain:hover {
+    transform: translateY(-10px);
+}
+
+/* Изображения */
+.cardFotoMain .img {
+    width: 100%;
+    height:  auto;
+    overflow: hidden;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cardFotoMain .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.cardFotoMain .img img:hover {
+    transform: scale(1.05);
+}
+
+.fotoItemsMain-container .cardFotoMain:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Карточки */
+
+.cardFotoMainFotoMain {
+    min-height: 35rem;
+    width: 25rem;
+    list-style: none;
+    background: #ffffff;
+    border-radius: 2rem;
+    padding: 3rem;
+    scroll-snap-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.fotoMain-container .cardFotoMain:hover {
+    transform: translateY(-10px);
+}
+
+/* Изображения */
+.cardFotoMain .img {
+    width: 100%;
+    height:  auto;
+    overflow: hidden;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cardFotoMain .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.cardFotoMain .img img:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

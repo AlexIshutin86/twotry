@@ -22,7 +22,8 @@
 @import "./styles/root.css";
 
 
-
+@import "./styles/foto/foto.css";
+@import "./styles/generalFoto.css";
 
 
 
@@ -36,6 +37,7 @@
     text-decoration: none;
     scroll-behavior: smooth;
     list-style: none;
+    
     
     
 }

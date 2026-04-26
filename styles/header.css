@@ -50,7 +50,7 @@ header {
 
     header{
         padding: 1rem 5rem;
-        gap: 8rem;
+        gap: 1rem;
     }
 
     header .logo{
