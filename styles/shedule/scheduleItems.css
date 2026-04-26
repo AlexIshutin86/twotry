@@ -1,0 +1,151 @@
+
+
+.scheduleItems {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 2fr));
+    justify-content: center;
+    align-content: center;
+    gap: 0.1rem;
+    padding-top: 1rem;
+
+    background-color: rgb(14, 53, 45);
+    margin-top: -10rem;
+    padding-top: 3rem;
+    padding-bottom: 0rem;
+    padding-left: 4rem;
+    padding-right: 5rem;
+    z-index: 2;
+    border-radius: 3rem 3rem 0rem 0rem;
+}
+
+
+
+
+
+/* ========== АДАПТИВНОСТЬ ========== */
+
+/* Планшеты (768px - 1300px) */
+@media (max-width: 1024px) {
+    .cardfeature {
+        width: 90%;
+    }
+    
+    .cardfeature .img {
+        width: 45%;
+        height: 400px;
+    }
+    
+    .left-partD {
+        width: 55%;
+        padding: 1.5rem;
+    }
+    
+    .intPart h2 {
+        font-size: 1.5rem;
+    }
+    
+    .schedule-testimony {
+        margin-top: -rem;
+    }
+}
+
+/* Мобильные устройства (до 768px) */
+@media (max-width: 768px) {
+    .discriptionSchedule {
+        padding: 1rem;
+    }
+    
+    .features-container {
+        min-height: 500px;
+    }
+    
+    .cardfeature {
+        flex-direction: column;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .cardfeature .img {
+        width: 100%;
+        height: 220px;
+        order: -1;
+    }
+    
+    .left-partD {
+        width: 100%;
+        padding: 1.5rem;
+    }
+    
+    .intPart {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+   
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+  
+    .nav-arrow {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+    
+  
+    
+    .schedule-testimony h1 {
+      
+        padding: 0.3rem 0.8rem;
+    }
+}
+
+/* Маленькие мобильные (до 480px) */
+@media (max-width: 480px) {
+    .features-container {
+        min-height: 450px;
+    }
+    
+    .cardfeature .img {
+        height: 180px;
+    }
+    
+    .left-partD {
+        padding: 1rem;
+    }
+    
+    .intPart h2 {
+        font-size: 1.2rem;
+    }
+    
+    .schedule-testimony {
+        margin-top: -20rem;
+        padding: 0.8rem;
+    }
+    
+    .schedule-testimony h1 {
+        font-size: 0.75rem;
+    }
+}
+
+/* Очень маленькие телефоны (до 360px) */
+@media (max-width: 360px) {
+    .cardfeature .img {
+        height: 150px;
+    }
+    
+    .left-partD {
+        padding: 1rem;
+    }
+    
+    .intPart h2 {
+        font-size: 1.1rem;
+    }
+}
+
+
