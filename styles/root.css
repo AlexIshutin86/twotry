@@ -181,49 +181,34 @@ a {
 
 .scrollUp {
     
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    
-    width: 50px;
-    height: 50px;
-    border: none;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    opacity: 0;
-    visibility: hidden;
+        bottom: 85px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
 }
 
-.scroll-up-btn.visible {
+.scrollUp.visible {
     opacity: 1;
     visibility: visible;
 }
 
-.scroll-up-btn:hover {
+.scrollUp:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-.scroll-up-btn:active {
+.scrollUp:active {
     transform: translateY(-1px);
 }
 
 
 /* Для планшетов (768px — 1024px) */
 @media (max-width: 1024px) and (min-width: 768px) {
-    .scroll-up-btn {
+    .scrollUp {
         bottom: 15px;
         right: 15px;
-        width: 45px;
+        width: 75px;
         height: 45px;
         font-size: 16px;
     }
@@ -231,7 +216,7 @@ a {
 
 /* Для мобильных телефонов (до 767px) */
 @media (max-width: 767px) {
-    .scroll-up-btn {
+    .scrollUp {
         bottom: 10px;
         right: 10px;
         width: 40px;
@@ -242,7 +227,7 @@ a {
 
 /* Для очень маленьких экранов (до 480px) */
 @media (max-width: 480px) {
-    .scroll-up-btn {
+    .scrollUp {
         bottom: 8px;
         right: 8px;
         width: 35px;
