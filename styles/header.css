@@ -27,11 +27,6 @@ header{
     
 }
 
-@media(max-width: 800px){
-    .nav-links{
-        gap: 1rem;
-    }
-}
 
 
 .contact-btn{
@@ -119,13 +114,45 @@ header{
 
 
 
+/* Базовая точка для мобильных (до 600px) */
+@media (max-width: 600px) {
+  .nav-links {
+    gap: 0.75rem; /* Ещё более компактный отступ */
+    flex-wrap: wrap; /* Элементы переносятся на новую строку, если не помещаются */
+  }
+  
+  .sidebar {
+    width: 100%; /* На очень узких экранах боковая панель занимает всю ширину */
+  }
+  
+  .contact-btn {
+    width: 100%; /* Кнопка растягивается на всю доступную ширину */
+    padding: 0.6rem 1rem; /* Уменьшенные отступы для маленьких экранов */
+  }
+}
 
+/* Планшетный режим (600–800px) */
+@media (min-width: 600px) and (max-width: 800px) {
+  .nav-links {
+    gap: 1rem; /* Промежуточный отступ */
+  }
+  
+  .sidebar {
+    width: 80%; /* Панель занимает 80% ширины, а не фиксированные 250px */
+  }
+  
+  .contact-btn {
+    display: none; /* Скрываем кнопку, как было в оригинале */
+  }
+}
 
-@media(max-width: 800px){
-    .hideOnMobile{
-        display: none;
-    }
-    .contact-btn{
-        display: none;
-    }
+/* Широкий экран (от 800px) — возвращаем исходные значения */
+@media (min-width: 800px) {
+  .nav-links {
+    gap: 2rem;
+  }
+  
+  .sidebar {
+    width: 250px; /* Возвращаем фиксированную ширину для десктопа */
+  }
 }
