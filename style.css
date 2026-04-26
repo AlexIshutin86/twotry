@@ -8,7 +8,10 @@
 @import "./styles/shedule/scheduleItems.css";
 @import "./styles/shedule/discriptionSchedule.css";
 
-@import "./styles/footer.css";
+
+@import "./styles/";
+
+@import "./styles/pohod/navForPohod.css";
 @import "./styles/header.css";
 @import "./styles/root.css";
 
