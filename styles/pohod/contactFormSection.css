@@ -1,0 +1,257 @@
+:root {
+  --pale-green: hsl(148, 38%, 91%);
+  --green: hsl(169, 82%, 27%);
+  --red: hsl(0, 0%, 54%);
+  --white: hsl(0, 0%, 100%);
+  --light-teal: hsl(186, 15%, 59%);
+  --dark-teal: hsl(187, 24%, 22%);
+  --ff-base: "Karla", sans-serif;
+}
+
+* {
+  accent-color: var(--green);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  list-style: none;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+/* Стили для формы */
+.contactForm {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 2rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  min-height: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contactForm h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--dark-teal);
+  font-size: 1.8rem;
+}
+
+fieldset {
+  padding: 0;
+  border: 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr; /* Одноколоночная сетка по умолчанию */
+}
+
+fieldset .form-group {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+fieldset input[type="radio"] {
+  width: auto;
+  margin: 0;
+}
+
+.form-group input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+fieldset:has([required]) legend,
+.form-group:has(:not([type="radio"])[required]) label {
+  display: flex;
+  gap: 0.4ch;
+}
+
+fieldset:has([required]) legend::after,
+.form-group:has(:not([type="radio"])[required]) label::after {
+  content: "*";
+  color: #039b03;
+}
+
+form {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.span-all {
+  grid-column: 1 / -1;
+}
+
+.form-group {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--dark-teal);
+}
+
+.form-group:has([type="radio"]) {
+  position: relative;
+}
+
+.form-group:has([type="radio"]) label::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+input,
+.form-group:has([type="radio"]) {
+  border: 1px solid var(--dark-teal);
+  border-radius: 6px;
+  padding: 0.75em 1.5em;
+  transition: all 0.3s ease;
+}
+
+textarea {
+  resize: vertical;
+  box-sizing: content-box;
+  height: 5lh;
+  border: 1px solid var(--dark-teal);
+  border-radius: 6px;
+  padding: 0.75em 1.5em;
+  transition: all 0.3s ease;
+  min-height: 100px;
+}
+
+.form-group:has([type="radio"]:checked) {
+  background-color: var(--pale-green);
+  border-color: var(--green);
+}
+
+.form-group:has([type="radio"], [type="checkbox"]) {
+  display: flex;
+  gap: 1.5ch;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 2px rgba(3, 155, 3, 0.2);
+}
+
+[type="radio"],
+[type="checkbox"] {
+  width: 1rem;
+}
+
+button[type="submit"] {
+  background: linear-gradient(90deg, #039b03, #05c405);
+  border: none;
+  border-radius: 2rem;
+  padding: 0.8rem 2rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(3, 155, 3, 0.4);
+}
+
+/* Адаптивность для мобильных устройств (до 480 px) */
+@media (max-width: 480px) {
+  .contactForm {
+    padding: 1.5rem 1rem;
+    margin: 1rem auto;
+    max-width: 95%;
+  }
+
+  .contactForm h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  form {
+    gap: 1rem;
+  }
+
+  fieldset {
+    grid-template-columns: 1fr;
+  }
+
+  input,
+  textarea {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  button[type="submit"] {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Планшеты (481–768 px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .contactForm {
+    padding: 1.8rem;
+    max-width: 90%;
+  }
+
+  .contactForm h1 {
+    font-size: 1.7rem;
+  }
+
+  form {
+    gap: 1.3rem;
+  }
+
+  fieldset {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Для групп с радиокнопками — оставляем одну колонку */
+  .form-group:has([type="radio"]) {
+    grid-column: span 2;
+  }
+}
+
+/* Десктоп (769 px и выше) */
+@media (min-width: 769px) {
+  form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Поля, которые должны занимать всю ширину */
+  .span-all {
+    grid-column: span 2;
+  }
+
+  textarea {
+    grid-column: span 2;
+  }
+}
+
+/* Большие экраны (1200 px и выше) */
+@media (min-width: 1200px) {
+  .contactForm {
+    max-width: 700px;
+  }
+
+  .contactForm h1 {
+    font-size: 2rem;
+  }
+
+  input,
+  textarea {
+    font-size: 1rem;
+  }
+}

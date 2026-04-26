@@ -79,118 +79,112 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-/// Получаем элементы
-const carousel = document.querySelector(".carouselDlyDney-container");
-const arrowBtns = document.querySelectorAll("#scrollLeftPohod, #scrollRightPohod");
-let firstCardWidth = 0; // Инициализируем нулём на случай, если элемент не найден
 
-// Ждём загрузки DOM
-document.addEventListener("DOMContentLoaded", () => {
-    if (carousel) {
-        const firstCard = carousel.querySelector(".cardPohod");
-        if (firstCard) {
-            firstCardWidth = firstCard.offsetWidth;
-        } else {
-            console.warn("Карточка .cardPohod не найдена в карусели");
-        }
-    } else {
-        console.error("Карусель .carouselDlyDney-container не найдена!");
+document.addEventListener('DOMContentLoaded', function() {
+  const carousel = document.querySelector('.carouselDlyDney-container');
+  const prevButton = document.getElementById('scrollLeftPohod');
+  const nextButton = document.getElementById('scrollRightPohod');
+
+  if (!carousel) {
+    console.error('Карусель .carouselDlyDney-container не найдена!');
+    return;
+  }
+
+  let isDragging = false;
+  let startX;
+  let startScrollLeft;
+  let hasMoved = false;
+
+  // Функции для скролла
+  const scrollLeft = () => {
+    carousel.scrollBy({
+      left: -carousel.clientWidth / 1.5,
+      behavior: 'smooth'
+    });
+  };
+
+  const scrollRight = () => {
+    carousel.scrollBy({
+      left: carousel.clientWidth / 1.5,
+      behavior: 'smooth'
+    });
+  };
+
+  // Обработчики для кнопок
+  prevButton.addEventListener('click', scrollLeft);
+  nextButton.addEventListener('click', scrollRight);
+
+  // Drag and drop функционал
+
+  // Для мыши
+  const dragStart = (e) => {
+    isDragging = true;
+    hasMoved = false;
+    carousel.classList.add('dragging');
+    startX = e.pageX - carousel.getBoundingClientRect().left;
+    startScrollLeft = carousel.scrollLeft;
+    carousel.style.cursor = 'grabbing';
+  };
+
+  const dragging = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+
+    const x = e.pageX - carousel.getBoundingClientRect().left;
+    const walk = (x - startX) * 1.5;
+    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+
+    carousel.scrollLeft = Math.max(0, Math.min(startScrollLeft - walk, maxScroll));
+    hasMoved = true;
+  };
+
+  const dragStop = () => {
+    isDragging = false;
+    carousel.classList.remove('dragging');
+    carousel.style.cursor = 'grab';
+  };
+
+  // Для touch (мобильные устройства)
+  const touchStart = (e) => {
+    isDragging = true;
+    hasMoved = false;
+    carousel.classList.add('dragging');
+    startX = e.touches[0].pageX - carousel.getBoundingClientRect().left;
+    startScrollLeft = carousel.scrollLeft;
+  };
+
+  const touchMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+
+    const x = e.touches[0].pageX - carousel.getBoundingClientRect().left;
+    const walk = (x - startX) * 1.5;
+    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+
+    carousel.scrollLeft = Math.max(0, Math.min(startScrollLeft - walk, maxScroll));
+    hasMoved = true;
+  };
+
+  const touchEnd = () => {
+    isDragging = false;
+    carousel.classList.remove('dragging');
+  };
+
+  // Обработчики для мыши
+  carousel.addEventListener('mousedown', dragStart);
+  window.addEventListener('mousemove', dragging);
+  window.addEventListener('mouseup', dragStop);
+
+  // Обработчики для touch
+  carousel.addEventListener('touchstart', touchStart);
+  carousel.addEventListener('touchmove', touchMove);
+  carousel.addEventListener('touchend', touchEnd);
+
+  // Защита от случайных кликов
+  carousel.addEventListener('click', (e) => {
+    if (hasMoved) {
+      e.preventDefault();
+      e.stopPropagation();
     }
+  });
 });
-
-// Кнопки навигации
-if (arrowBtns.length > 0 && carousel) {
-    arrowBtns.forEach(btn => {
-        btn.addEventListener("click", () => {
-            // Проверяем ID кнопки для определения направления
-            const scrollAmount = btn.id === "scrollLeftPohod"
-                ? -firstCardWidth
-                : firstCardWidth;
-
-            if (firstCardWidth > 0) {
-                carousel.scrollBy({
-                    left: scrollAmount,
-                    behavior: "smooth"
-                });
-            } else {
-                console.warn("Ширина карточки не определена, прокрутка невозможна");
-            }
-        });
-    });
-}
-
-// Drag and drop функционал
-if (carousel) {
-    let isDragging = false;
-    let startX;
-    let startScrollLeft;
-    let hasMoved = false; // Флаг для отслеживания движения
-
-    // Для мыши
-    const dragStart = (e) => {
-        isDragging = true;
-        hasMoved = false;
-        carousel.classList.add("dragging");
-        startX = e.pageX - carousel.offsetLeft;
-        startScrollLeft = carousel.scrollLeft;
-        carousel.style.cursor = 'grabbing';
-    };
-
-    const dragging = (e) => {
-        if (!isDragging) return;
-        e.preventDefault();
-
-        const x = e.pageX - carousel.offsetLeft;
-        const walk = (x - startX) * 1.5;
-        carousel.scrollLeft = startScrollLeft - walk;
-        hasMoved = true; // Отмечаем, что было движение
-    };
-
-    const dragStop = () => {
-        isDragging = false;
-        carousel.classList.remove("dragging");
-        carousel.style.cursor = 'grab';
-    };
-
-    // Для touch (мобильные устройства)
-    const touchStart = (e) => {
-        isDragging = true;
-        hasMoved = false;
-        carousel.classList.add("dragging");
-        startX = e.touches[0].pageX - carousel.offsetLeft;
-        startScrollLeft = carousel.scrollLeft;
-    };
-
-    const touchMove = (e) => {
-        if (!isDragging) return;
-        e.preventDefault();
-
-        const x = e.touches[0].pageX - carousel.offsetLeft;
-        const walk = (x - startX) * 1.5;
-        carousel.scrollLeft = startScrollLeft - walk;
-        hasMoved = true;
-    };
-
-    const touchEnd = () => {
-        isDragging = false;
-        carousel.classList.remove("dragging");
-    };
-
-    // Обработчики для мыши
-    carousel.addEventListener("mousedown", dragStart);
-    window.addEventListener("mousemove", dragging);
-    window.addEventListener("mouseup", dragStop);
-
-    // Обработчики для touch
-    carousel.addEventListener("touchstart", touchStart);
-    carousel.addEventListener("touchmove", touchMove);
-    carousel.addEventListener("touchend", touchEnd);
-
-    // Защита от случайных кликов
-    carousel.addEventListener("click", (e) => {
-        if (hasMoved) {
-            e.preventDefault();
-            e.stopPropagation();
-        }
-    });
-}
