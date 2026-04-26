@@ -81,7 +81,7 @@
     -webkit-overflow-scrolling: touch;
     
     /* Улучшение производительности */
-    will-change: scroll-position;
+    will-change: transform, scroll-position;
     transform: translateZ(0);
     backface-visibility: hidden;
 }
@@ -148,12 +148,12 @@
 
 .videoCarousel::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
+    border-radius: 0px;
 }
 
 .videoCarousel::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
+    border-radius: 0px;
 }
 
 .videoCarousel::-webkit-scrollbar-thumb:hover {
