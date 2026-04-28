@@ -21,10 +21,14 @@
 /* Хедер карусели */
 .carousel-header {
   display: flex;
+  
   justify-content: space-between;
+ margin-left: 4rem;
+  max-width: 90%;
+
  
   
-  padding: 2rem;
+  
 
 }
 
@@ -41,9 +45,13 @@
 /* Контейнер для кнопок */
 .carousel-buttons {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
 
   gap: 3rem;
-  margin-right: 11rem;
+  
 }
 
 /* Кнопки навигации */
@@ -123,11 +131,7 @@
    
 
    
-  &:focus {
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
-    background-color:  rgb(22, 27, 39);
-    
-  }
+
 }
 
 
@@ -180,7 +184,7 @@
 /* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
   .carousel-header {
-  
+   margin-left: 0rem;
     gap: 1rem;
     padding: 0 1rem;
   }
@@ -208,15 +212,4 @@
 
 }
 
-@media (max-width: 480px) {
-  .carouselDlyDney-container {
-   
-  }
 
-
-
-  .carousel-buttons {
-    width: 100%;
-    justify-content: center;
-  }
-}

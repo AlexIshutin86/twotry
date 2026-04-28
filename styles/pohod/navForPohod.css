@@ -318,9 +318,10 @@
 }
 
 .details-title {
-    text-align: right;
+    text-align: start;
     position: relative;
-    margin-right: 25rem;
+   
+  
     
 }
 
@@ -337,6 +338,7 @@
 
 .details-description {
     margin-bottom: 1.5rem;
+    
 }
 
 
@@ -427,7 +429,7 @@
     
     .details-text h2 {
         text-align: left;
-
+        padding-bottom: 1rem;
         font-size: 1.3rem;
     }
     
@@ -446,7 +448,7 @@
 /* Для мобильных устройств (577px - 768px) */
 @media (max-width: 768px) {
     .details-section {
-        padding: 2rem 1rem;
+        padding: 1rem 0.2rem;
         margin: 1.5rem 0;
         border-radius: 1.8rem;
          margin-top: -5rem;
