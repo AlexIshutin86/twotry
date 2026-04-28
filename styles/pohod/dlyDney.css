@@ -22,7 +22,7 @@
 .carousel-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+ 
   
   padding: 2rem;
 
@@ -31,7 +31,7 @@
 /* Заголовок */
 .text1 {
   color: #a31f1f;
-  margin-left: 6.5rem;
+  margin-left: 5.5rem;
  
   padding: 0;
 }
