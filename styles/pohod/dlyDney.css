@@ -22,13 +22,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
   padding: 0 2rem;
-  margin-bottom: 0;
+
 }
 
 /* Заголовок */
 .text1 {
-  color: #fff;
+  color: #a31f1f;
   margin-left: 6.5rem;
   margin-bottom: 3rem;
   padding: 0;
@@ -39,6 +40,7 @@
 /* Контейнер для кнопок */
 .carousel-buttons {
   display: flex;
+
   gap: 3rem;
   margin-right: 11rem;
 }
