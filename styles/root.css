@@ -102,22 +102,14 @@ h3{
 
 
 p{
-    font-size: 15px;
+   
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(238, 13, 13);
+    color: rgb(202, 29, 29);
     font-weight: 100;
     line-height: 1.4rem;
     
 }
 
-@media (max-width: 800px){
-    p{
-    font-size: 15px;
-    
-   
-
-    }
-}
 
 
 
@@ -235,6 +227,4 @@ a {
         font-size: 12px;
     }
 }   
-    p {
-        font-size: 10px;
-    }
+ 

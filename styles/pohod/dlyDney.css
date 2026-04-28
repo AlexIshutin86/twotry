@@ -29,15 +29,12 @@
 /* Заголовок */
 .text1 {
   color: #fff;
-  margin-left: 9.5rem;
+  margin-left: 6.5rem;
   margin-bottom: 3rem;
   padding: 0;
 }
 
-.text1 h1 {
-  font-size: 1.5rem;
-  margin: 0;
-}
+
 
 /* Контейнер для кнопок */
 .carousel-buttons {
@@ -73,7 +70,7 @@
 .carouselDlyDney-container {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: minmax(250px, 1fr);
+ grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
   gap: 2.5rem;
   align-items: flex-start; /* улучшенное выравнивание */
   overflow-x: auto;
@@ -102,6 +99,8 @@
 /* Карточки */
 .cardPohod {
   min-height: 25rem;
+  min-width: 29rem;
+ 
   list-style: none;
   background: #fff;
   border-radius: 2rem;
