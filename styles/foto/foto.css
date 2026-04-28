@@ -69,6 +69,10 @@
     max-width: 100%;
     width: 100%;
     position: relative;
+    background-color: rgb(16, 51, 44);
+    padding: 1rem;
+    border-radius: 3rem;
+ 
 }
 
 
@@ -80,10 +84,10 @@
     grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
 
     grid-auto-rows: 400px auto 100px;
+    
     container-type: inline-size;
     
-    background-color: rgb(16, 51, 44);
-    padding: 1rem;
+    
   
 }
 
