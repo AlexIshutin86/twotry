@@ -6,15 +6,15 @@
     grid-template-columns: repeat(auto-fit, minmax(24rem, 2fr));
     justify-content: center;
     align-content: center;
-    gap: 0.1rem;
+    gap: 2rem;
     padding-top: 1rem;
 
     background-color: rgb(14, 53, 45);
     margin-top: -10rem;
     padding-top: 3rem;
     padding-bottom: 0rem;
-    padding-left: 4rem;
-    padding-right: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     z-index: 2;
     border-radius: 3rem 3rem 0rem 0rem;
 }
@@ -23,3 +23,19 @@
 
 
 
+
+
+
+
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+}
