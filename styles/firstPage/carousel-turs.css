@@ -10,7 +10,7 @@
     
     height: auto;
     max-width: 100%;
-    width: 100%;
+   
     padding: 1rem 1rem;
   
     background: rgb(65, 80, 116);
@@ -20,29 +20,21 @@
        
 }
 
-/* Адаптация содержимого внутри */
-.carouselPoxod .carousel-header {
-   max-width: 1700px;
-    width: 100%;
-    justify-content: space-between;
-    margin: 1rem auto;
-    gap: 1.5rem;
-    
-}
 
 
 
 /* Заголовок */
-.carouselPoxod .text1 {
-    
-    margin-left: 9.5rem;
-    margin-bottom: 2rem;
+.carouselPoxod-header {
+  display: flex;
+    justify-content: space-between;
+    margin: 1rem 1rem;
+    gap: 1.5rem;
 }
 
 
 
 /* Контейнер для кнопок */
-.carousel-buttons {
+.carouselPoxod-buttons {
     display: flex;
     gap: 3rem;
     
@@ -51,8 +43,8 @@
 
 
 /* Кнопки навигации */
-.carousel-buttons #scrollLeft,
-.carousel-buttons #scrollRight {
+.carouselPoxod-buttons #scrollLeft,
+.carouselPoxod-buttons #scrollRight {
     color: #fff;
     height: 3rem;
     width: 3rem;
@@ -74,7 +66,9 @@
     color: black;
 }
 
-
+.btn2-container {
+    background-color: aqua;
+}
 
 /* Контейнер карточек */
 
@@ -95,6 +89,8 @@
     will-change: scroll-position;
     transform: translateZ(0);
     backface-visibility: hidden;
+    padding: 2rem;
+   
 }
 
 /* Стили для dragging */
@@ -116,18 +112,23 @@
 
 .carouselPoxod-container li.card {
     
-    min-height: 25rem;
-    width: 25rem;
-    list-style: none;
-    background: #ffffff;
-    border-radius: 2rem;
-    padding: 1rem;
-    scroll-snap-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    will-change: transform;
-    transform: translateZ(0);
+   min-width: 24rem;
+  grid-row: span 3;
+  display: grid;
+  grid-template-rows: subgrid;
+ 
+  list-style: none;
+  background:hsl(214, 31%, 19%);
+  border-radius: 2rem;
+  padding: 1rem;
+  scroll-snap-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: grab;
+  will-change: transform;
+  position: relative;
+  /* Улучшенная доступность */
+  outline: none;
 }
 
 .carouselPoxod-container .card:hover {
@@ -136,11 +137,13 @@
 
 /* Изображения */
 .card .img {
-    width: 100%;
-    height:  auto;
     overflow: hidden;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  /* Плавное появление */
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  max-height: 25rem;
 }
 
 .card .img img {
@@ -167,12 +170,12 @@
 
 .carouselPoxod-container::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
+    border-radius: 0px;
 }
 
 .carouselPoxod-container::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
+    border-radius: 0px;
 }
 
 .carouselPoxod-container::-webkit-scrollbar-thumb:hover {
