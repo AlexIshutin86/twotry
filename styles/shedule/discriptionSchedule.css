@@ -1,5 +1,3 @@
-/* ========== СЕКЦИЯ РАСПИСАНИЯ ========== */
-
 
 
 .discriptionSchedule {
@@ -82,23 +80,27 @@
 }
 
 .intPart h2 {
-    color: #ffd700;
+    color: #ffd412;
     margin: 0;
+    padding: 0.4rem;
+    font-size: 2.5rem;
 }
 
 .left-partD p {
     color: #fff;
     margin-bottom: 1.5rem;
     line-height: 1.5;
+    
 }
 
 .btn {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background: linear-gradient(90deg, #ffd700, #ffaa00);
     border: none;
     border-radius: 2rem;
     padding: 0.8rem 1.5rem;
-    color: #333;
-    font-weight: 600;
+    color: #1f1f1f;
+    font-weight: 100;
     cursor: pointer;
     width: auto;
     align-self: flex-start;
@@ -148,7 +150,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    background-color: rgb(19, 163, 134);
+    background-color: rgb(10, 92, 77);
     padding: 4rem 2rem 2rem 2rem;
     border-radius: 2rem;
     width: 90%;
@@ -162,6 +164,10 @@
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
+
+.schedule-testimony p {
+    color: #ffffff;
+}
 
 
 /* ========== АДАПТИВНОСТЬ ========== */
@@ -178,7 +184,7 @@
     }
     
     .left-partD {
-        width: 55%;
+        width: 70%;
         padding: 1.5rem;
     }
     
@@ -187,7 +193,7 @@
     }
     
     .schedule-testimony {
-        margin-top: -rem;
+      width: 90%;
     }
 }
 
@@ -239,12 +245,14 @@
     }
     
   
+    .schedule-testimony {
+      width: 97%;
+      padding: 0.3rem 0.8rem;
     
-    .schedule-testimony h1 {
-      
-        padding: 0.3rem 0.8rem;
+      padding-top: 5rem;
     }
-}
+    }
+   
 
 /* Маленькие мобильные (до 480px) */
 @media (max-width: 480px) {
@@ -265,8 +273,9 @@
     }
     
     .schedule-testimony {
-        margin-top: -20rem;
+        margin-top: -5rem;
         padding: 0.8rem;
+        padding-top: 5rem;
     }
     
     .schedule-testimony h1 {
