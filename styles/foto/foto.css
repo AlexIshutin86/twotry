@@ -82,7 +82,7 @@
     display: grid;
     grid-auto-flow: dense;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 
     grid-auto-rows: 400px auto 100px;
 
@@ -104,10 +104,6 @@
     max-height: 35rem;
     overflow: hidden;
     border-radius: 1rem;
-    
-    
-
-
 
     list-style: none;
     background: #ffffff;
@@ -121,6 +117,9 @@
     transform: translateZ(0);
    
 }
+
+
+
 
 .fotoItemsMain-container .cardFotoMain:hover {
     transform: translateY(-10px);
@@ -156,6 +155,14 @@
 
 
 
+@media (min-width: 300px) {
+   .fotoItemsMain-container .cardFotoMain{
+    min-height: 17rem;
+    max-height: 15rem;
+   
+}
+
+}
 
 
 
