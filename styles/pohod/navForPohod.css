@@ -151,10 +151,7 @@
         gap: 1rem;
     }
     
-    .info-boxForPoxod .text-boxPoxod .text-left h1 {
-        font-size: 2rem;
-       
-    }
+   
     
     .gridPoxod {
         grid-template-columns: repeat(2, 1fr);
@@ -684,7 +681,7 @@
 
 .provodniki {
     width: 100%;
-    background: linear-gradient(135deg, rgb(236, 213, 5) 0%, rgb(255, 230, 50) 100%);
+    background: linear-gradient(135deg, rgb(10, 38, 46) 0%,100%);
     border-radius: 3rem;
     padding: 4rem 2rem;
     
@@ -702,7 +699,7 @@
     text-align: left;
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #333;
+  
     position: relative;
     padding-bottom: 1rem;
 }
@@ -723,7 +720,8 @@
 .provodnik:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-    background: linear-gradient(135deg, rgb(236, 213, 5) 0%, rgb(255, 230, 50) 100%);
+   
+    background:  rgb(34, 34, 34) 
 }
 
 .provodnik img {
@@ -747,7 +745,7 @@
 .provodnik-info h2 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: #222;
+  
     font-weight: 600;
 }
 
@@ -907,13 +905,7 @@
         grid-template-columns: 200px 1fr;
     }
     
-    .provodnik img {
-        height: 200px;
-    }
-    
-    .provodnik-info h2 {
-        font-size: 1.2rem;
-    }
+  
     
     .provodnik-info p {
         font-size: 0.85rem;
@@ -976,9 +968,9 @@
 
 .faq-title {
     text-align: left;
-    font-size: 2.5rem;
+   
     font-weight: 600;
-    color: #fff;
+  
     margin-bottom: 3rem;
     position: relative;
 }
@@ -1062,11 +1054,17 @@
 .price{
     min-height: 10rem;
     width: 100%;
-    padding: 4rem 2rem;
-    background: linear-gradient(135deg, #1a1a2e 0%, #23c045 100%);
+    padding:  2rem;
+    background: linear-gradient(135deg, #323247 0%, #16213e 100%);
     
     border-radius: 3rem;
     
+}
+
+
+.price-header {
+    display: grid;
+    justify-content: space-between;
 }
 
 .price-container{
@@ -1085,8 +1083,9 @@
 
 .price-grid{
     display: grid;
-    grid-template-columns: auto;       /* repeat(auto-fit, minmax(500px, 1fr));*/
+    grid-template-columns:   repeat(auto-fit, minmax(450px, 1fr));
     gap: 2.5rem;
+
 }
 
 
@@ -1131,6 +1130,7 @@
 }
 
 .price-answer {
+    
     max-height: 0;
     padding: 0 1.5rem;
     overflow: hidden;
@@ -1142,9 +1142,9 @@
     padding: 0 1.5rem 1.5rem 1.5rem;
 }
 
-.price-answer p {
-    color: rgba(255, 255, 255, 0.85);
-    font-size: 0.95rem;
+ p {
+   
+
     line-height: 1.5;
     margin-bottom: 1rem;
 }
@@ -1159,11 +1159,12 @@
 }
 
 .price-answer li {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgba(255, 255, 255, 0.85);
     font-size: 0.95rem;
     line-height: 1.5;
     margin-bottom: 0.5rem;
-    list-style: disc;
+   
 }
 
 
@@ -1185,17 +1186,13 @@
     }
     
     .price-container {
-        grid-template-columns: 25rem 1fr;
+        grid-template-columns: 30rem 1fr;
         gap: 1.5rem;
     }
     
-    .price-title {
-        font-size: 2.2rem;
-    }
+   
     
-    .price-value {
-        font-size: 2.5rem;
-    }
+   
 }
 
 /* Для планшетов (768px - 1024px) */
@@ -1217,10 +1214,7 @@
         text-align: center;
     }
     
-    .price-title {
-        text-align: center;
-        font-size: 2rem;
-    }
+   
     
     .price-value {
         text-align: center;
@@ -1325,18 +1319,14 @@
 /* Для больших экранов (1440px+) */
 @media (min-width: 1440px) {
     .price-container {
-        max-width: 1400px;
+        max-width: 100px;
         grid-template-columns: 35rem 1fr;
         gap: 3rem;
     }
     
-    .price-title {
-        font-size: 3rem;
-    }
+  
     
-    .price-value {
-        font-size: 3.5rem;
-    }
+    
     
     .price-question h3 {
         font-size: 1.3rem;
