@@ -5,9 +5,9 @@
     height: auto;
     padding: 2rem 0rem 2rem 2rem;
     background: rgb(44, 53, 77);
-    border-radius: 3rem;
+    border-radius: 2rem;
     position: relative;
-    z-index: 6;
+    z-index: 5;
    
     overflow: visible;
 }
@@ -158,7 +158,7 @@
 
 
 .opinionCarousel-container .card-Opinion h2 {
-   
+    
     margin-bottom: 1rem;
     padding: 0 0.5rem;
   
@@ -174,6 +174,7 @@
 }
 
 .opinionCarousel-container .card-Opinion p {
+    color: #fff;
     padding: 2rem 2rem 2rem 0rem;
 }
 
@@ -321,7 +322,7 @@
    
 
     .opinionCarousel-container .card-Opinion h2{
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: 100;
 
 
@@ -335,23 +336,8 @@
 
  
 
-@media (max-width: 360px){
-    .opinionCarousel-container .card-Opinion {
-    display: grid;
-    grid-template-rows: auto;
-    max-height: 65rem;
-    width: 15rem;
-    list-style: none;
-    background: #262636;
-    border-radius: 2rem;
-    padding: 1.5rem;
-    scroll-snap-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    will-change: transform;
-    transform: translateZ(0);
-}
+@media (max-width: 460px){
+  
 
 .opinionCarousel .carousel-header {
     max-height: 6rem;
@@ -360,27 +346,40 @@
     
     padding-top: 2rem;
     text-align: left;
-    
+}
+   
     
 }
 
 .opinionCarousel-container {
-
-    
     gap: 0.5rem;
     align-items: center;
     overflow-x: auto;
-   
-    padding:0.5rem 0.5rem 1rem 0.5rem;
-  
-   
-
-}
-
-
-
-.opinionCarousel-container .card-Opinion h1{
     
-    font-size: 3rem;
+    
+    padding-top: 3rem;
 }
+
+.opinionCarousel {
+margin-top: -4rem;
+}
+
+
+
+.card-Opinion {
+    margin-top: 6rem;
+}
+
+.opinionCarousel-container .card-Opinion h1 {
+    font-size: 1.5rem;
+  
+
+   
+}
+
+.opinionCarousel h1 {
+    font-size: 2rem;
+  
+
+   
 }

@@ -8,7 +8,7 @@
     position: relative;
     z-index: 6;
     background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
-    margin-top: -5rem;
+    margin-top: -2rem;
 }
 
 .gallery-container {
@@ -170,9 +170,7 @@
 }
 
 @media (max-width: 480px) {
-    .photo-gallery {
-        padding: 1.5rem 1rem;
-    }
+
     
     .gallery-info {
         padding: 1rem;
@@ -184,4 +182,59 @@
         font-size: 0.7rem;
         padding: 0.2rem 0.6rem;
     }
+
+
+
+
+
+    .photo-gallery {
+    
+   
+    margin-top: -5rem;
+}
+}
+
+
+@media (max-width: 768px) {
+    .photo-gallery {
+        padding: 2rem 1rem;
+    }
+    
+    .gallery-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    
+    
+    .gallery-card {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    
+   
+}
+
+@media (max-width: 350px) {
+
+    
+    .gallery-info {
+        padding: 1rem;
+    }
+    
+   
+    
+    .gallery-year {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.6rem;
+    }
+
+
+
+
+
+    .photo-gallery {
+    
+   
+    margin-top: -5rem;
+}
 }

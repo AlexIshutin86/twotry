@@ -6,7 +6,7 @@
 
 
 /* Основные стили карусели */
-.carouselPoxod {
+.carouselPoxod-turs {
     max-height: fit-content;
    
     max-width: 100%;
@@ -17,6 +17,7 @@
    
     position: relative;
     z-index: 3;
+   
        
 }
 
@@ -190,6 +191,9 @@
 
 
 @media (max-width: 480px) {
+
+   
+
    .carouselPoxod-header {
     max-width: 80%;
     display: flex;
@@ -201,7 +205,7 @@
 
     .carouselPoxod-buttons {
     display: flex;
-    gap: 4.5rem;
+    gap: 3rem;
     padding-right: 1rem;
     }
    .carouselPoxod-header h1{
