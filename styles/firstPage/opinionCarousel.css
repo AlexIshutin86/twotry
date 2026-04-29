@@ -3,12 +3,12 @@
     max-width: 100%;
     width: 100%;
     height: auto;
-    padding: 2rem 0rem 2rem 2rem;
+    padding: 4rem 0rem 2rem 2rem;
     background: rgb(44, 53, 77);
     border-radius: 2rem;
     position: relative;
     z-index: 5;
-   
+   margin-top: -5rem;
     overflow: visible;
 }
 
@@ -149,7 +149,22 @@
 }
 
 
-
+.btnOpinion {
+    display: flex;
+    
+    align-content: center;
+    justify-content: center;
+    
+    background: linear-gradient(to right, rgb(42, 219, 25));
+    font-size: 1.5rem;
+    padding: 0.8rem 2rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-weight: 100;
+    gap: 0.5rem;
+    border: none;
+}
 
 
 /* Текст карточек */
@@ -318,25 +333,10 @@
 
 
 
-@media (max-width: 900px) {
-   
-
-    .opinionCarousel-container .card-Opinion h2{
-        font-size: 1rem;
-        font-weight: 100;
-
-
-    }
-        .opinionCarousel-container .card-Opinion p {
-            padding: 1rem 1rem 1rem 0rem;
-}
-    }
-
-
 
  
 
-@media (max-width: 460px){
+@media (max-width: 560px){
   
 
 .opinionCarousel .carousel-header {
@@ -349,7 +349,7 @@
 }
    
     
-}
+
 
 .opinionCarousel-container {
     gap: 0.5rem;
@@ -360,9 +360,7 @@
     padding-top: 3rem;
 }
 
-.opinionCarousel {
-margin-top: -4rem;
-}
+
 
 
 
@@ -378,8 +376,12 @@ margin-top: -4rem;
 }
 
 .opinionCarousel h1 {
-    font-size: 2rem;
+    text-align: start;
   
 
    
+}
+
+
+
 }
