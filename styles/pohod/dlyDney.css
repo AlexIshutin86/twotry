@@ -171,7 +171,12 @@
   transform: scale(1.05);
 }
 
-/* Адаптивность для мобильных устройств */
+
+
+
+
+
+
 @media (max-width: 768px) {
 
   
@@ -193,18 +198,20 @@
   }
 
  .pForCard {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
 
  
 }
 
+.cardPohod {
+  min-width: 20rem;
+  
+}
  .carouselDlyDney-container{
-  grid-auto-rows: 180px 220px 60px;
+  grid-auto-rows: 280px 200px 35px;
  
  }
   
 
 
 }
-
-

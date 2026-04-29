@@ -57,33 +57,5 @@
 
 /* ====================== OTHER STYLES (keep your existing ones) ====================== */
 
-.topDescription {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    z-index: 1;
-}
-
-.topDescription .topDescription-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.topDescription-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    margin-top: -10rem;
-}
 
 /* ... rest of your other styles (cardFotoMain, fotoItemsMain, etc.) can stay below ... */

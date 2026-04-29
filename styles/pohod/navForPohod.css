@@ -1165,14 +1165,6 @@
 
 
 
-
-
-
-
-
-
-
-
 /* ========== АДАПТИВНОСТЬ ДЛЯ PRICE ========== */
 
 /* Для ноутбуков (1024px - 1200px) */
@@ -1243,7 +1235,7 @@
 @media (max-width: 768px) {
     .price {
         padding: 2rem 1rem;
-        margin: 1.5rem 0;
+      
         border-radius: 1.8rem;
      
     }
@@ -1332,6 +1324,14 @@
         transform: none;
     }
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -1569,97 +1569,7 @@
 }
 
 
-/* Для экранов 375px (iPhone SE, iPhone 8/SE) */
-@media (max-width: 375px) {
-  
-    
-    .faq-title {
-        font-size: 1.2rem;
-    }
-    
-    .faq-question h3 {
-        font-size: 0.75rem;
-    }
-    
-    .faq-item.active .faq-answer {
-        max-height: 600px;
-    }
-    
-    .faq-answer p {
-        font-size: 0.7rem;
-    }
-}
 
-/* Для iPhone 12/13/14 Pro и подобных (390px) */
-@media (max-width: 390px) and (min-height: 800px) {
-    .faq-section {
-        transform: translateY(-28rem);
-    }
-}
-
-/* Для планшетов в альбомной ориентации */
-@media (max-width: 1024px) and (orientation: landscape) {
-
-    .faq-container {
-        grid-template-columns: 1fr 1.5fr;
-        gap: 1.5rem;
-    }
-    
-    .faq-title {
-        text-align: left;
-        font-size: 1.8rem;
-        position: sticky;
-        top: 1rem;
-    }
-    
-    .faq-question h3 {
-        font-size: 0.9rem;
-    }
-    
-    .faq-item.active .faq-answer {
-        max-height: 300px;
-    }
-}
-
-/* Для мобильных в альбомной ориентации */
-@media (max-width: 896px) and (orientation: landscape) {
-    .faq-section {
-        
-        padding: 1rem;
-    }
-    
-    .faq-container {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
-    .faq-title {
-        text-align: center;
-        font-size: 1.3rem;
-    }
-    
-    .faq-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.8rem;
-    }
-    
-    .faq-question {
-        padding: 0.7rem;
-    }
-    
-    .faq-question h3 {
-        font-size: 0.75rem;
-    }
-    
-    .faq-item.active .faq-answer {
-        max-height: 250px;
-    }
-    
-    .faq-answer p {
-        font-size: 0.7rem;
-    }
-}
 
 /* Для больших экранов (1440px+) */
 @media (min-width: 1440px) {
