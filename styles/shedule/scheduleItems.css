@@ -9,7 +9,7 @@
     gap: 2rem;
     padding-top: 1rem;
 
-    background-color: rgb(14, 53, 45);
+    background-color: rgb(10, 66, 54);
     margin-top: -10rem;
     padding-top: 3rem;
     padding-bottom: 0rem;
@@ -20,6 +20,92 @@
 }
 
 
+.carouselScheduleItems-container {
+    display: grid;
+    grid-auto-flow: column;
+
+    gap: 0.5rem;
+    align-items: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+   
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    
+    /* Улучшение производительности */
+    will-change: scroll-position;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    padding: 2rem;
+}
+
+
+.cardScheduleItems{
+    min-width: 20rem;
+  grid-row: span 3;
+  display: grid;
+  grid-template-rows: subgrid;
+ 
+  list-style: none;
+  background:hsl(0, 0%, 99%);
+  border-radius: 2rem;
+  padding: 1rem;
+  scroll-snap-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: grab;
+  will-change: transform;
+  position: relative;
+  /* Улучшенная доступность */
+  outline: none;
+}
+
+
+.cardScheduleItems .img {
+    overflow: hidden;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  /* Плавное появление */
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  max-height: 25rem;
+}
+
+.cardScheduleItems .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.cardScheduleItems .img img:hover {
+    transform: scale(1.05);
+}
+
+.carouselPoxod-container .cardScheduleItems:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Скрыть скроллбар для красоты */
+.carouselPoxod-container::-webkit-scrollbar {
+    height: 0px;
+}
+
+.carouselPoxod-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 0px;
+}
+
+.carouselPoxod-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 0px;
+}
+
+.carouselPoxod-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
 
 
 
