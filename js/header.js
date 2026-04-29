@@ -29,7 +29,7 @@ function hideSidebar() {
 
 // Load header from header.html
 document.addEventListener('DOMContentLoaded', function () {
-    fetch("./elements/header.html")                    // ← Путь от index.html (они в одной папке)
+    fetch("../elements/header.html")                    // ← Путь от index.html (они в одной папке)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Header.html not found');
