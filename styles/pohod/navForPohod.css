@@ -1319,7 +1319,7 @@
 /* Для больших экранов (1440px+) */
 @media (min-width: 1440px) {
     .price-container {
-        max-width: 100px;
+        max-width: 1400px;
         grid-template-columns: 35rem 1fr;
         gap: 3rem;
     }
