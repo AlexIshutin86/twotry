@@ -78,7 +78,7 @@
 
 
 .fotoItemsMain-container {
-    
+    max-width: 20rem;
     display: grid;
     grid-auto-flow: dense;
     gap: 1rem;
