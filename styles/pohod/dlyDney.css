@@ -92,7 +92,7 @@
   will-change: transform;
   /* Плавная прокрутка */
   scrollbar-gutter: stable;
-  grid-auto-rows: 280px 250px 60px;
+  grid-auto-rows: 330px 250px 60px;
 }
 
 /* Стили для dragging */
@@ -191,7 +191,9 @@
 
  
 
- 
+ .carouselDlyDney-container{
+  grid-auto-rows: 180px 250px 60px;
+ }
   
 
 
