@@ -76,7 +76,7 @@
 .carouselPoxod-container {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: repeat(auto-fit, minmax (300px,1fr));
+    grid-auto-columns: repeat(auto-fit, minmax (250px,1fr));
     gap: 0.5rem;
     align-items: center;
     overflow-x: auto;
@@ -112,7 +112,7 @@
 
 .carouselPoxod-container li.card {
     
-   min-width: 24rem;
+   min-width: 20rem;
   grid-row: span 3;
   display: grid;
   grid-template-rows: subgrid;
