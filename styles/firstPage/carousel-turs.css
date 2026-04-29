@@ -7,12 +7,12 @@
 
 /* Основные стили карусели */
 .carouselPoxod {
-    
-    height: auto;
+    max-height: fit-content;
+   
     max-width: 100%;
    
     padding: 1rem 1rem;
-  
+    
     background: rgb(65, 80, 116);
    
     position: relative;
@@ -25,10 +25,13 @@
 
 /* Заголовок */
 .carouselPoxod-header {
-  display: flex;
+    max-width: 70%;
+    display: flex;
+    flex-direction: row;
+  
     justify-content: space-between;
-    margin: 1rem 1rem;
-    gap: 1.5rem;
+    padding: 2rem;
+    gap: 1rem;
 }
 
 
@@ -37,6 +40,7 @@
 .carouselPoxod-buttons {
     display: flex;
     gap: 3rem;
+    padding-right: 5rem;
     
 }
 
@@ -67,17 +71,18 @@
 }
 
 .btn2-container {
-    background-color: aqua;
+   
+    padding-top: 1rem;
 }
 
 /* Контейнер карточек */
 
 
-.carouselPoxod-container {
+.carouselPoxod1-container {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: repeat(auto-fit, minmax (250px,1fr));
-    gap: 0.5rem;
+    grid-auto-columns: repeat(auto-fit, minmax (230px, 1fr));
+    gap: 4rem;
     align-items: center;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -90,7 +95,7 @@
     transform: translateZ(0);
     backface-visibility: hidden;
     padding: 2rem;
-   
+  
 }
 
 /* Стили для dragging */
@@ -110,15 +115,16 @@
 
 /* Карточки */
 
-.carouselPoxod-container li.card {
+.carouselPoxod1-container li.card {
     
-   min-width: 20rem;
-  grid-row: span 3;
+    min-width: 20rem;
+    min-height: 25rem;
+ 
   display: grid;
-  grid-template-rows: subgrid;
+  
  
   list-style: none;
-  background:hsl(214, 31%, 19%);
+  background:hsl(0, 0%, 100%);
   border-radius: 2rem;
   padding: 1rem;
   scroll-snap-align: center;
@@ -183,4 +189,31 @@
 }
 
 
+@media (max-width: 480px) {
+   .carouselPoxod-header {
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem  2rem  0rem  02rem;
+    gap: 1rem;
+    }
 
+    .carouselPoxod-buttons {
+    display: flex;
+    gap: 4.5rem;
+    padding-right: 1rem;
+    }
+   .carouselPoxod-header h1{
+    font-size: 1.5rem;
+    text-align: start;
+}   
+
+    .carouselPoxod-container li.card {
+        min-height: 45rem;
+   
+      
+    } 
+ 
+
+}

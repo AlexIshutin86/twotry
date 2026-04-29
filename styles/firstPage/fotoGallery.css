@@ -8,6 +8,7 @@
     position: relative;
     z-index: 6;
     background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+    margin-top: -5rem;
 }
 
 .gallery-container {
