@@ -78,11 +78,11 @@
 
 
 .fotoItemsMain-container {
-    max-width: 20rem;
+    
     display: grid;
     grid-auto-flow: dense;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 
     grid-auto-rows: 400px auto 100px;
 
@@ -100,8 +100,7 @@
     grid-row: span 3;
     display: grid;
     grid-template-rows: subgrid;
-    min-height: 27rem;
-    max-height: 35rem;
+  
     overflow: hidden;
     border-radius: 1rem;
 
