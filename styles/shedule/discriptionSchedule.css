@@ -222,7 +222,7 @@
     
     .left-partD {
         width: 100%;
-        padding: 1.5rem;
+        padding: 1rem;
     }
     
     .intPart {
@@ -230,7 +230,10 @@
         align-items: flex-start;
     }
     
-   
+    .intPart h2 {
+        padding-bottom: 4rem;
+       
+    }
     
     .btn {
         width: 100%;
@@ -269,6 +272,7 @@
     }
     
     .intPart h2 {
+        padding-bottom: 4rem;
         font-size: 1.2rem;
     }
     
@@ -278,8 +282,15 @@
         padding-top: 5rem;
     }
     
+    .carousel-controls {
+
+    padding-bottom: 37%;   
+
+}
+
+
     .schedule-testimony h1 {
-        font-size: 0.75rem;
+        font-size: 1rem;
     }
 }
 
