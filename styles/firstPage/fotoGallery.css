@@ -27,6 +27,7 @@
 
 
 
+
 /* Сетка - подстраивается под размер контейнера */
 .gallery-grid {
     display: grid;
@@ -52,29 +53,6 @@
     transform: translateY(-10px);
     border-color: #039b03;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-/* Разные размеры карточек - работают только при достаточной ширине */
-@media (min-width: 768px) {
-    .gallery-card:nth-child(1) {
-        grid-column: span 1;
-        grid-row: span 2;
-    }
-    
-    .gallery-card:nth-child(2) {
-        grid-column: span 2;
-        grid-row: span 1;
-    }
-    
-    .gallery-card:nth-child(3) {
-        grid-column: span 1;
-        grid-row: span 1;
-    }
-    
-    .gallery-card:nth-child(4) {
-        grid-column: span 1;
-        grid-row: span 1;
-    }
 }
 
 .gallery-image {
@@ -145,12 +123,49 @@
     color: #ffd700;
 }
 
+.btnGallary {
+    display: flex;
+    
+    align-content: center;
+    justify-content: center;
+    
+    background: linear-gradient(to right, rgb(42, 219, 25));
+    font-size: 1.5rem;
+    padding: 0.8rem 2rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-weight: 100;
+    gap: 0.5rem;
+    border: none;
+}
+
+.btnGallary:hover {
+    transform: scale(1.02);
+}
+/* Разные размеры карточек - работают только при достаточной ширине */
+@media (min-width: 768px) {
+    .gallery-card:nth-child(1) {
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+    
+    .gallery-card:nth-child(2) {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    
+    .gallery-card:nth-child(3) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    
+    .gallery-card:nth-child(4) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
 
 
-
-
-
-@media (max-width: 768px) {
     .photo-gallery {
         padding: 2rem 1rem;
     }
@@ -166,7 +181,20 @@
         grid-row: span 1;
     }
     
-   
+    .photo-gallery {
+        padding: 2rem 1rem;
+    }
+    
+    .gallery-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    
+    
+    .gallery-card {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
 }
 
 @media (max-width: 480px) {
@@ -176,43 +204,17 @@
         padding: 1rem;
     }
     
-   
-    
     .gallery-year {
         font-size: 0.7rem;
         padding: 0.2rem 0.6rem;
     }
 
-
-
-
-
     .photo-gallery {
-    
-   
-    margin-top: -5rem;
+    margin-top: -7rem;
 }
 }
 
 
-@media (max-width: 768px) {
-    .photo-gallery {
-        padding: 2rem 1rem;
-    }
-    
-    .gallery-title {
-        font-size: 1.8rem;
-        margin-bottom: 2rem;
-    }
-    
-    
-    .gallery-card {
-        grid-column: span 1;
-        grid-row: span 1;
-    }
-    
-   
-}
 
 @media (max-width: 350px) {
 
