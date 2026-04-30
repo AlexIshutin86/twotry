@@ -337,6 +337,19 @@
  
 
 @media (max-width: 560px){
+
+
+    .opinionCarousel {
+   
+  
+    padding: 4rem 0rem 2rem 2rem;
+    background: rgb(44, 53, 77);
+    border-radius: 2rem;
+    position: relative;
+    z-index: 5;
+  
+    overflow: visible;
+}
   
 
 .opinionCarousel .carousel-header {
@@ -357,7 +370,7 @@
     overflow-x: auto;
     
     
-    padding-top: 3rem;
+    padding-top: 1rem;
 }
 
 
