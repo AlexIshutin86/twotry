@@ -356,7 +356,7 @@
     display: grid;
     grid-column: auto;
     
-    padding-top: 2rem;
+    padding-top: 5rem;
     text-align: left;
 }
    
@@ -369,7 +369,7 @@
     overflow-x: auto;
     
     
-    padding-top: 1rem;
+    padding-top: 2rem;
 }
 
 
