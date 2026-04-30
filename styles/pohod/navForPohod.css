@@ -15,9 +15,7 @@
     z-index: 1000;
 }
 
-.header-placeholder{
-    position: sticky;
-}
+
 
 .info-boxForPoxod{
     display: flex;
@@ -41,6 +39,10 @@
     padding-top: 8rem;
    
    
+}
+.text1 p{
+    color: #fff;
+    text-align: left;
 }
 
 
@@ -81,54 +83,38 @@
 
  .nav-linksPoxod{
     position: sticky;
-    
-    top: 50px; /* Основной отступ от верха */
+   
+    top: 70px; /* Основной отступ от верха */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
     gap: 3rem;
     border: 2px solid rgba(255, 255, 255, 0.3);
-    background-color: rgba(18, 14, 255, 0.226);
+    background-color: rgba(255, 255, 255, 0.070);
     backdrop-filter: blur(8px);
     
     border-radius: 3rem;
     z-index: 999;
-  
+    
     max-width: 100%;
     padding: 1rem;
     margin: 0rem auto;
     overflow: hidden;
+
+ }
+
+ .nav-linksPoxod a{
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+    font-size: 1.5rem;
  }
 
 
 
 /* ========== АДАПТИВНОСТЬ ========== */
 
-/* Для планшетов и небольших ноутбуков (1024px - 1200px) */
-@media (max-width: 1200px) {
-
-    
-
-
-    .info-boxForPoxod {
-        padding: 3rem 8%;
-    }
-    
-    .text-boxPoxod {
-
-        grid-template-columns: 25rem 40rem;
-        gap: 1rem;
-    }
-    
-    .gridPoxod {
-        gap: 1rem;
-    }
-    
-    .grid-cardPoxod span {
-        font-size: 1.5rem;
-    }
-}
 
 /* Для планшетов (768px - 1024px) */
 
@@ -170,11 +156,16 @@
         justify-content: space-between;
     }
     
-  
+  .nav-linksPoxod a{
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+    font-size: 0.9rem;
+ }
     
     #menu-icon {
         display: block;
-        color: white;
+        color: rgb(255, 255, 255);
         font-size: 1.5rem;
         cursor: pointer;
     }
@@ -200,11 +191,7 @@
         line-height: 1.5;
     }
     
-    .gridPoxod {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        
-    }
+   
     
     .grid-cardPoxod {
         flex-direction: column;
@@ -230,7 +217,11 @@
         align-items: stretch;
         padding: 1rem;
         gap: 0.1rem;
+        transform: translateY(4rem);
     }
+
+   
+   
     
     .nav-linksPoxod li {
         text-align: center;
@@ -256,7 +247,7 @@
     align-items: center;
     justify-content: center;
     padding: 0;
-   margin-top: -10rem;
+   margin-top: -15rem;
     position: relative;
     width: 100%;
     height: 100vh; /* Make section full viewport height */
@@ -304,8 +295,11 @@
     background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
     border-radius: 3rem;
     margin-top: -5rem;
-    
-    
+}
+.details-section h2,
+.details-section p {
+    color: #fff;
+    line-height: 1.7rem;
 }
 
 .details-container {
@@ -319,8 +313,6 @@
 .details-title {
     text-align: start;
     position: relative;
-   
-  
     
 }
 
@@ -553,41 +545,17 @@
 
 .bezopasnost-container h1 {
         font-size: 1.6rem;
+        padding-bottom: 0.7rem;
     }
 
+    .bezopasnost-container h3 {
+        font-size: 1.4rem;
+    }
 
 
 /* ========== АДАПТИВНОСТЬ ========== */
 
-/* Для ноутбуков (1200px - 1400px) */
-@media (max-width: 1400px) {
-    .bezopasnost {
-        padding-left: 15rem;
-        padding-right: 15rem;
-    }
-}
 
-/* Для небольших ноутбуков (1024px - 1200px) */
-@media (max-width: 1200px) {
-    .bezopasnost {
-        padding-left: 8rem;
-        padding-right: 8rem;
-        gap: 0.8rem;
-        grid-auto-rows: 14rem;
-    }
-    
-    .bezopasnost-container {
-        padding: 1.5rem;
-    }
-    
-    .bezopasnost-container h1 {
-        font-size: 1.3rem;
-    }
-    
-    .bezopasnost-container h3 {
-        font-size: 0.9rem;
-    }
-}
 
 /* Для планшетов (768px - 1024px) */
 @media (max-width: 1024px) {
@@ -651,6 +619,9 @@
 
 /* Для маленьких мобильных (481px - 576px) */
 @media (max-width: 576px) {
+
+ 
+
     .bezopasnost {
         padding: 1rem;
         gap: 0.6rem;
