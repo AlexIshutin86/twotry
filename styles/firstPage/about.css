@@ -45,7 +45,7 @@
 
 .shortAbout  h3 {
     font-size: 1.5rem;
-    line-height: 1.4;
+    line-height: 1.2;
     margin-bottom: 2rem;
     text-align: left;
 }
@@ -71,15 +71,13 @@
 }
 
 .grid {
-    padding: 2rem;
+    padding: 1.5rem;
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    
-    
-    gap: 1.7rem;
+    gap: 2rem;
 }
 
 .grid-card {
