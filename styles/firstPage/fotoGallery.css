@@ -168,7 +168,7 @@
 
 
     .photo-gallery {
-        padding: 2rem 1rem;
+        padding: 1rem 1rem;
     }
     
     .gallery-title {
@@ -210,11 +210,9 @@
         padding: 0.2rem 0.6rem;
     }
 
-
     .photo-gallery {
     padding: 0.5rem 
     }
-
 
     .photo-gallery {
     margin-top: -4rem;
@@ -224,25 +222,20 @@
         padding: 1rem;
     }
     
-
     .photo-gallery {
     padding: 0.5rem 
 
 }
-   
-    
+      
     .gallery-year {
         font-size: 0.7rem;
         padding: 0.2rem 0.6rem;
     }
 
 
-
-
-
     .photo-gallery {
-    
-   
     margin-top: -5rem;
+    padding: 1rem 1rem;
+    
 }
 }
