@@ -2,7 +2,7 @@
 
 
 
-// Add to your existing script.js or create a new file
+
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-linksPoxod a');
     const sections = {};
