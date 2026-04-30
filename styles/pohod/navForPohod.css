@@ -15,7 +15,9 @@
     z-index: 1000;
 }
 
-
+.header-placeholder{
+    position: sticky;
+}
 
 .info-boxForPoxod{
     display: flex;
@@ -80,7 +82,7 @@
  .nav-linksPoxod{
     position: sticky;
     
-    top: 100px; /* Основной отступ от верха */
+    top: 50px; /* Основной отступ от верха */
     display: flex;
     align-items: center;
     justify-content: center;
