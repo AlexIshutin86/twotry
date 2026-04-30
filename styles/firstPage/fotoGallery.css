@@ -74,6 +74,7 @@
 }
 
 .gallery-overlay {
+   
     position: absolute;
     top: 0;
     left: 0;
@@ -223,6 +224,12 @@
         padding: 1rem;
     }
     
+
+    .photo-gallery {
+    padding: 1rem 
+  
+   
+}
    
     
     .gallery-year {
