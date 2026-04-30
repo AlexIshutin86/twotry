@@ -12,10 +12,9 @@
     background-color: rgb(14, 53, 45);
     margin-top: -15rem;
   
-  
     padding-left: 2rem;
     padding-right: 2rem;
-    z-index: 2;
+    z-index: 1;
     border-radius: 3rem 3rem 0rem 0rem;
 }
 
