@@ -4,7 +4,7 @@ footer {
     position: relative;
     z-index: 999;
     background-color: hsl(215, 31%, 12%);
-    z-index: 999;
+    z-index: 2000;
     
     
 }
@@ -12,11 +12,11 @@ footer {
 .footer-container {
    background-color: rgb(0, 0, 0);
    border-radius: 3rem 3rem 0rem 0rem;
-    margin-top: -2rem;
+ 
 }
 
 .info-footer{
-    padding: 2rem 2rem 2rem 2rem;
+    
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -30,57 +30,6 @@ footer {
     gap: 1rem;
     grid-template-columns: 2rem 2rem 2rem 2rem;
     
-}
-
-
-
-
-
-.podsek2 {
-    display: grid;
-    gap: 1rem;
-    margin-top: -1rem;
-    
-    padding-left: 2rem;
-    
-    padding-bottom: 3rem;
-    position: relative;
-    
-}
-
-
-
-.podsek2 h3 {
-  
-     text-align: left;
-
-}
-
-@media (max-width: 800px) {
-    .info-footer {
-        font-size: 0.3;
-        gap: 2rem;
-        display: grid;
-        grid-template-columns: 10px ;
-        grid-row: 10px 10px 10px;
-        text-align: left;
-    
-   
-       
-    } 
-}
-
-
-@media (max-width: 570px) {
-    .podsekIcon {
-    padding-left: 1rem;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 10px 10px;
-    grid-row: 10px 10px;
-    
-    gap: 1rem;
-}
 }
 
 
@@ -118,8 +67,6 @@ footer {
 
 
 
-
-
 .podsek2 {
     display: grid;
     gap: 1rem;
@@ -127,11 +74,10 @@ footer {
     
     padding-left: 2rem;
     
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
     position: relative;
     
 }
-
 
 
 .podsek2 h3 {
@@ -142,28 +88,40 @@ footer {
 
 @media (max-width: 800px) {
     .info-footer {
-        font-size: 0.3;
-        gap: 2rem;
+     
+        gap: 1rem;
         display: grid;
         grid-template-columns: 10px ;
-        grid-row: 10px 10px 10px;
-        text-align: left;
-    
-   
-       
+        grid-row: 10px 10px ;
+      
     } 
+
+
+    .footer-container h3{
+    font-size: 1.3rem;
+    line-height: 1rem;
+    }
 }
 
 
-@media (max-width: 570px) {
-    .podsekIcon {
-    padding-left: 1rem;
-    width: 100%;
+@media (max-width: 560px) {
+  
+
+.podsekIcon {
     display: grid;
-    grid-template-columns: 10px 10px;
-    grid-row: 10px 10px;
-    
+    grid-template-rows: 1rem ;
+    align-items: start;
+    justify-content: center;
     gap: 1rem;
-}
+    
+    
 }
 
+.footer-container h3{
+    font-size: 1rem;
+    line-height: 0.9rem;
+}
+
+}
+
+   

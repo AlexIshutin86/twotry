@@ -207,34 +207,14 @@ a {
 }
 
 
-/* Для планшетов (768px — 1024px) */
-@media (max-width: 1024px) and (min-width: 768px) {
-    .scrollUp {
-        bottom: 15px;
-        right: 15px;
-        width: 75px;
-        height: 45px;
-        font-size: 16px;
-    }
-}
 
-/* Для мобильных телефонов (до 767px) */
-@media (max-width: 767px) {
-    .scrollUp {
-        bottom: 10px;
-        right: 10px;
-        width: 40px;
-        height: 40px;
-        font-size: 14px;
-    }
-}
 
 /* Для очень маленьких экранов (до 480px) */
 @media (max-width: 480px) {
     .scrollUp {
         bottom: 8px;
         right: 8px;
-        width: 35px;
+        width: 165px;
         height: 35px;
         font-size: 12px;
     }
