@@ -81,36 +81,128 @@
    
 }
 
- .nav-linksPoxod{
+
+
+
+
+
+
+
+ /* Main navigation container */
+.nav-linksPoxod {
+    /* Sticky positioning */
     position: sticky;
-   
-    top: 70px; /* Основной отступ от верха */
+    top: 70px; /* Adjust based on your header height */
+    z-index: 998;
+    
+    /* Layout */
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
-    flex-wrap: nowrap;
-    gap: 3rem;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    background-color: rgba(255, 255, 255, 0.070);
-    backdrop-filter: blur(8px);
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on mobile */
+    gap: 0.5rem;
     
+    /* Styling */
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
     border-radius: 3rem;
-    z-index: 999;
+    padding: 0.75rem 1.5rem;
+    margin: 0 auto;
     
-    max-width: 100%;
-    padding: 1rem;
-    margin: 0rem auto;
-    overflow: hidden;
+    /* Width */
+    width: fit-content;
+    max-width: 90%;
+    
+    /* Transition for smooth scroll effect */
+    transition: all 0.3s ease;
+}
 
- }
+/* Navigation items */
+.nav-linksPoxod li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
- .nav-linksPoxod a{
-    color: #fff;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 100;
-    font-size: 1.5rem;
- }
+/* Navigation links */
+.nav-linksPoxod a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 2rem;
+    transition: all 0.2s ease;
+    letter-spacing: 0.3px;
+}
 
+/* Hover effect */
+.nav-linksPoxod a:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-1px);
+}
+
+/* Active section link styling */
+.nav-linksPoxod a.active {
+    color: #ffd700;
+    background: rgba(255, 215, 0, 0.15);
+}
+
+/* Scroll effect class (adds shadow when scrolled) */
+.nav-linksPoxod.scrolled {
+    background: rgba(0, 0, 0, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    padding: 0.5rem 1.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .nav-linksPoxod {
+        gap: 0.3rem;
+        padding: 0.6rem 1rem;
+    }
+    
+    .nav-linksPoxod a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .nav-linksPoxod {
+        width: 95%;
+        overflow-x: auto;
+        justify-content: flex-start;
+        white-space: nowrap;
+        flex-wrap: nowrap;
+        scrollbar-width: thin;
+    }
+    
+    .nav-linksPoxod::-webkit-scrollbar {
+        height: 3px;
+    }
+    
+    .nav-linksPoxod a {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-linksPoxod {
+        top: 60px;
+        padding: 0.5rem 0.8rem;
+        border-radius: 2rem;
+    }
+    
+    .nav-linksPoxod a {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.75rem;
+    }
+}
 
 
 /* ========== АДАПТИВНОСТЬ ========== */
