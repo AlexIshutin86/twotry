@@ -188,7 +188,7 @@
     
     .gallery-title {
         font-size: 1.8rem;
-        margin-bottom: 2rem;
+       
     }
     
     
@@ -198,7 +198,7 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 350px) {
 
     
     .gallery-info {
@@ -210,25 +210,24 @@
         padding: 0.2rem 0.6rem;
     }
 
+
+    .photo-gallery {
+    padding: 0.5rem 
+    }
+
+
     .photo-gallery {
     margin-top: -4rem;
 }
-}
 
-
-
-@media (max-width: 350px) {
-
-    
     .gallery-info {
         padding: 1rem;
     }
     
 
     .photo-gallery {
-    padding: 1rem 
-  
-   
+    padding: 0.5rem 
+
 }
    
     
