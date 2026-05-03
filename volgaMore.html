@@ -119,10 +119,20 @@
 
         </section>
 
-        <section id="photo" class="photo">
-            <div class="photo-container">
-                    <img src="./foto/wolgaMore/13.jpg" alt="">
+        <section id="photo-slider1" class="photo-slider">
+
+             <button class="prev" onclick="prevSlide()">&#10094</button>
+            <button class="next" onclick="nextSlide()">&#10095</button>
+
+
+            <div class="slides">
+                <img class="slide" src="./foto/wolgaMore/13.jpg" alt="">
+                <img class="slide" src="./foto/wolgaMore/12.jpg" alt="">
+                <img class="slide" src="./foto/wolgaMore/11.jpg" alt="">
+                <img class="slide" src="./foto/wolgaMore/10.jpg" alt="">
             </div>
+
+           
         </section>
 
         <!-- Секция Подробнее -->
@@ -575,6 +585,7 @@
 
     </main>
 
+    <script src="./js/photoSlider.js" defer></script>
     <script src="./js/pohod.js" defer></script>
     <script src="./js/script.js" defer></script>
 

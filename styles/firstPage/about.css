@@ -1,6 +1,6 @@
 .shortAbout {
     display: flex;
-    align-items: flex-starts;
+    align-items: flex-start;
     justify-content: center;
     min-height: 40rem;
     padding: 3rem 12%;
