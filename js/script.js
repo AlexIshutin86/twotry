@@ -3,7 +3,7 @@
 
  document.addEventListener("DOMContentLoaded", () => {
     // ========== ПЕРВАЯ КАРУСЕЛЬ (carouselPoxod) ==========
-    const carousel = document.querySelector(".carouselPoxod-container");
+    const carousel = document.querySelector(".carouselPoxod1-container");
     const arrowBtns = document.querySelectorAll("#scrollLeft, #scrollRight");
     let cardWidth;
     let isDragging = false;
