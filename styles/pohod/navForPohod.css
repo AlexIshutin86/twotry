@@ -649,7 +649,7 @@
 
 .bezopasnost-grid .title {
     padding-bottom: 1rem;
-    padding-left: 10rem;
+  
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -667,7 +667,7 @@
 /*  bezopasnost  */
 
 .bezopasnost{
-    width: 100%;
+    max-width: 205rem;
     gap: 1rem;
     display: grid;
     justify-content: center;
@@ -684,14 +684,13 @@
     
     border-radius: 3rem;
     color: rgb(255, 255, 255);
-    padding-left: 10rem;
-    padding-right: 10rem;
+    
     z-index: 5;
 }
 
 
 .bezopasnost-container{
-    max-width: 550rem;
+    max-width: 105rem;
     border-radius: 2rem;
     background: rgba(10, 10, 36, 0.5);
     backdrop-filter: blur(5px);
@@ -827,7 +826,7 @@
 }
 
 .provodniki-container {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
