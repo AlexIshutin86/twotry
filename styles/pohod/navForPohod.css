@@ -656,6 +656,8 @@
 }
 
 
+
+
 @media (max-width: 576px) {
     .bezopasnost-grid .title {
      padding-bottom: 0.5rem;
@@ -693,8 +695,9 @@
 
 .bezopasnost-container{
     max-width: 105rem;
+    
     border-radius: 2rem;
-    background: rgba(10, 10, 36, 0.5);
+    background: rgba(24, 24, 24, 0.815);
     backdrop-filter: blur(5px);
     padding: 2rem;
 }
