@@ -77,6 +77,32 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// ========== КНОПКА "ЧИТАТЬ ПОЛНОСТЬЮ" ==========
+document.addEventListener('DOMContentLoaded', function() {
+    const readMoreBtn = document.getElementById('readMoreBtn2');
+    const detailsDescription = document.getElementById('detailsDescription2');
+    
+    if (readMoreBtn && detailsDescription) {
+        readMoreBtn.addEventListener('click', function() {
+            // Переключаем класс expanded
+            detailsDescription.classList.toggle('expanded');
+            
+            // Меняем текст кнопки и иконку
+            const btnText = this.querySelector('.btn-text');
+            const icon = this.querySelector('i');
+            
+            if (detailsDescription.classList.contains('expanded')) {
+                btnText.textContent = 'Свернуть';
+                this.classList.add('active');
+            } else {
+                btnText.textContent = 'Читать полностью';
+                this.classList.add('active');
+            }
+        });
+    }
+});
+
+
 
 
 

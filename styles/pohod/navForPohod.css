@@ -427,19 +427,28 @@
 
 .details-description {
     margin-bottom: 1.5rem;
+    color: #fff;
     
 }
 
 .details-text h2{
     padding-bottom: 1rem;
+    color: #fff;
+}
+
+.details-text p{
+    
+    color: #fff;
 }
 
 .details-description .full-text {
     display: none;
+    color: #fff;
 }
 
 .details-description.expanded .full-text {
     display: block;
+    color: #fff;
 }
 
 

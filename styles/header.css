@@ -44,7 +44,7 @@ header {
     
     .nav-links li{
         margin-top: 1.5rem;
-        padding: 1rem;
+        padding: 0.5rem;
     }
 
     .nav-links.active{
@@ -52,12 +52,13 @@ header {
     }
 
     header{
-        padding: 1rem 5rem;
+        padding: 0.5rem 5rem;
         gap: 1rem;
     }
 
     header .logo{
         font-size: 1.5rem;
+        padding: 0.2rem;
     }
 }
 
@@ -120,7 +121,7 @@ header {
     top: 0;
     right: 0;
     height: 100vh;
-    width: 250px;
+    width: 150px;
     backdrop-filter: blur(10px);
     z-index: 999;
     
@@ -172,7 +173,7 @@ header {
   
   .contact-btn {
     width: 100%; /* Кнопка растягивается на всю доступную ширину */
-    padding: 0.6rem 1rem; /* Уменьшенные отступы для маленьких экранов */
+    padding: 0.3rem 0.5rem; /* Уменьшенные отступы для маленьких экранов */
   }
 }
 

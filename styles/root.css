@@ -67,7 +67,15 @@ h1{
 }
 }
 
+.pusher {
+    height: 12rem;
+}
 
+@media (max-width: 900px) {
+    .pusher{
+    height: 6rem;
+    }
+}
 
 h2{
     color: #1a1a1a;
