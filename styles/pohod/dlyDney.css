@@ -120,7 +120,7 @@
  
   list-style: none;
   background:hsl(214, 31%, 19%);
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   padding: 1rem;
   scroll-snap-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -141,7 +141,11 @@
 
 .pForCard {
   font-size: 1rem;
-
+  display: flex;
+  flex-direction: row;
+  gap: 0.3rem;
+  justify-content: left;
+ 
   color: rgb(255, 255, 255);
 }
 
@@ -176,8 +180,31 @@
 
 
 
+.pForCard i{
+  font-size: 1.2rem;
+  color: #f5dd05;
+}
 
 
+
+
+
+/* Firefox */
+.carouselDlyDney-container {
+  scrollbar-width: none;
+}
+
+/* Chrome, Safari, Edge */
+.carouselDlyDney-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+/* IE */
+.carouselDlyDney-container {
+  -ms-overflow-style: none;
+}
 
 
 @media (max-width: 768px) {
