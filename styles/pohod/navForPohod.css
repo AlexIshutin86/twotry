@@ -429,7 +429,7 @@
      display: grid;
     grid-template-columns: 30rem 50rem;
     max-width: 1300px;
-    margin: 0 auto;
+    
    justify-content: space-between;
 }
 
