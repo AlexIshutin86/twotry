@@ -4,7 +4,7 @@
   width: 100%;
 
   background: rgb(65, 80, 116);
-  border-radius: 3rem;
+ 
   position: relative;
   overflow: hidden; /* изменено с visible для лучшего контроля */
 
@@ -240,7 +240,7 @@
 
   .text1 {
     margin-left: 0;
-    text-align: center;
+    text-align: left;
    
   }
 
@@ -256,7 +256,7 @@
 }
 
 .cardPohod {
-  min-width: 20rem;
+  min-width: 23rem;
   
 }
  .carouselDlyDney-container{

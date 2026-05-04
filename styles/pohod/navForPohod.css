@@ -641,8 +641,8 @@
 
 .bezopasnost-grid {
     background-color: rgb(35, 37, 48);
-    padding: 2rem;
-   
+    padding: 1rem;
+  
     border-radius: 2rem;
      z-index: 5;
 }
@@ -660,7 +660,9 @@
     .bezopasnost-grid .title {
      padding-bottom: 0.5rem;
     padding-left: 1.5rem;
-  
+  }
+    .bezopasnost-grid {
+     margin-top: -6rem;
     }
 
 }
