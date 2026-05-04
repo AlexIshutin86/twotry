@@ -46,7 +46,12 @@
     margin-left: 1rem;
 }
 
-
+.inside {
+    display: flex;
+    flex-direction: column;
+   
+    gap: 0.5rem;
+}
 
 .gridPoxod {
     width: 100%;
