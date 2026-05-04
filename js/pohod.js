@@ -152,33 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
     carousel.style.cursor = 'grabbing';
   };
 
-  const dragging = (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-
-    const x = e.pageX - carousel.getBoundingClientRect().left;
-    const walk = (x - startX) * 1.5;
-    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
-
-    carousel.scrollLeft = Math.max(0, Math.min(startScrollLeft - walk, maxScroll));
-    hasMoved = true;
-  };
-
-  const dragStop = () => {
-    isDragging = false;
-    carousel.classList.remove('dragging');
-    carousel.style.cursor = 'grab';
-  };
-
-  // Для touch (мобильные устройства)
-  const touchStart = (e) => {
-    isDragging = true;
-    hasMoved = false;
-    carousel.classList.add('dragging');
-    startX = e.touches[0].pageX - carousel.getBoundingClientRect().left;
-    startScrollLeft = carousel.scrollLeft;
-  };
-
+ 
   const touchMove = (e) => {
     if (!isDragging) return;
     e.preventDefault();
