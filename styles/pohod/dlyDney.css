@@ -113,7 +113,7 @@
 
 /* Карточки */
 .cardPohod {
-  min-width: 24rem;
+  min-width: 28rem;
   grid-row: span 3;
   display: grid;
   grid-template-rows: subgrid;
