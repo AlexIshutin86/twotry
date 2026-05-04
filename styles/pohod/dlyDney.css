@@ -130,10 +130,6 @@
   position: relative;
   /* Улучшенная доступность */
   outline: none;
-  
-   
-
-   
 
 }
 
@@ -186,6 +182,36 @@
 }
 
 
+
+.pohod-overlay {
+   
+    position: absolute;
+    top: 0.3rem;
+    left: 0.3rem;
+    right: 0;
+    bottom: 0;
+    
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem;
+    
+    transition: opacity 0.3s ease;
+}
+
+.cardPohod:hover .pohod-overlay {
+    opacity: 1;
+}
+
+.pohod-days {
+    background-color: #f5dd05;
+    color: rgb(12, 12, 12);
+    padding: .3rem 0.8rem;
+    border-radius: 2rem;
+    font-size: 1ю5rem;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 
 
