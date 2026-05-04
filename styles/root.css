@@ -137,11 +137,11 @@ a {
 .btn{
     color: rgb(255, 255, 255);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background: linear-gradient(90deg, #09c909, #15c405);
+    background: linear-gradient(90deg, #03b103, #1bc405);
     border: none;
     border-radius: 2rem;
     padding: 0.4rem 1rem;
-    
+  
     font-size: 1.5rem;
     font-weight: 500;
     cursor: pointer;
@@ -149,6 +149,10 @@ a {
     align-items: center;
     gap: 0.8rem;
     transition: all 0.3s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -182,3 +186,8 @@ a {
 
 }
 
+.btn-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #0a0a0a;
+    font-weight: 600;
+}

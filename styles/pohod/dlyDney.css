@@ -68,6 +68,9 @@
   font-size: 1.25rem;
   transition: all 0.3s ease;
   box-shadow: 0 3px 6px rgb(18, 18, 26);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .carousel-buttons #scrollLeftPohod:hover,
@@ -96,12 +99,12 @@
 }
 
 /* Стили для dragging */
-.carouselDlyDney.dragging {
+.carouselDlyDney-container.dragging {
   scroll-behavior: auto;
   cursor: grabbing;
 }
 
-.carouselDlyDney.dragging .cardPohod {
+.carouselDlyDney-container.dragging .cardPohod {
   cursor: grabbing;
   user-select: none;
   pointer-events: none;

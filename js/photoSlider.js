@@ -8,7 +8,7 @@ function initializeSlider(){
    
     if(slides.length > 0){
         slides[slideIndex].classList.add("displaySlide");
-        intervalid = setInterval(nextSlide, 5000);
+       
         console.log (intervalid);
     }
 }
