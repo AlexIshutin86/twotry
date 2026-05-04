@@ -13,7 +13,7 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Onest:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    
     </head>
 
 <body>
@@ -50,6 +50,8 @@
             </div>
         </section>
 
+       
+
         <ul class="nav-linksPoxod">
             <li><a href="#about">О походе</a></li>
             <li><a href="#carouselDlyDney">Программа</a></li>
@@ -65,7 +67,7 @@
         
         <section id="info-boxForPoxod"  class="info-boxForPoxod">
 
-          
+          <div class="wrapper">
 
             <div class="info-boxForPoxod-container">
 
@@ -133,6 +135,7 @@
 
             </div>
 
+            </div> 
                
         </section>
 
@@ -154,51 +157,64 @@
         </section>
 
         <section class="details-section" id="about"> 
-        <div class="details-container">
-                
+
+        <div class="wrapper">
+            
+            <div class="details-container">
+                        
                 <h1 class="details-title">Подробнее</h1>
-                
                 <div class="details-content">
 
-                    <div class="details-text">
+                        <div class="details-text">
 
-                        <h2>Для кого поход</h2>
+                            <h2>Для кого поход</h2>
 
-                        <div class="details-description" id="detailsDescription2">
-                            <p>Маршрут подходит туристам с любым опытом или его отсутвием, желающим увидеть не туристическую жизнь Кавказа и открыть для себя Дагестан с неизвестной стороны.
-                            Дневные переходы и перепады высот адаптированы под  световой день, чтобы здоровый человек без специальной физической подготовки мог пройти его. При этом нам предстоит
-                            пройти три плато и набрать около 3500м высоты на пути в Гуниб.</p>
+                            <div class="details-description" id="detailsDescription2">
+                                <p>Маршрут подходит туристам с любым опытом или его отсутвием, желающим увидеть не туристическую жизнь Кавказа и открыть для себя Дагестан с неизвестной стороны.
+                                Дневные переходы и перепады высот адаптированы под  световой день, чтобы здоровый человек без специальной физической подготовки мог пройти его. При этом нам предстоит
+                                пройти три плато и набрать около 3500м высоты на пути в Гуниб.</p>
+                                
+                                <p class="full-text">Район похода:
+                                Маршрут "Тропой императора" проходит по центральному Дагестану. В сердце страны гор, находятся удивительные извястниковые плато. 
+                                Плато Турчи- большой зеленый каменный стол с размерами 12 на 16 км. На вершине  находятся русла рек , горы, каньоны и сотни вольно пасущихся животных. 
+                                Плато Кегер - каменистая саванна почти полностью лишенная растительности. Уникальное место, напоминающее другую планету.
+                                Плато Гуниб - природная крепость с отвесными стенами. Гуниб похож на птицу или ладони. Лес растущий наверху оказывает исцеляющий эффект на лёгкие. В альпийской зоне пасутся дикие яки,  вершины плато открывается лучший вид на центральный Дагестан.</p>
+                                
                             
-                            <p class="full-text">Район похода:
-                            Маршрут "Тропой императора" проходит по центральному Дагестану. В сердце страны гор, находятся удивительные извястниковые плато. 
-                            Плато Турчи- большой зеленый каменный стол с размерами 12 на 16 км. На вершине  находятся русла рек , горы, каньоны и сотни вольно пасущихся животных. 
-                            Плато Кегер - каменистая саванна почти полностью лишенная растительности. Уникальное место, напоминающее другую планету.
-                            Плато Гуниб - природная крепость с отвесными стенами. Гуниб похож на птицу или ладони. Лес растущий наверху оказывает исцеляющий эффект на лёгкие. В альпийской зоне пасутся дикие яки,  вершины плато открывается лучший вид на центральный Дагестан.</p>
+                            </div>
                             
-                         
+                            <button class="read-more-btn" id="readMoreBtn2">
+                                <span class="btn-text">Читать полностью</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            
                         </div>
-                        
-                        <button class="read-more-btn" id="readMoreBtn2">
-                            <span class="btn-text">Читать полностью</span>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </button>
-                        
-                    </div>
+            
                 </div>
+
+            </div>
 
         </div>
         </section>
 
 
            <section id="carouselDlyDney" class="carouselDlyDney">
-        <div class="carousel-header">
-            <div class="text1">
-                <h1>Программа по дням</h1>
+
+            <div class="wrapper">
+
+                <div class="carousel-header">
+            
+                <div class="text1">
+                    <h1>Программа по дням</h1>
+                </div>
+                
+                <div class="carousel-buttons">
+                    <i id="scrollLeftPohod" class="fa-solid fa-arrow-left" aria-label="Прокрутить влево"></i>
+                    <i id="scrollRightPohod" class="fa-solid fa-arrow-right" aria-label="Прокрутить вправо"></i>
+                </div>
+                
             </div>
-            <div class="carousel-buttons">
-                <i id="scrollLeftPohod" class="fa-solid fa-arrow-left" aria-label="Прокрутить влево"></i>
-                <i id="scrollRightPohod" class="fa-solid fa-arrow-right" aria-label="Прокрутить вправо"></i>
-            </div>
+        
         </div>
 
         <ul class="carouselDlyDney-container" tabindex="0" aria-live="polite">
@@ -365,151 +381,279 @@
         </section>
 
          <section class="bezopasnost-grid" id="bezopasnost-grid">
-
-            <div class="title">
-            <h1>Безопасность мой приоритет</h1>
-            </div>
-
-            <div class="bezopasnost">
-
-                <div class="bezopasnost-container" style="grid-area: box-1">
-                        <div>
-                            
-                        <h1>Разведанный маршрут.</h1>
-                        <h3>Я организую походы только в местности которую хорошо знаю сам. Всё продумано до мелочей.</h3>
-                        </div>
-                            
+            <div class="wrapper">
+                <div class="title">
+                <h1>Безопасность мой приоритет</h1>
                 </div>
 
-                <div class="bezopasnost-container" style="grid-area: box-2">
-                        <div>
-                        <h1>Связь по рации с мобильным лагерем.</h1>
-                        <h3>Поход всегда зарегистрирован в мчс.
-                            Знание местных жителей, способных прийти на помощь в случаи  ЧС.
-                        </h3>
-                        </div>
-                </div>
+                <div class="bezopasnost">
 
-                <div class="bezopasnost-container" style="grid-area: box-3">
-                        <div>
-                        <h1>Поход всегда зарегистрирован в мчс.</h1>
-                        <h3></h3>
-                        </div>
-                </div>
-                
-                <div class="bezopasnost-container" style="grid-area: box-4">
-                        <div>
-                        <h1>Знание местных жителей, способных прийти на помощь в случаи  ЧС.</h1>
-                        <h3></h3>
-                        </div>
-                </div>
-
-                <div class="bezopasnost-container" style="grid-area: box-5">
-                
-                <div>
-                    <h1>Первая помощь</h1>
-                    <h3>
-                    Инструктор проводник прошёл курс базовой и расширенной первой помощи в Красном Кресте.
-                    </h3>
-                </div>
-
-            </div>
-
-            <div class="bezopasnost-container" style="grid-area: box-6">
-                    <div>
-                        <h1>Страховка
-                        На каждого участника оформляется страховка</h1>
-                        <h3>
-                        Перед походом группа проходит инструктаж по технике безопасности в данном районе. 
-                        Никакой" воды", только необходимая информация.</h3>
+                    <div class="bezopasnost-container" style="grid-area: box-1">
+                            <div>
+                                
+                            <h1>Разведанный маршрут.</h1>
+                            <h3>Я организую походы только в местности которую хорошо знаю сам. Всё продумано до мелочей.</h3>
+                            </div>
+                                
                     </div>
-            </div>
 
-            </div>
+                    <div class="bezopasnost-container" style="grid-area: box-2">
+                            <div>
+                            <h1>Связь по рации с мобильным лагерем.</h1>
+                            <h3>Поход всегда зарегистрирован в мчс.
+                                Знание местных жителей, способных прийти на помощь в случаи  ЧС.
+                            </h3>
+                            </div>
+                    </div>
 
+                    <div class="bezopasnost-container" style="grid-area: box-3">
+                            <div>
+                            <h1>Поход всегда зарегистрирован в мчс.</h1>
+                            <h3></h3>
+                            </div>
+                    </div>
+                    
+                    <div class="bezopasnost-container" style="grid-area: box-4">
+                            <div>
+                            <h1>Знание местных жителей, способных прийти на помощь в случаи  ЧС.</h1>
+                            <h3></h3>
+                            </div>
+                    </div>
+
+                    <div class="bezopasnost-container" style="grid-area: box-5">
+                    
+                    <div>
+                        <h1>Первая помощь</h1>
+                        <h3>
+                        Инструктор проводник прошёл курс базовой и расширенной первой помощи в Красном Кресте.
+                        </h3>
+                    </div>
+
+                </div>
+
+                <div class="bezopasnost-container" style="grid-area: box-6">
+                        <div>
+                            <h1>Страховка
+                            На каждого участника оформляется страховка</h1>
+                            <h3>
+                            Перед походом группа проходит инструктаж по технике безопасности в данном районе. 
+                            Никакой" воды", только необходимая информация.</h3>
+                        </div>
+                </div>
+
+                </div>
+            </div>
         </section>
 
 
          <section class="provodniki" id="provodniki">
+             
             <div class="provodniki-container">
 
-                <h1 class="provodniki-title">Проводники</h1>
-                
-                <div class="provodnik">
+                <div class="wrapper">
 
-                    <img class="provodnikImg" src="./foto/wolgaMore/vladimer.jpg" alt="Владимир">
+                    <h1 class="provodniki-title">Проводники</h1>
                     
-                    <div class="provodnik-info">
+                    <div class="provodnik">
+                        <img class="provodnikImg" src="./foto/wolgaMore/vladimer.jpg" alt="Владимир">
+                        
+                        <div class="provodnik-info">
 
-                        <h2>Владимир Сергиенко</h2>
-                        <p>Сертифицированный инструктор проводник. Два года прожил в Якутской тайге. На протяжении 4 лет принимал участие в создании Кавказской тропы. Прошёл пешком по горам Кавказа более 3500 км. Создатель пешеходной тропы Волга море.</p>
-                    
+                            <h2>Владимир Сергиенко</h2>
+                            <p>Сертифицированный инструктор проводник. Два года прожил в Якутской тайге. На протяжении 4 лет принимал участие в создании Кавказской тропы. Прошёл пешком по горам Кавказа более 3500 км. Создатель пешеходной тропы Волга море.</p>
+                        
+                        </div>
                     </div>
+
                 </div>
 
-               
             </div>
+             
         </section>
 
-           <section class="price" id="price">
+        <section class="price" id="price">
+
+            <div class="wrapper">
         
-        <div class="price-container">
+                <div class="price-container">
 
-            <div class="price-header">
-                <h1 class="price-title">Цена   40 000 ₽</h1>
+                    <div class="price-header">
+                        <h1 class="price-title">Цена   40 000 ₽</h1>
+                    </div>
+
+                    <div class="price-grid">
+
+                        <div class="price-item">
+
+                            <div class="price-question">
+                                <h3>Входит в цену</h3>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+
+                            <div class="price-answer">
+                                <p>Что входит в стоимость тура:</p>
+                                <ul>
+                                    <li>Трансфер из Махачкалы до села Кумух</li>
+                                    <li>Трансферы на маршруте</li>
+                                    <li>Проживание</li>
+                                    <li>Питание</li>
+                                    <li>Групповая спортивная страховка</li>
+                                    <li>Сопровождение инструктором проводником</li>
+                                    <li>Трансфер из Гуниба до Махачкалы.</li>
+                                    <li>Регистрация группы в мчс</li>
+                                    <li>Услуги гида-инструктора (реестровый № инструктора-проводника 3938)</li>
+                                    <li>Проживание в глэмпинге</li>
+                                    <li>Баня+чан в глэмпинге (2 часа)</li>
+                                    <li>Трансфер Сосновка – Саратов</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="price-item">
+
+                            <div class="price-question">
+
+                                <h3>Не входит в цену</h3>
+                                <i class="fa-solid fa-chevron-down"></i>
+
+                            </div>
+                            
+                            <div class="price-answer">
+
+                                <p>Что не входит в стоимость тура:</p>
+
+                                <ul>
+                                    <li>Билеты до Махачкалы</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="price-grid">
-
-                <div class="price-item">
-
-                    <div class="price-question">
-                        <h3>Входит в цену</h3>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-
-                    <div class="price-answer">
-                        <p>Что входит в стоимость тура:</p>
-                        <ul>
-                            <li>Трансфер из Махачкалы до села Кумух</li>
-                            <li>Трансферы на маршруте</li>
-                            <li>Проживание</li>
-                            <li>Питание</li>
-                            <li>Групповая спортивная страховка</li>
-                            <li>Сопровождение инструктором проводником</li>
-                            <li>Трансфер из Гуниба до Махачкалы.</li>
-                            <li>Регистрация группы в мчс</li>
-                            <li>Услуги гида-инструктора (реестровый № инструктора-проводника 3938)</li>
-                            <li>Проживание в глэмпинге</li>
-                            <li>Баня+чан в глэмпинге (2 часа)</li>
-                            <li>Трансфер Сосновка – Саратов</li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <div class="price-item">
-
-                    <div class="price-question">
-
-                        <h3>Не входит в цену</h3>
-                        <i class="fa-solid fa-chevron-down"></i>
-
-                    </div>
-                    
-                    <div class="price-answer">
-
-                        <p>Что не входит в стоимость тура:</p>
-
-                        <ul>
-                            <li>Билеты до Махачкалы</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </div>
         </section>
+
+
+        
+
+        <!-- Почему стоит приехать -->
+        <section class="faq-section" id="faq-section">
+
+            <div class="wrapper">
+
+                <div class="faq-container">
+                    <h1 class="faq-title">Почему стоит приехать</h1>
+                    
+                        <div class="faq-grid">
+                        <!-- Блок 1: -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>1 Пятничная  Мечеть села Кумух</h3>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Второе по старшенству здание в России. Время постройки середина 8 века. Орхитектура оформление мечети не имеют аналогов в России. Переступив её порог ты попадаешь в параллельный мир, который напоминает о райский жизни и пути ведущим туда. </p>
+                            </div>
+                        </div>
+
+                        <!-- Блок 2: Вес рюкзака -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>2 Орлы.</h3>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Отвесные скалы  известняковых плато, служат домом многочисленным орлам и стервятникам. Как только воздух с утра прогреется,  большие птицы начинают  парить, поднимаясь в небо с теплыми потоками. Можно смотреть вечно на четыре вещи. И кроме огня , воды и работающего человека это полет орлов.</p>
+                            </div>
+                        </div>
+
+                        <!-- Блок 3: Гигиена -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>3 Турчи </h3>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Широкая плоская гора на вершине которой текут реки  и вздымаются горы. Здесь ты забываешь, что находишся на вершине горы, ибо её площадь более 200 квадратных километров. На плато есть покинутый людьми аул, от которого остались стены домов сложенные из масивных камней. Здесь облака плывут на уровне земли, а трава остаётся зелёная всё лето. Пол года в году, плато служит постбищем для многочисленных  стад коров и табунов лошадей. Вольные кони в горах, это незабываемое зрелище.</p>
+                            </div>
+                        </div>
+
+                        <!-- Блок 4: Вода -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>4 Кегер</h3>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Известняковое наклонное плато сложной формы.
+                                    Каменистую саванную почти лешенную растительности прорезают гигантские каньоны. На плато Кегер зародилась горное земледелие.
+                                    </p>
+                            </div>
+                        </div>
+
+                        <!-- Блок 5: Животные -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>5 Кудалинские пирамиды </h3>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Холмы рядом с селом Кудали, в незопамятые времена превращение людьми в правильные пирамидальные террасы. </p>
+                            </div>
+                        </div>
+
+                        <!-- Блок 6: Питание -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>6 Салтинский водопад</h3>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Единственный в Дагестане подземный водопад, памятник природы регионального значения.</p>
+                            </div>
+                        </div>
+
+                        <!-- Блок 6: Питание -->
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h3>7 Поляна Айвазовского</h3>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>это живописная обзорная площадка на Кегерском плато, откуда открывается панорамный вид на Гунибское плато. Свое название она получила в честь художника-мариниста Ивана Айвазовского, который написал здесь свою картину «Аул Гуниб»</p>
+                                </div>
+                            </div>
+                     
+
+                     
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h3>8 Гуниб </h3>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>известняковое плато и одноименное село в центральном дагестане. По праву можно назвать чудом Кавказа.</p>
+                                </div>
+                            </div>
+               
+
+            
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h3>9 Абрикосы</h3>
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>прекрасно растут в долинах и на склонах гор. Это главное дерево центрального Дагестана. На вкус они просто великолепны и заметно отличаются от деревьев растущих на равнине.</p>
+                                </div>
+                            </div>
+    
+
+                </div>
+            </div>
+        </section>
+        
 
 
         <div class="scrollUp" id="scrollUpBtn">

@@ -21,16 +21,17 @@
 /* Хедер карусели */
 .carousel-header {
   display: flex;
-  padding-top: 2rem;
+  flex-direction: row;
+  padding-top: 1rem;
+  
   justify-content: space-between;
- margin-left: 4rem;
-  max-width: 90%;
-
+  align-items: center;
  
   
-  
-
+ 
 }
+
+
 
 /* Заголовок */
 .text1 {

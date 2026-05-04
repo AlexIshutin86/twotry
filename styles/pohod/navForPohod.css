@@ -446,6 +446,7 @@
     
     gap: 3rem;
     align-items: start;
+    padding-right: 2rem;
 }
 
 
@@ -994,7 +995,7 @@ background: rgb(255, 251, 39);}
     min-height: 30rem;
     padding: 4rem 2rem;
     background: linear-gradient(135deg, #323247 0%, #16213e 100%);
-    
+     height: fit-content;
     border-radius: 3rem;
    
    
@@ -1004,6 +1005,7 @@ background: rgb(255, 251, 39);}
     display: grid;
     grid-template-columns: 35rem 35rem;
     max-width: 1200px;
+   
     margin: 0 auto;
 }
 

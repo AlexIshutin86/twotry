@@ -1,6 +1,11 @@
 
 
-
+.wrapper {
+    max-inline-size: 1420px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+    border: 5px dotted red;
+}
 
 
 
