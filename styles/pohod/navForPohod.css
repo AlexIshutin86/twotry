@@ -392,12 +392,19 @@
 }
 
 
+.price-question h3{
+   
+    justify-content: start;
+    align-items: start;
+}
+
 .price-answer p {
   
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(255, 255, 255);
     font-weight: 500;
     line-height: 1.4rem;
+    
     
 }
 
@@ -985,120 +992,6 @@ background: rgb(255, 251, 39);}
 
 
 
-
-
-
-/*  FAQ */
-
-
-/* ========== СЕКЦИЯ ВОПРОСЫ И ОТВЕТЫ (FAQ) ========== */
-
-
-.faq-section {
-    width: 100%;
-    min-height: 30rem;
-    padding: 4rem 2rem;
-    background: linear-gradient(135deg, #323247 0%, #16213e 100%);
-     height: fit-content;
-    border-radius: 3rem;
-   
-   
-}
-
-.faq-container {
-    display: grid;
-    grid-template-columns: 35rem 35rem;
-    max-width: 1200px;
-   
-    margin: 0 auto;
-}
-
-.faq-title {
-    text-align: left;
-   
-    font-weight: 600;
-  
-    margin-bottom: 3rem;
-    position: relative;
-}
-
-
-.faq-grid {
-    display: grid;
-    grid-template-rows: 5rem, 2fr;
-    grid-template-columns: 45rem;       /* repeat(auto-fit, minmax(500px, 1fr));*/
-    gap: 1.5rem;
-}
-
-.faq-item {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(10px);
-    border-radius: 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    overflow: hidden;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.faq-item:hover {
-    background: rgba(255, 255, 255, 0.12);
-    transform: translateY(-2px);
-}
-
-.faq-question {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem;
-    gap: 1rem;
-}
-
-.faq-question h3 {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: #fff;
-    margin: 0;
-    flex: 1;
-}
-
-.faq-question i {
-    font-size: 1.2rem;
-    color: #ffffff;
-    transition: transform 0.3s ease;
-}
-
-/* Активное состояние (открытый вопрос) */
-.faq-item.active .faq-question i {
-    transform: rotate(180deg);
-}
-
-.faq-answer {
-    max-height: 0;
-    padding: 0 1.5rem;
-    overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.3s ease;
-}
-
-.faq-item.active .faq-answer {
-    max-height: 500px; /* Достаточно для раскрытия контента */
-    padding: 0 1.5rem 1.5rem 1.5rem;
-}
-
-.faq-answer p {
-    color: rgba(255, 255, 255, 0.85);
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-}
-
-.faq-answer p:last-child {
-    margin-bottom: 0;
-}
-
-
-
-
-
 .price{
     min-height: 10rem;
     width: 100%;
@@ -1251,13 +1144,10 @@ background: rgb(255, 251, 39);}
     
    
     
-    .price-value {
-        text-align: center;
-       
-    }
+   
 
     .price-title{
-        text-align: center;
+        text-align: left;
     }
     
     .price-grid {
@@ -1289,7 +1179,7 @@ background: rgb(255, 251, 39);}
     
     .price-title {
         font-size: 1.8rem;
-        text-align: center;
+        text-align: left;
     }
     
     .price-value {
@@ -1372,24 +1262,12 @@ background: rgb(255, 251, 39);}
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* ========== СЕКЦИЯ ВОПРОСЫ И ОТВЕТЫ (FAQ) - АДАПТИВНАЯ ========== */
 
 .faq-section {
     width: 100%;
     padding: 3rem 2rem;
-  background: rgb(65, 80, 116);
-    
+    background: rgb(65, 80, 116);
     border-radius: 3rem;
     
 }
@@ -1444,11 +1322,12 @@ background: rgb(255, 251, 39);}
     margin: 0;
     flex: 1;
     line-height: 1.4;
+    align-items: start;
 }
 
 .faq-question i {
     font-size: 1.2rem;
-    color: #ffd700;
+    color: #ffffff;
     transition: transform 0.3s ease;
     flex-shrink: 0;
 }
@@ -1514,7 +1393,7 @@ background: rgb(255, 251, 39);}
     }
     
     .faq-title {
-        text-align: center;
+        text-align: left;
         font-size: 2rem;
         position: static;
         margin-bottom: 0;
