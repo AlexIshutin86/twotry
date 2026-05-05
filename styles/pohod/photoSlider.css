@@ -7,8 +7,8 @@
     width: 100%;
     
     /* FIXED HEIGHT: This defines the size. The image will match this exactly. */
-    height: 600px; 
-    max-height: 600px;
+    height: 900px; 
+    max-height: 900px;
     
     margin-top: -5rem;
     background-color: #333333; /* Placeholder color while loading */
@@ -16,12 +16,14 @@
 }
 
 .photo-slider img {
- 
+    height: 100%;
+    width: 100%;
     display: none;
     
     /* This makes the image cover the area without distortion */
     object-fit: cover; 
     object-position: center;
+   
 }
 
 img.displaySlide {
@@ -76,6 +78,12 @@ img.displaySlide {
         max-height: 400px;
         margin-top: -3rem;
     }
+
+    .photo-slider img {
+    height: 160%;
+    width: 160%;
+    
+}
 }
 
 /* Mobile */
@@ -92,4 +100,9 @@ img.displaySlide {
         min-width: 35px;
         min-height: 35px;
     }
+    .photo-slider img {
+    height: 160%;
+    width: 160%;
+    
+}
 }
