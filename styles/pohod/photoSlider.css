@@ -7,8 +7,8 @@
     width: 100%;
     
     /* FIXED HEIGHT: This defines the size. The image will match this exactly. */
-    height: 900px; 
-    max-height: 900px;
+    height: 100px; 
+    max-height: 1200px;
     
     margin-top: -5rem;
     background-color: #333333; /* Placeholder color while loading */
@@ -20,15 +20,16 @@
     width: 100%;
     display: none;
     
-    /* This makes the image cover the area without distortion */
+
     object-fit: cover; 
     object-position: center;
+    
    
 }
 
 img.displaySlide {
-    /* Changed from 'flex' to 'block' - images should not be flex containers */
-    display: block; 
+   min-width: 140rem;
+    display: flex; 
     animation-name: fade;
     animation-duration: 1.5s;
 }
@@ -76,14 +77,10 @@ img.displaySlide {
     .photo-slider {
         height: 400px;
         max-height: 400px;
-        margin-top: -3rem;
+        margin-top: -10rem;
     }
 
-    .photo-slider img {
-    height: 160%;
-    width: 160%;
-    
-}
+ 
 }
 
 /* Mobile */
@@ -100,9 +97,5 @@ img.displaySlide {
         min-width: 35px;
         min-height: 35px;
     }
-    .photo-slider img {
-    height: 160%;
-    width: 160%;
-    
-}
+
 }
