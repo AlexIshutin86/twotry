@@ -156,150 +156,71 @@ position: absolute;
 
 
 
-@media (min-width: 1024px) and (max-width: 1200px) {
- 
+/* ========== RESPONSIVENESS FOR SCHEDULE CAROUSEL ========== */
+
+
+
+
+
+/* Mobile Small (220px - 379px) */
+@media (min-width: 220px) and (max-width: 400px) {
+    .scheduleItems {
+        grid-template-columns: 1fr;
+        margin-top: -15rem;
+       padding: 0.1;
+        
+        border-radius: 1rem 1rem 0rem 0rem;
     }
 
+    .carouselScheduleItems-container {
+        grid-auto-columns: 180px;
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
 
-@media (min-width: 340px) and (max-width: 1023px) {
-.scheduleItems {
-    
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(28rem, 2fr));
-    justify-content: center;
-    align-content: center;
-   
-    padding-top: 0.5rem;
+    .cardScheduleItems {
+        padding: 0.4rem;
+    }
 
-    background-color: rgb(22, 36, 49);
-    margin-top: -15rem;
-  
-    padding-left: 2rem;
-    padding-right: 2rem;
-    z-index: 1;
-    border-radius: 2rem 2rem 0rem 0rem;
+    .cardScheduleItems .img {
+        max-height: 120rem;
+        border-radius: 0.6rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .sheduls-days {
+        font-size: 0.8rem;
+        padding: 0.1rem 0.3rem;
+    }
+
+    .poxodDescription {
+        font-size: 0.75rem;
+        padding: 0rem 0.3rem;
+    }
 }
 
 
+/* Fix scrollbar for all screen sizes */
+.carouselScheduleItems-container::-webkit-scrollbar {
+    height: 4px;
+}
+
+.carouselScheduleItems-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.carouselScheduleItems-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+}
+
+.carouselScheduleItems-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+/* Firefox scrollbar */
 .carouselScheduleItems-container {
-  
-    min-width: 10rem;
-    gap: 0.3rem;
-    align-items: center;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-   
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    
-    /* Улучшение производительности */
-    will-change: scroll-position;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    padding:1rem 0rem;
-    grid-auto-rows: 450px 50px 150px 55px;
-    
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.1);
 }
-
-
-
-
-.cardScheduleItems{
-  min-width: 10rem; 
-   
-  grid-row: span 4;
-  display: grid;
-  grid-template-rows: subgrid;
-
-  
-  
-  scroll-snap-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  cursor: grab;
-  will-change: transform;
-  position: relative;
-  /* Улучшенная доступность */
-  outline: none;
-   transition: 0.3s ease;
-}
-
-.cardScheduleItems:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-.schedule-overlay {
-position: absolute;
-    top: 0.3rem;
-    left: 0.3rem;
-    right: 0;
-    bottom: 0;
-    
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 1rem;
-    
-    transition: opacity 0.3s ease;
-}
-
-.sheduls-days {
-    background-color: #bbbbbb;
-    color: rgb(10, 10, 10);
-    padding: .3rem 0.8rem;
-    border-radius: 2rem;
-    font-size: 1.2rem;
-    font-weight: 500;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.poxodDescription {
-    color: #181818;
-    align-items: start;
-   text-align: left;
-   background-color: #5eff13;
-   max-width: fit-content;
-   border-radius: 3rem;
-   padding: 0rem 1rem 0rem 1rem;
-   font-size: 1.4rem;
-
-   
-}
-
-
-.cardScheduleItems .img {
-    overflow: hidden;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
-  /* Плавное появление */
-  opacity: 1;
-  transition: opacity 0.3s ease;
-  max-height: 55rem;
-  min-width: 10rem;
-  
-  
-}
-
-.cardScheduleItems .img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-   transition: 0.3s ease;
-}
-
-
-
-
-
- 
-}
-
-
-
-
-
-@media (min-width: 220px) and (max-width: 767px) {
-      
-}
-   
