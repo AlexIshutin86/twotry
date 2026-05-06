@@ -7,6 +7,14 @@
     /*border: 5px dotted red;*/
 }
 
+@media (max-width: 800px) {
+    .wrapper{
+    max-inline-size: 620px;
+    margin-inline: auto;
+    padding-inline: 0.2rem;
+    }
+}
+
 
 
 
