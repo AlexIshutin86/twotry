@@ -3,13 +3,13 @@
 .scheduleItems {
     
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24rem, 2fr));
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 2fr));
     justify-content: center;
     align-content: center;
    
     padding-top: 0.5rem;
 
-    background-color: rgb(49, 50, 51);
+    background-color: rgb(22, 36, 49);
     margin-top: -15rem;
   
     padding-left: 2rem;
@@ -35,7 +35,7 @@
     will-change: scroll-position;
     transform: translateZ(0);
     backface-visibility: hidden;
-    padding: 2rem;
+    padding:2rem;
     grid-auto-rows: 450px 50px 150px 55px;
     
 }
