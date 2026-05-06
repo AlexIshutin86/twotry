@@ -36,7 +36,7 @@
     transform: translateZ(0);
     backface-visibility: hidden;
     padding: 2rem;
-    grid-auto-rows: 300px 50px 140px;
+    grid-auto-rows: 400px 50px 240px;
     
 }
 
@@ -45,6 +45,7 @@
 
 .cardScheduleItems{
     min-width: 20rem;
+
   grid-row: span 3;
   display: grid;
   grid-template-rows: subgrid;
