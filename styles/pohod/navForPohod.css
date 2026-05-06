@@ -389,9 +389,10 @@
 }
 
 .details-container {
-     display: grid;
+    display: grid;
     grid-template-columns: 30rem 50rem;
     max-width: 1300px;
+    gap: 9rem;
     
    justify-content: space-between;
 }
@@ -400,16 +401,15 @@
     text-align: start;
     position: relative;
     
+    
 }
 
 
 
-.details-content {
-    display: grid;
-    
-    gap: 3rem;
-    align-items: start;
-    padding-right: 2rem;
+.details-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
 
@@ -530,6 +530,13 @@
         text-align: left;
         
     }
+
+    .details-container {
+    display: flex;
+    flex-direction: column;
+   
+    width: 100%;
+}
     
     
 }
