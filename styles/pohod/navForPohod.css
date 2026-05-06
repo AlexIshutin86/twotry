@@ -370,51 +370,7 @@
     border-radius: 3rem;
 }
 
-.price {
-    
-    margin-top: -4rem;
-}
 
-
-
-.price-container{
-    display: grid;
-    grid-template-columns: 30rem 50rem;
-    max-width: 1200px;
-    padding-top: 4rem;
-    
-}
-
-.price-title{
-    color: #ffffff;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 2.7rem;
-}
-
-
-.price-question h3{
-   
-    justify-content: start;
-    align-items: start;
-}
-
-.price-answer p {
-  
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(255, 255, 255);
-    font-weight: 500;
-    line-height: 1.4rem;
-    
-    
-}
-
-@media (max-width: 900px) {
-    p{
-    font-size: 1rem;
-   
-}
-
-}
 
 
 /* ========== СЕКЦИЯ ПОДРОБНЕЕ ========== */
@@ -865,6 +821,7 @@
     padding-bottom: 2rem;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
+    z-index: 4;
     
 }
 
@@ -995,10 +952,11 @@ background: rgb(255, 251, 39);}
 .price{
     min-height: 10rem;
     width: 100%;
-    padding:  2rem;
-    background: linear-gradient(135deg, #323247 0%, #16213e 100%);
-    
-    border-radius: 3rem;
+    padding:  2rem 2rem;
+    background: rgb(44, 53, 77);
+    z-index: 80;
+    border-radius: 2rem 2rem 2rem 2rem;
+    margin-top: -9rem;
     
 }
 
