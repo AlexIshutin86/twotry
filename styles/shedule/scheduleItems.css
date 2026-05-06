@@ -15,7 +15,7 @@
     padding-left: 2rem;
     padding-right: 2rem;
     z-index: 1;
-    border-radius: 3rem 3rem 0rem 0rem;
+    border-radius: 2rem 2rem 0rem 0rem;
 }
 
 
@@ -44,7 +44,7 @@
 
 
 .cardScheduleItems{
-    min-width: 20rem;
+    min-width: 10rem;
 
   grid-row: span 4;
   display: grid;
@@ -62,6 +62,12 @@
   position: relative;
   /* Улучшенная доступность */
   outline: none;
+   transition: 0.3s ease;
+}
+
+.cardScheduleItems:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .schedule-overlay {
@@ -111,44 +117,39 @@ position: absolute;
   opacity: 1;
   transition: opacity 0.3s ease;
   max-height: 25rem;
+  
 }
 
 .cardScheduleItems .img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+   transition: 0.3s ease;
 }
 
-.cardScheduleItems .img img:hover {
-    transform: scale(1.05);
-}
 
-.carouselPoxod-container .cardScheduleItems:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
+
+
 
 
 /* Скрыть скроллбар для красоты */
-.carouselPoxod-container::-webkit-scrollbar {
+.cardScheduleItems-container::-webkit-scrollbar {
     height: 0px;
 }
 
-.carouselPoxod-container::-webkit-scrollbar-track {
+.cardScheduleItems-container::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 0px;
 }
 
-.carouselPoxod-container::-webkit-scrollbar-thumb {
+.cardScheduleItems-container::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.5);
     border-radius: 0px;
 }
 
-.carouselPoxod-container::-webkit-scrollbar-thumb:hover {
+.cardScheduleItems-container::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.8);
 }
-
 
 
 
@@ -162,6 +163,8 @@ position: absolute;
 @media (min-width: 768px) and (max-width: 1023px) {
 
 }
+
+
 
 @media (min-width: 320px) and (max-width: 767px) {
  

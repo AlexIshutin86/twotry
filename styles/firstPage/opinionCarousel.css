@@ -3,7 +3,7 @@
     max-width: 100%;
     width: 100%;
     height: auto;
-    padding: 4rem 0rem 2rem 0rem;
+    padding: 4rem 3rem 2rem 0rem;
     background: rgb(44, 53, 77);
     border-radius: 2rem;
     position: relative;
@@ -339,7 +339,7 @@
 @media (max-width: 560px){
 
 
-
+  
 
 
     .opinionCarousel {

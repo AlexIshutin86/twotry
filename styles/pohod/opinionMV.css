@@ -1,0 +1,349 @@
+/* Основные стили карусели отзывов */
+.opinionCarouselVM {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding: 4rem 3rem 2rem 0rem;
+    background: rgb(44, 53, 77);
+    border-radius: 2rem;
+    position: relative;
+    z-index: 5;
+    margin-top: -5rem;
+    overflow: visible;
+}
+
+.opinionCarouselVM .carousel-headerVM {
+    max-width: 1700px;
+    width: 100%;
+    display: flex; /* ADDED */
+    justify-content: space-between;
+    margin: 1rem auto;
+    gap: 1.5rem;
+}
+
+/* Контейнер для кнопок */
+.opinionCarouselVM .carouselVM-buttons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Кнопки навигации */
+.opinionCarouselVM .carouselVM-buttons #scrollLeftOpinionVM,
+.opinionCarouselVM .carouselVM-buttons #scrollRightOpinionVM {
+    color: #fff;
+    height: 3rem;
+    width: 3rem;
+    background: hsl(215, 31%, 12%);
+    text-align: center;
+    line-height: 3rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+    transition: 0.3s ease;
+    box-shadow: 0 3px 6px rgb(18, 18, 26);
+    position: static;
+}
+
+.opinionCarouselVM .carouselVM-buttons #scrollLeftOpinionVM:hover,
+.opinionCarouselVM .carouselVM-buttons #scrollRightOpinionVM:hover {
+    background: #ffffff;
+    transform: scale(1.1);
+    color: rgb(141, 36, 36);
+}
+
+/* Контейнер карточек - FIXED */
+.opinionCarouselVM-container {
+    display: grid;
+    grid-auto-flow: column;
+   
+    gap: 1.5rem;
+    align-items: stretch;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 1rem 1rem 3rem 1rem;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    will-change: scroll-position;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    
+}
+
+/* Стили для dragging */
+.opinionCarouselVM-container.dragging {
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+    cursor: grabbing;
+}
+
+.opinionCarouselVM-container.dragging .card-OpinionVM {
+    cursor: grabbing;
+    user-select: none;
+    pointer-events: none;
+    transition: none;
+}
+
+/* Карточки - FIXED */
+.opinionCarouselVM-container .card-OpinionVM {
+    display: flex;
+    flex-direction: column; /* Better for variable content */
+    min-width: 60rem;
+    min-height: 20rem;
+    width: 100%; /* Take full width of grid column */
+    list-style: none;
+    background: #262636;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    scroll-snap-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.opinionCarouselVM-container .card-OpinionVM:hover {
+    transform: translateY(-10px);
+}
+
+/* Make opinion content flexible */
+.opinionCarouselVM-container .card-OpinionVM .opinion {
+    flex: 1;
+}
+
+/* Изображения */
+.opinionCarouselVM-container .card-OpinionVM .avatar {
+    width: 5rem;
+    height: 5rem;
+    overflow: hidden;
+    border-radius: 5rem;
+    object-fit: cover;
+}
+
+.opinionCarouselVM-container .card-OpinionVM h1,
+.opinionCarouselVM-container .card-OpinionVM h2 {
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+    color: #fff;
+}
+
+.opinionCarouselVM-container .card-OpinionVM p {
+    color: #fff;
+    padding: 1rem 0rem 1rem 0rem;
+    line-height: 1.5;
+}
+
+.avatarDiskr {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 6rem;
+    gap: 1.5rem;
+    padding: 1rem;
+    margin-top: auto; /* Push to bottom */
+}
+
+.diskr {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    height: auto;
+}
+
+.diskr h3 {
+    color: #fff;
+    margin: 0;
+}
+
+.diskr i {
+    color: #0088cc;
+    font-size: 1.5rem;
+}
+
+.btnOpinionVM {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    background: linear-gradient(90deg, #039b03, #05c405);
+    font-size: 1.2rem;
+    padding: 0.8rem 2rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    gap: 0.5rem;
+    border: none;
+}
+
+.btnOpinionVM:hover {
+    transform: scale(1.05);
+}
+
+.btnOpinionVM h3, .btnOpinionVM i {
+    color: #fff;
+    margin: 0;
+}
+
+/* Стили для диалогов */
+.opinion-dialogVM {
+    border: none;
+    border-radius: 2rem;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    padding: 2rem;
+    max-width: 500px;
+    width: 90%;
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10001;
+}
+
+.opinion-dialogVM::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.closeDialogVM {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+.closeDialogVM:hover {
+    background: #ff4444;
+    transform: scale(1.1);
+}
+
+.dialogOpinionVM-content {
+    color: #fff;
+}
+
+.dialogOpinionVM-content h2 {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Кнопка "Читать полностью" */
+.buttonOpinionVM {
+    position: relative;
+    z-index: 10;
+    background: linear-gradient(90deg, #039b03, #05c405);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    pointer-events: auto;
+    user-select: none;
+}
+
+.buttonOpinionVM:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(3, 155, 3, 0.4);
+}
+
+.buttonOpinionVM h4 {
+    margin: 0;
+    color: #fff;
+}
+
+/* Скроллбар - FIXED (visible now) */
+.opinionCarouselVM-container::-webkit-scrollbar {
+    height: 6px; /* Was 0px */
+}
+
+.opinionCarouselVM-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.opinionCarouselVM-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.opinionCarouselVM-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+
+
+
+
+
+
+
+/* Responsive */
+@media (max-width: 560px) {
+    .opinionCarouselVM {
+        padding: 2rem 0rem 1rem 0rem;
+        margin-top: -8rem;
+    }
+
+
+
+    .opinionCarouselVM-container .card-OpinionVM {
+    display: flex;
+    flex-direction: column; /* Better for variable content */
+    min-width: 14rem;
+    
+}
+
+
+
+    .opinionCarouselVM .carousel-headerVM { /* FIXED class name */
+        max-height: 6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem 1rem 0rem 1rem;
+    }
+    
+    .opinionCarouselVM .carousel-headerVM h1 {
+        font-size: 1.5rem;
+    }
+    
+    .opinionCarouselVM-container {
+        grid-auto-columns: 280px; /* Smaller cards on mobile */
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .opinionCarouselVM .carouselVM-buttons {
+        padding: 0;
+    }
+
+    .opinionCarouselVM-container .card-OpinionVM {
+        margin-top: 2rem; /* Reduced from 8rem */
+        padding: 1rem;
+        min-height: auto;
+    }
+    
+    .avatar {
+        width: 4rem;
+        height: 4rem;
+    }
+    
+    .avatarDiskr {
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+}
