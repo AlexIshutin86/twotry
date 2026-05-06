@@ -176,10 +176,12 @@ position: absolute;
         grid-auto-columns: 180px;
         gap: 0.5rem;
         padding: 0.5rem;
+        
     }
 
     .cardScheduleItems {
         padding: 0.4rem;
+        border-radius: 1.1rem;
     }
 
     .cardScheduleItems .img {
