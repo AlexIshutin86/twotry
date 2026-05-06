@@ -190,7 +190,7 @@
 
 .opinionCarousel-container .card-Opinion p {
     color: #fff;
-    padding: 2rem 2rem 2rem 0rem;
+    padding: 2rem 0rem 2rem 0rem;
 }
 
 
@@ -316,16 +316,16 @@
 
 .opinionCarousel-container::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
+    border-radius: 0px;
 }
 
 .opinionCarousel-container::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
+    border-radius: 0px;
 }
 
 .opinionCarousel-container::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.8);
+    
 }
 
 
@@ -378,12 +378,10 @@
 
 .card-Opinion {
     margin-top: 6rem;
+    max-width: 25rem;
 }
 
-.opinionCarousel-container .card-Opinion h1 {
-    font-size: 1.5rem;
 
-}
 
 }
 
