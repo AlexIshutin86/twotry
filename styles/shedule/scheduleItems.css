@@ -44,7 +44,7 @@
 
 
 .cardScheduleItems{
-  min-width: 17rem; 
+  min-width: 19rem; 
    
   grid-row: span 4;
   display: grid;
@@ -180,7 +180,7 @@ position: absolute;
     }
   
     .cardScheduleItems {
-         min-width: 17.5rem;
+         min-width: 19rem;
         padding: 0.6rem;
         border-radius: 1.1rem;
     }
@@ -198,7 +198,7 @@ position: absolute;
 
     .poxodDescription {
         font-size: 0.75rem;
-        padding: 0rem 0.3rem;
+       
     }
 }
 
