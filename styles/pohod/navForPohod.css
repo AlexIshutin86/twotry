@@ -388,14 +388,7 @@
     line-height: 1.7rem;
 }
 
-.details-container {
-    display: grid;
-    grid-template-columns: 30rem 50rem;
-    max-width: 1300px;
-    gap: 9rem;
-    
-   justify-content: space-between;
-}
+
 
 .details-title {
     text-align: start;
@@ -404,12 +397,13 @@
     
 }
 
-
-
 .details-container {
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
     width: 100%;
+    max-width: 1300px;
+    gap: 9rem;
 }
 
 
@@ -433,6 +427,8 @@
 .details-description .full-text {
     display: none;
     color: #fff;
+
+    
 }
 
 .details-description.expanded .full-text {
