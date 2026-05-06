@@ -22,7 +22,7 @@
 .carouselScheduleItems-container {
     display: grid;
     grid-auto-flow: column;
-
+    
     gap: 0.3rem;
     align-items: center;
     overflow-x: auto;
@@ -44,8 +44,8 @@
 
 
 .cardScheduleItems{
-    min-width: 10rem;
-
+  min-width: 17rem; 
+   
   grid-row: span 4;
   display: grid;
   grid-template-rows: subgrid;
@@ -116,7 +116,8 @@ position: absolute;
   /* Плавное появление */
   opacity: 1;
   transition: opacity 0.3s ease;
-  max-height: 25rem;
+  max-height: 35rem;
+  
   
 }
 
@@ -161,11 +162,18 @@ position: absolute;
 
 
 @media (min-width: 768px) and (max-width: 1023px) {
+.scheduleItems {
+    
+   
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 2fr));
+ 
+}
 
 }
 
 
 
-@media (min-width: 320px) and (max-width: 767px) {
- 
-   }
+@media (min-width: 220px) and (max-width: 767px) {
+      
+}
+   
