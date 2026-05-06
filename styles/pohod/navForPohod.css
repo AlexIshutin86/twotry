@@ -1074,6 +1074,7 @@ background: rgb(255, 251, 39);}
 @media (max-width: 1200px) {
     .price {
         padding: 3rem 1.5rem;
+        margin-top: -1rem;
     }
     
     .price-container {
@@ -1093,6 +1094,7 @@ background: rgb(255, 251, 39);}
         align-items: center;
         padding: 2.5rem 1.5rem;
         border-radius: 2rem;
+        margin-top: -9rem;
     }
     
     .price-container {
@@ -1131,11 +1133,11 @@ background: rgb(255, 251, 39);}
     }
 }
 
-/* Для мобильных устройств (577px - 768px) */
+/* Для мобильных устройств (357px - 768px) */
 @media (max-width: 768px) {
     .price {
         padding: 2rem 1rem;
-      
+        margin-top: 1rem;
         border-radius: 1.8rem;
      
     }
@@ -1176,7 +1178,7 @@ background: rgb(255, 251, 39);}
 /* Для мобильных в альбомной ориентации */
 @media (max-width: 896px) and (orientation: landscape) {
     .price {
-        
+       
         padding: 1rem;
     }
     
