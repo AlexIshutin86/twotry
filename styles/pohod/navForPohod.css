@@ -114,7 +114,7 @@
     
     /* Width */
     width: fit-content;
-    max-width: 90%;
+    max-width: 100%;
     
     /* Transition for smooth scroll effect */
     transition: all 0.3s ease;
@@ -798,12 +798,14 @@
     margin-top: -5rem;
     z-index: 1;
     min-height: fit-content;
+   
 }
 
 .provodniki-container {
     max-width: 1500px;
     margin: 0 auto;
     display: flex;
+    
     flex-direction: column;
     gap: 0.1rem;
 }
@@ -829,6 +831,8 @@
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
     z-index: 4;
+    align-items: center;
+    
     
 }
 
@@ -844,16 +848,20 @@ background: rgb(255, 251, 39);}
     object-fit: cover;
     border-radius: 20rem;
     transition: transform 0.3s ease;
+    
 }
 
 .provodnik:hover img {
     transform: scale(1.02);
+
+    
+    
 }
 
 .provodnik-info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
 }
 
 .provodnik-info h2 {
@@ -885,7 +893,7 @@ background: rgb(255, 251, 39);}
     
     .provodniki-title {
         font-size: 1.8rem;
-        text-align: center;
+        text-align: left;
         padding-top: 7rem;
         padding-bottom: 0rem;
         
@@ -897,7 +905,7 @@ background: rgb(255, 251, 39);}
         grid-template-columns: 1fr;
         gap: 1rem;
         padding: 1.5rem;
-        text-align: center;
+        text-align: left;
         padding-bottom: 0rem;
     }
     
