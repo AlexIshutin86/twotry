@@ -104,6 +104,44 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+/// ========== КНОПКА "ЧИТАТЬ ПОЛНОСТЬЮ" ==========
+document.addEventListener('DOMContentLoaded', function() {
+    // FIXED: Using correct ID that matches HTML
+    const readMoreBtn = document.getElementById('readMoreBtn3');
+    const detailsDescription = document.getElementById('detailsDescription3'); // Was 'detailsDescription2'
+    
+    if (readMoreBtn && detailsDescription) {
+        readMoreBtn.addEventListener('click', function() {
+            // Переключаем класс expanded
+            detailsDescription.classList.toggle('expanded');
+            
+            // Меняем текст кнопки и иконку
+            const btnText = this.querySelector('.btn-text');
+            const icon = this.querySelector('i');
+            
+            if (detailsDescription.classList.contains('expanded')) {
+                btnText.textContent = 'Свернуть';
+                // Rotate icon 180 degrees
+                if (icon) {
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            } else {
+                btnText.textContent = 'Читать полностью';
+                if (icon) {
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            }
+        });
+    } else {
+        console.log('Elements not found:', { 
+            button: readMoreBtn3, 
+            description: detailsDescription 
+        });
+    }
+});
+
+
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
