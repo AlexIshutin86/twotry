@@ -3,7 +3,7 @@
     max-width: 100%;
     width: 100%;
     height: auto;
-    padding: 4rem 0rem 2rem 2rem;
+    padding: 4rem 0rem 2rem 0rem;
     background: rgb(44, 53, 77);
     border-radius: 2rem;
     position: relative;
@@ -151,10 +151,10 @@
 
 .btnOpinion {
     display: flex;
-    
     align-content: center;
     justify-content: center;
-    
+    margin-left: 1rem;
+     margin-right: 1rem;
     background: linear-gradient(to right, rgb(42, 219, 25));
     font-size: 1.5rem;
     padding: 0.8rem 2rem;
