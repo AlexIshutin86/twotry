@@ -27,6 +27,7 @@
 
 .opinionCarousel .carousel-buttons {
     display: flex;
+   
     gap: 1.5rem;
    
 }
@@ -324,9 +325,7 @@
     border-radius: 0px;
 }
 
-.opinionCarousel-container::-webkit-scrollbar-thumb:hover {
-    
-}
+
 
 
 
@@ -355,7 +354,7 @@
     max-height: 6rem;
     display: grid;
     grid-column: auto;
-    
+    align-items: left;
     padding-top: 5rem;
     text-align: left;
 }
@@ -373,7 +372,9 @@
 }
 
 
-
+.opinionCarousel .carousel-buttons {
+padding: 0;
+}
 
 
 .card-Opinion {
