@@ -105,6 +105,14 @@ h2{
     line-height: 1.2;
 }
 
+
+@media (max-width: 1900px) {
+    .cardScheduleItems h2{
+    font-size: 1.8rem;
+    }
+}
+
+
 span {
     display: flex;
     flex-direction: column;

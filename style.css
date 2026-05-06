@@ -53,9 +53,7 @@
 }
 
 
-html{
-     height: 100%;
-}
+
 
 body{
     height: 100%;
@@ -110,6 +108,9 @@ section{
 
 .info-box {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
     top: 15%; /* Center vertically */
     left: 50%;
     transform: translate(-50%, -50%); /* Perfect centering */
@@ -117,9 +118,17 @@ section{
     z-index: 10;
     width: 100%;
     padding: 2rem;
+   
+    
 }
 
+.text2ForFirst h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+    line-height: 2rem;
+    text-align: center;
 
+}
 
 
 
