@@ -25,39 +25,38 @@
        
 
         <section id="topDescription" class="topDescription">
+    <div class="topDescription-container">
+        <div id="hero">
+            <!-- Video element with source switching based on screen size -->
+            <video autoplay loop muted>
+                <!-- Mobile: vertical video for screens < 500px -->
+                <source src="./video/tumbnailForSection/firstTry_compatible.mp4" 
+                        media="(max-width: 500px)" 
+                        type="video/mp4">
+                
+                <!-- Tablet/Desktop: horizontal video for screens > 600px -->
+                <source src="./video/tumbnailForSection/firstTry_cropped.mp4" 
+                        media="(min-width: 601px)" 
+                        type="video/mp4">
+                
+                <!-- Default fallback (for screens between 501-600px or if above don't match) -->
+                <source src="./video/tumbnailForSection/firstTry_cropped.mp4" type="video/mp4">
+            </video>
+        </div>
 
-            <div class="topDescription-container">
-
-                <div id="hero">
-                    
-                        <video autoplay loop muted>
-
-                            <source src="./video/tumbnailForSection/firstTry_cropped.mp4" type="video/mp4">
-
-                        </video>
-                                
-                    </div>
-
-                <div class="info-box">
-
-                    <div class="text">
-                        <h1>Горы мастеров</h1>
-                    </div>
-
-                    <div class="btn-group">
-
-                        <div class="read-more-btn">
-                            <i class="fa-solid fa-arrow-down"></i>
-                            Забронировать
-
-                        </div>
-
-                    </div>
-
-                </div>
-
+        <div class="info-box">
+            <div class="text">
+                <h1>Горы мастеров</h1>
             </div>
-        </section>
+            <div class="btn-group">
+                <div class="read-more-btn">
+                    <i class="fa-solid fa-arrow-down"></i>
+                    Забронировать
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
        
 

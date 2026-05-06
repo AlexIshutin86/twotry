@@ -38,6 +38,44 @@
 
 
 
+#hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+#hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This will crop the video to fill the container */
+    z-index: 10;
+}
+
+/* Optional: Adjust for different aspect ratios */
+@media (max-width: 500px) {
+    #hero video {
+        object-fit: cover; /* Good for vertical videos on mobile */
+    }
+}
+
+@media (min-width: 601px) {
+    #hero video {
+        object-fit: cover; /* Good for horizontal videos on desktop */
+    }
+}
+
+
+
+
+
+
+
+
+
 
 *{
     margin: 0;
