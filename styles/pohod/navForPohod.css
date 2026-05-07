@@ -978,7 +978,8 @@ background: rgb(255, 251, 39);}
 
 
 .price-header {
-    display: grid;
+    display: flex;
+    
     
    
 }
@@ -1081,23 +1082,6 @@ background: rgb(255, 251, 39);}
 
 /* ========== АДАПТИВНОСТЬ ДЛЯ PRICE ========== */
 
-/* Для ноутбуков (1024px - 1200px) */
-@media (max-width: 1200px) {
-    .price {
-        padding: 3rem 1.5rem;
-        margin-top: -1rem;
-    }
-    
-    .price-container {
-        grid-template-columns: 30rem 1fr;
-        gap: 1.5rem;
-    }
-    
-   
-    
-   
-}
-
 /* Для планшетов (768px - 1024px) */
 @media (max-width: 1024px) {
     .price {
@@ -1186,50 +1170,6 @@ background: rgb(255, 251, 39);}
 }
 
 
-/* Для мобильных в альбомной ориентации */
-@media (max-width: 896px) and (orientation: landscape) {
-    .price {
-       
-        padding: 1rem;
-    }
-    
-    .price-container {
-        gap: 1rem;
-    }
-    
-    
-    
-  
-    .price-question h3 {
-        font-size: 0.85rem;
-    }
-    
-    .price-item.active .price-answer {
-        max-height: 350px;
-    }
-    
-    .price-answer li {
-        font-size: 0.7rem;
-    }
-}
-
-/* Для больших экранов (1440px+) */
-@media (min-width: 1440px) {
-    .price-container {
-        max-width: 1400px;
-        grid-template-columns: 35rem 1fr;
-        gap: 3rem;
-    }
-    
-    .price-question h3 {
-        font-size: 1.3rem;
-    }
-    
-    .price-answer p,
-    .price-answer li {
-        font-size: 1rem;
-    }
-}
 
 /* Убираем hover-эффекты на touch-устройствах */
 @media (hover: none) and (pointer: coarse) {

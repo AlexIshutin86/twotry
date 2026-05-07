@@ -151,28 +151,7 @@
 }
 
 
-.btnOpinion {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    background: linear-gradient(to right, rgb(42, 219, 25));
-    font-size: 1.5rem;
-    padding: 0.8rem 2rem;
-    border-radius: 3rem;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    font-weight: 100;
-    gap: 0.5rem;
-    border: none;
-}
-
-
 /* Текст карточек */
-
-
-
 
 .opinionCarousel-container .card-Opinion h2 {
     

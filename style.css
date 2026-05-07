@@ -81,7 +81,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins';
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     text-decoration: none;
     scroll-behavior: smooth;
     list-style: none;
@@ -145,10 +145,9 @@ section{
 
 .info-box {
     position: absolute;
-    display: flex;
-    flex-direction: column;
+
     gap: 6rem;
-    top: 25%; /* Center vertically */
+    top: 15%; /* Center vertically */
     left: 50%;
     transform: translate(-50%, -50%); /* Perfect centering */
     text-align: center;

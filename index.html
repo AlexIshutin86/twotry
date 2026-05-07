@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <link rel="stylesheet" href="./style.css">
+   
+    
     
 
 
@@ -23,9 +25,13 @@
 
         <section id="topDescription" class="topDescription">
 
-                    <div class="topDescription-container">
+              
 
+                <div class="topDescription-container">
+                     
                         <img src="./fotoForOne/first.jpg" alt="">
+
+                    
 
                         <div class="info-box">
 
@@ -33,13 +39,20 @@
                                 <h1>Походы на легке с Владимиром Лисом</h1>
                             </div>
 
-                            <a href="./schedule.html" class="btn">
-                            <i class="fa-solid fa-arrow-down"></i> Расписание походов
-                            </a>
+                        <div class="wrapper">
+
+                            <div class="btn">   
+
+                                <i class="fa-solid fa-arrow-down"></i>
+                                <h3>Расписание походов</h3>
+                                
+                            </div>
 
                         </div>
 
                     </div>
+                    
+                </div>
 
         </section>
 
@@ -50,24 +63,23 @@
 
                 <div class="shortAbout-container">
 
-                    <div class="info-box">
+                    <div class="info-boxAbout">
 
-                            <div class="textbout">
-                                <h1>Обо мне</h1>
-                                <h3>В течении  5 лет я  работал  над созданием пешего маршрута Кавказская тропа.
+                        <h1>Обо мне</h1>
+                        <h3>В течении  5 лет я  работал  над созданием пешего маршрута Кавказская тропа.
                                 Проведя много месяцев в горах, я увидел их настоящую жизнь.
                                 В 2025 был дан старт новому проекту - пешеходному маршруту  Волга  Море, проходящему по берегу великой  Русской реки. 
                                 Сейчас я хочу  показать вам красоту мест,  пленившую  моё сердце.
                                 Я провожу походы только в той местности которую хорошо знаю, и только на легке. Мы не несём на себе палатки и запас еды. В походе  соблюдаем баланс между дикой природой и комфортным размещением на ночлег.
                                 Добро пожаловать в клуб любителей  красивых пейзажей и легкого рюкзака.
-                                </h3>
-                            </div>
+                        </h3>
 
-                            <div class="btn">
-                                    <a href="./about.html"><i class="fa-solid fa-arrow-down"></i>
-                                    Узнать больше</a>
-                            </div>
-
+                     
+                        <a href="./about.html" class="btn">
+                            <i class="fa-solid fa-arrow-down"></i> 
+                            <h4>Узнать больше</h4>
+                        </a> 
+           
                     </div>
 
                     <div class="grid">
@@ -98,71 +110,73 @@
             
 
         <section id="carouselPoxod" class="carouselPoxod-turs">
-        <div class="wrapper">
-            <div class="carouselPoxod1-header">
+            <div class="wrapper">
+                <div class="carouselPoxod1-header">
 
-                <div class="text1">
-                    <h1>Записывайся в поход</h1>
+                    <div class="text1">
+                        <h1>Записывайся в поход</h1>
+                    </div>
+                    
+                    <div class="carouselPoxod1-buttons">
+                        <i id="scrollLeft" class="fa-solid fa-arrow-left"></i>
+                        <i id="scrollRight" class="fa-solid fa-arrow-right"></i>
+                    </div>
+
                 </div>
+            </div>
+
+                <ul class="carouselPoxod1-container">
+
+                    <li class="card" onclick="window.location.href='volgaMore.html'">
+                    <div class="img">
+                        <img src="./foto/wolgaMore/12.jpg" alt="img" draggable="false">
+                    </div>
+                    <h2>Волга море</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
+                    </li>
+
+                    <li class="card">
+                        <div class="img">
+                            <img src="./foto/autumnCaucases/1.jpg" alt="img" draggable="false">
+                        </div>
+                        <h2>Узоры времён</h2>
+                        <p>Lorem earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
+                    </li>
+
+                    <li class="card">
+                        <div class="img">
+                            <img src="./foto/autumnCaucases/4.jpg" alt="img" draggable="false">
+                        </div>
+                        <h2>Lorem ipsum dolor sit amet.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
+                    </li>
+
+                    <li class="card">
+                        <div class="img">
+                            <img src="./foto/autumnCaucases/3.jpg" alt="img" draggable="false">
+                        </div>
+                        <h2>Lorem ipsum dolor sit amet.</h2>
+                        <p>Lorupti officia, non impedit rerum.</p>
+                    </li>
+
+                    <li class="card">
+                        <div class="img">
+                            <img src="./foto/autumnCaucases/2.jpg" alt="img" draggable="false">
+                        </div>
+                        <h2>Lorem ipsum dolor sit amet.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
+                    </li>
+                </ul>
                 
-                <div class="carouselPoxod1-buttons">
-                    <i id="scrollLeft" class="fa-solid fa-arrow-left"></i>
-                    <i id="scrollRight" class="fa-solid fa-arrow-right"></i>
-                </div>
+             <div class="wrapper">
 
+                    <a href="./schedule.html" class="btn">
+                        <i class="fa-solid fa-arrow-down"></i>
+                        <h3>Расписание походов</h3>
+                    </a>   
             </div>
-        </div>
 
-            <ul class="carouselPoxod1-container">
 
-                <li class="card" onclick="window.location.href='volgaMore.html'">
-                <div class="img">
-                    <img src="./foto/wolgaMore/12.jpg" alt="img" draggable="false">
-                </div>
-                <h2>Волга море</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
-                </li>
-
-                <li class="card">
-                    <div class="img">
-                        <img src="./foto/autumnCaucases/1.jpg" alt="img" draggable="false">
-                    </div>
-                    <h2>Узоры времён</h2>
-                    <p>Lorem earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
-                </li>
-
-                <li class="card">
-                    <div class="img">
-                        <img src="./foto/autumnCaucases/4.jpg" alt="img" draggable="false">
-                    </div>
-                    <h2>Lorem ipsum dolor sit amet.</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
-                </li>
-
-                <li class="card">
-                    <div class="img">
-                        <img src="./foto/autumnCaucases/3.jpg" alt="img" draggable="false">
-                    </div>
-                    <h2>Lorem ipsum dolor sit amet.</h2>
-                    <p>Lorupti officia, non impedit rerum.</p>
-                </li>
-
-                <li class="card">
-                    <div class="img">
-                        <img src="./foto/autumnCaucases/2.jpg" alt="img" draggable="false">
-                    </div>
-                    <h2>Lorem ipsum dolor sit amet.</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum earum necessitatibus commodi similique quibusdam deleniti corrupti officia, non impedit rerum.</p>
-                </li>
-            </ul>
-
-            <div class="btn2-container">
-                <div class="btn2">
-                    <i class="fa-solid fa-arrow-down"></i>
-                    <a href="./schedule.html">Расписание походов</a>
-                </div>
-            </div>
-            
         </section>
 
 
@@ -244,7 +258,7 @@
                   
                 </div>
 
-                <a href="./foto.html" class="btnGallary">
+                <a href="./foto.html" class="btn">
                     <i  class="fa-solid fa-arrow-down"></i>
                     <h3>Все фотогалереи</h3>
                 </a>
@@ -423,7 +437,8 @@
 
         <div class="wrapper">
 
-            <div class="btnOpinion">
+            <div class="btn">
+                <a href="./video.html"></a>
                 <i class="fa-solid fa-arrow-down"></i>
                 <h3>Смотреть все отзывы</h3>
             </div>
@@ -497,10 +512,10 @@
 
             <div class="wrapper">
 
-                <a href="./video.html" class="btnGallary">
-                        <i  class="fa-solid fa-arrow-down"></i>
-                        <h3>Все видео</h3>
-                </a>
+                <a href="./video.html" class="btn">
+                <i  class="fa-solid fa-arrow-down"></i>
+                <h3>Все видео</h3></a>
+
             </div>
 
         </section>
@@ -579,6 +594,10 @@
     </main>
 
         <div id="footer-placeholder"></div>
+
+        \
+
+
 
 
         <dialog id="enrolOpinionDialog1" class="opinion-dialog">

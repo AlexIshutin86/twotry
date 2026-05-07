@@ -124,26 +124,6 @@
     color: #ffd700;
 }
 
-.btnGallary {
-    display: flex;
-    
-    align-content: center;
-    justify-content: center;
-    
-    background: linear-gradient(to right, rgb(42, 219, 25));
-    font-size: 1.5rem;
-    padding: 0.8rem 2rem;
-    border-radius: 3rem;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    font-weight: 100;
-    gap: 0.5rem;
-    border: none;
-}
-
-.btnGallary:hover {
-    transform: scale(1.02);
-}
 /* Разные размеры карточек - работают только при достаточной ширине */
 @media (min-width: 768px) {
     .gallery-card:nth-child(1) {

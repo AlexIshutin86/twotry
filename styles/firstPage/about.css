@@ -3,7 +3,7 @@
     align-items: flex-start;
     justify-content: center;
     min-height: 40rem;
-    padding: 3rem 12%;
+    padding: 1rem 2rem;
     background-color: hsl(215, 31%, 12%);
     margin-top: -11rem;
     position: relative;
@@ -13,66 +13,52 @@
 
 .shortAbout-container {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     top: 0rem;
-    gap: 6rem;
+    gap: 5rem;
     width: 100%;
     max-width: 1900px;
-    margin: 0 auto;
+    margin: 0;
+    margin: 2rem;
 }
 
-/* Info box styles for shortAbout section */
 
-.shortAbout .info-box {
-    position: relative; 
-    top: 0.1rem;
-    left: auto;
-    transform: none;
-    width: 80%;
-    text-align: left;
-    padding: 0rem;
-    
-    
-    
+.info-boxAbout {
+  
+    max-width: 50rem;
+
 }
 
-.shortAbout  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    text-align: left;
-}
-
-.shortAbout  h3 {
-    font-size: 1.5rem;
-    line-height: 1.2;
-    margin-bottom: 2rem;
-    text-align: left;
-}
-
-.shortAbout .btn {
+.info-boxAbout .btn {
     display: flex;
-    align-content: center;
+    flex-direction: row;
     justify-content: center;
-    
-    padding: 0.8rem 2rem;
-    border-radius: 3rem;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    font-weight: 500;
-    gap: 0.5rem;
-    border: none;
-    width: auto;
+    align-items: center;
+    gap: 2rem;
 }
 
-.shortAbout .btn:hover {
-    transform: scale(1.05);
-    background: linear-gradient(to right, rgb(220, 255, 65));
+.info-boxAbout h4 {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 100; 
+    line-height: 1.8rem;
 }
+
+.info-boxAbout h3 {
+    margin-bottom: 2rem;  
+}
+
+
+.info-boxAbout h1 {
+    margin-bottom: 2rem;
+}
+
 
 .grid {
    
-    width: 50%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -83,12 +69,14 @@
 .grid-card {
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 3rem;
-    gap: 0rem;
-    padding: 1rem;
+    
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
+  
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
     
@@ -104,20 +92,6 @@
 
 
 
-
-
-
-
-@media(max-width: 800px){
-    .grid-card {
-        border-radius: 2rem;
-    }
-    .contact-btn{
-        display: none;
-    }
-}
-
-
 /* ========== RESPONSIVE STYLES ========== */
 
 /* Laptops (1024px - 1200px) */
@@ -131,10 +105,7 @@
         gap: 3rem;
     }
     
-    .shortAbout .info-box .textbout h1 {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-    }
+  
     
     .grid-card span {
         font-size: 2rem;
@@ -158,24 +129,12 @@
         gap: 2rem;
     }
     
-    .shortAbout .info-box {
+    .shortAbout .info-boxAbout {
         width: 100%;
         text-align: left;
     }
     
-    .shortAbout .info-box .textbout h1 {
-        text-align: left;
-        
-    }
-    
-    .shortAbout .info-box .textbout h3 {
-        text-align: left;
-        
-    }
-    
-    .shortAbout .btn {
-        margin: 0 auto;
-    }
+  
     
     .grid {
         width: 100%;
@@ -218,10 +177,7 @@
     
   
     
-    .shortAbout .btn {
-        padding: 0.6rem 1.5rem;
-        font-size: 0.9rem;
-    }
+  
     
     .grid {
         gap: 1rem;
@@ -232,7 +188,7 @@
         flex-direction: row;
         justify-content: space-between;
         padding: 0.8rem 1.2rem;
-        gap: 1rem;
+        gap: 2rem;
     }
     
     .grid-card span {
