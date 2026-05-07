@@ -979,16 +979,19 @@ background: rgb(255, 251, 39);}
 
 .price-header {
     display: flex;
+   
     
     
    
 }
 
+
 .price-container{
     display: grid;
-    grid-template-columns: 30rem 45rem;
-    max-width: 1200px;
+     grid-template-columns: 1fr 1.8fr; 
+    max-width: 1700px;
     margin: 0 auto;
+    gap: 9rem;
     
 }
 
