@@ -33,6 +33,12 @@
   grid-auto-rows: 450px 50px 150px 55px;
 }
 
+@media (max-width: 400px) {
+  .carouselScheduleItems-container {
+    grid-auto-rows: 300px 50px 120px 55px;
+  }
+}
+
 .cardScheduleItems {
   min-width: 19rem;
 
