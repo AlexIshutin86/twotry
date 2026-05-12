@@ -1084,6 +1084,7 @@
   overflow: hidden;
   transition: all 0.3s ease;
   cursor: pointer;
+  border-bottom: 3px solid #27ff0a;
 }
 
 .faq-item:hover {
@@ -1120,6 +1121,7 @@
   transform: rotate(180deg);
 }
 
+/* Make faq-answer a proper container */
 .faq-answer {
   max-height: 0;
   padding: 0 1.5rem;
@@ -1130,14 +1132,61 @@
 }
 
 .faq-item.active .faq-answer {
-  max-height: 500px;
+  max-height: 800px; /* Increased to fit images */
   padding: 0 1.5rem 1.5rem 1.5rem;
 }
 
-.faq-answer p:last-child {
-  margin-bottom: 0;
+/* Image fills container width */
+.faq-answer img {
+  width: 100%;
+  height: 40rem;
+  display: block;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  object-fit: cover;
 }
 
+/* If you want exact container fill (may crop top/bottom) */
+.faq-answer .fill-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* For image galleries */
+.faq-image-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.faq-image-gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin: 0;
+}
+
+/* Single image takes full width */
+.faq-answer .full-width-image {
+  width: 100%;
+  height: auto;
+  margin: 1rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faq-image-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-answer .fill-image {
+    height: 200px;
+  }
+}
 /* ========== АДАПТИВНОСТЬ ДЛЯ FAQ ========== */
 
 /* Для ноутбуков (1024px - 1200px) */
