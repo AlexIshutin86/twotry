@@ -194,8 +194,6 @@
   }
 }
 
-/* ========== АДАПТИВНОСТЬ ========== */
-
 /* Для планшетов (768px - 1024px) */
 
 @media (max-width: 1024px) {
@@ -1108,6 +1106,10 @@
   flex: 1;
   line-height: 1.4;
   align-items: start;
+}
+
+.faq-answer p {
+  color: #fff;
 }
 
 .faq-question i {
