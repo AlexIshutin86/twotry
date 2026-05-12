@@ -1,184 +1,149 @@
-
-
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 5rem;
-    background-color: rgba(255, 255, 255, 0.253);
-    backdrop-filter: blur(8px);
-    color: white;
-    z-index: 2000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+  background-color: rgba(255, 255, 255, 0.253);
+  backdrop-filter: blur(8px);
+  color: white;
+  z-index: 2000;
 }
 
-
-
-.nav-links{
+.nav-links {
   height: 100%;
-    display: flex;
-    gap: 2rem;
+  display: flex;
+  gap: 2rem;
 }
-
-
- 
 
 .nav-links a:hover {
-    background-color: aqua;
+  background-color: aqua;
 }
 
-.contact-btn{
-    padding: 0.8rem 1.5rem;
-    border-radius: 3rem;
-    border: none;
-    font-weight: 500;
-    color: black;
-    font-size: 1rem;
-    cursor: pointer;
-    text-wrap: nowrap;
-    transition: 0.3 ease-in-out;
-    background: linear-gradient(to right,rgb(255, 255, 255));
+.contact-btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 3rem;
+  border: none;
+  font-weight: 500;
+  color: black;
+  font-size: 1rem;
+  cursor: pointer;
+  text-wrap: nowrap;
+  transition: 0.3 ease-in-out;
+  background: linear-gradient(to right, rgb(255, 255, 255));
 }
 
-
-.contact-btn:hover{
-    transform: scale(1.03);
-    background: linear-gradient(to right,rgb(25, 20, 53));
-    color: white;
-    box-shadow: inset 0 0 0 2px white;
+.contact-btn:hover {
+  transform: scale(1.03);
+  background: linear-gradient(to right, rgb(25, 20, 53));
+  color: white;
+  box-shadow: inset 0 0 0 2px white;
 }
 
-#menu-icon{
-    font-size: 2rem;
-    display: none;
+#menu-icon {
+  font-size: 2rem;
+  display: none;
 }
 
-
-.logo{
-    color: aliceblue;
-    font-size: 1.5rem;
-    font-weight: 400;
-    text-wrap: nowrap;
-    transition: 0.3s ease-out;
+.logo {
+  color: aliceblue;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-wrap: nowrap;
+  transition: 0.3s ease-out;
 }
-.logo:hover{
-    transform: scale(1.05);
-}
-
-
-
-
-.sidebar{
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 150px;
-    backdrop-filter: blur(10px);
-    z-index: 999;
-    
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    background-color: rgba(255, 255, 255, 0.329);
-    backdrop-filter: blur(10px);
-
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+.logo:hover {
+  transform: scale(1.05);
 }
 
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 150px;
+  backdrop-filter: blur(10px);
+  z-index: 999;
 
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.329);
+  backdrop-filter: blur(10px);
+
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
 
 .sidebar li {
-    width: 100%;
-    align-content: center;
-    padding: 0.5rem;
-    
+  width: 100%;
+  align-content: center;
+  padding: 0.5rem;
 }
 
 .sidebar a {
-    height: 100%;
-    width: 100%;
-    color: rgb(20, 20, 20);
-    padding-left: 2rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 100%;
+  width: 100%;
+  color: rgb(20, 20, 20);
+  padding-left: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.sidebar li:hover{
-    background-color: rgb(8, 170, 81);
-    
+.sidebar li:hover {
+  background-color: rgb(8, 170, 81);
 }
-
 
 .sidebar i {
-    padding-left: 2rem;
-    color: black;
-    
+  padding-left: 2rem;
+  color: black;
 }
 
+@media (max-width: 1000px) {
+  header #menu-icon {
+    display: block;
+  }
 
-
-
-@media (max-width: 1000px){
-    header #menu-icon{
-        display: block !important;
-    }
-   
-    .nav-links{
-        display: none !important;
-     
-        top: 100%;
-        left: 0; 
-        margin-top: 1rem;
-        width: 100%;
-        padding: 1rem;
-        color: white;
-        flex-direction: column;
-        text-align: center;
-        background-color: rgba(0, 0, 0, 0.884);
-        border-radius: 3rem;
-    }
-    
-    .nav-links li{
-        margin-top: 1.5rem;
-        padding: 0.5rem;
-    }
-
-    .nav-links.active{
-        display: block !important;
-    }
-
-    header{
-        padding: 0.5rem 5rem;
-        gap: 1rem;
-    }
-
-    header .logo{
-        font-size: 1.5rem;
-        padding: 0.2rem;
-    }
-}
-
-
-
-
-/* Базовая точка для мобильных (до 600px) */
-@media (max-width: 600px) {
   .nav-links {
-    gap: 0.75rem; /* Ещё более компактный отступ */
-    flex-wrap: wrap; /* Элементы переносятся на новую строку, если не помещаются */
+    display: none;
+
+    top: 100%;
+    left: 0;
+    margin-top: 1rem;
+    width: 100%;
+    padding: 1rem;
+    color: white;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.884);
+    border-radius: 3rem;
   }
-  
-  .sidebar {
-    width: 100%; /* На очень узких экранах боковая панель занимает всю ширину */
+
+  .nav-links li {
+    margin-top: 1.5rem;
+    padding: 0.5rem;
   }
-  
+
+  .nav-links.active {
+    display: block;
+  }
+
+  header {
+    padding: 0.5rem 1rem;
+    gap: 1rem;
+  }
+
+  header .logo {
+    font-size: 1.5rem;
+    padding: 0.2rem;
+  }
+}
+
+@media (max-width: 600px) {
   .contact-btn {
-    width: 100%; /* Кнопка растягивается на всю доступную ширину */
-    padding: 0.3rem 0.5rem; /* Уменьшенные отступы для маленьких экранов */
+    display: none;
   }
 }
 
@@ -187,11 +152,11 @@ header {
   .nav-links {
     gap: 1rem; /* Промежуточный отступ */
   }
-  
+
   .sidebar {
     width: 80%; /* Панель занимает 80% ширины, а не фиксированные 250px */
   }
-  
+
   .contact-btn {
     display: none; /* Скрываем кнопку, как было в оригинале */
   }
@@ -200,9 +165,9 @@ header {
 /* Широкий экран (от 800px) — возвращаем исходные значения */
 @media (min-width: 800px) {
   .nav-links {
-    gap: 2rem;
+    gap: 4rem;
   }
-  
+
   .sidebar {
     width: 250px; /* Возвращаем фиксированную ширину для десктопа */
   }
