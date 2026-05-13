@@ -71,6 +71,11 @@
   transform: scale(1.05);
 }
 
+.runer {
+  padding: 3rem;
+  background-color: var(--color-bg-dark);
+  max-height: fit-content;
+}
 /* ========== АДАПТИВНОСТЬ ДЛЯ DETAILS SECTION ========== */
 
 /* Для ноутбуков (1024px - 1200px) */

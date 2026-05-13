@@ -1,152 +1,124 @@
 .ranStrips-section {
-      margin: 0;           /* Remove any margins */
-    padding: 0;          /* Remove any padding */
-    line-height: 0;      /* Remove extra line height */
+  margin: 0rem; /* Remove any margins */
+  padding-bottom: 0; /* Remove any padding */
+  line-height: 0; /* Remove extra line height */
+  max-height: fit-content;
 }
 
 .ranStrips {
-     font-size: 0.9rem;
-    padding-block: 8px;  /* Keep minimal padding (was 12px) */
-    border-block: 1px solid rgba(255, 255, 255, 0.2);
-    overflow: hidden;
-    user-select: none;
-    --gap: 150px;
-    display: flex;
-    gap: var(--gap);
-    white-space: nowrap;
-    position: relative;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(4px);
-    
-    /* CRITICAL: Ensure height is only content */
-    height: auto;
-    min-height: fit-content;
-    line-height: 1;      /* Normalize line height */
-}
+  font-size: 0.9rem;
+  padding-block: 15px; /* Keep minimal padding (was 12px) */
 
+  overflow: hidden;
+  user-select: none;
+  --gap: 150px;
+  display: flex;
+  gap: var(--gap);
+  white-space: nowrap;
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+
+  /* CRITICAL: Ensure height is only content */
+  height: auto;
+  min-height: fit-content;
+  line-height: 1; /* Normalize line height */
+}
 
 /* Smooth fade edges */
 .ranStrips::before,
 .ranStrips::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 80px;
-    height: 100%;
-    z-index: 2;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.ranStrips::before {
-    left: 0;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
-}
-
-.ranStrips::after {
-    right: 0;
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.8), transparent);
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .ranStrips:hover::before,
 .ranStrips:hover::after {
-    opacity: 1;
+  opacity: 1;
 }
 
 .ranStrips ul {
-    list-style: none;
-    flex-shrink: 0;
-    min-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--gap);
-    padding: 0;
-    margin: 0;
-    animation: scroll 20s linear infinite;
-    
-    /* Remove any extra spacing */
-    line-height: 1;
+  list-style: none;
+  flex-shrink: 0;
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap);
+  padding: 0;
+  margin: 0;
+  animation: scroll 20s linear infinite;
+
+  /* Remove any extra spacing */
+  line-height: 1;
 }
 
 .ranStrips:hover ul {
-    animation-play-state: paused;
+  animation-play-state: paused;
 }
 
 @keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .ranStrips li {
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.8rem;
-    white-space: nowrap;
-    flex-shrink: 0;
-    transition: transform 0.2s ease;
-    cursor: pointer;
-    padding: 0.3rem 1rem;  /* Reduced from 0.5rem */
-    border-radius: 2rem;
-    background: rgba(255, 255, 255, 0.05);
-    
-    /* Ensure no extra height */
-    line-height: 1.2;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.8rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  padding: 0.3rem 1rem; /* Reduced from 0.5rem */
+
+  /* Ensure no extra height */
+  line-height: 1.2;
 }
 
 .ranStrips li:hover {
-    transform: scale(1.05);
-    background: rgba(255, 255, 255, 0.1);
-}
-
-.ranStrips .plus::before {
-    content: '↑';
-    display: inline-block;
-    color: #4caf50;
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-
-.ranStrips .minus::before {
-    content: '↓';
-    display: inline-block;
-    color: #f44336;
-    font-weight: bold;
-    font-size: 1.1rem;
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .ranStrips .advantages {
-    font-weight: bold;
-    color: white;
+  font-weight: bold;
+  color: white;
 }
 
 .ranStrips .benefits {
-    color: #ffd700;
-    margin-left: 0.5rem;
+  color: #ffd700;
+  margin-left: 0.5rem;
 }
 
 .ranStrips .advantages,
 .ranStrips .benefits {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    line-height: 1.2;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  line-height: 1.2;
 }
 /* Responsive */
 @media (max-width: 768px) {
-    .ranStrips {
-        --gap: 80px;
-        font-size: 0.8rem;
-    }
-    
-    .ranStrips li {
-        gap: 0.5rem;
-        padding: 0.3rem 0.8rem;
-    }
+  .ranStrips {
+    --gap: 80px;
+    font-size: 0.8rem;
+  }
+
+  .ranStrips li {
+    gap: 0.5rem;
+    padding: 0.3rem 0.8rem;
+  }
 }
