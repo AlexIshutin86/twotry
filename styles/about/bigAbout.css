@@ -1,3 +1,7 @@
+.mainBigAbout {
+  background-color: var(--color-bg-dark);
+}
+
 .bigAbout-section {
   width: 100%;
   min-height: 10rem;
@@ -5,6 +9,8 @@
   background: var(--color-bg-dark);
   border-radius: 0rem 0rem 2rem 2rem;
   z-index: 10;
+  margin-top: -4rem;
+  padding-top: 6rem;
 }
 .bigAbout-section h2,
 .bigAbout-section p {
