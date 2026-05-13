@@ -89,7 +89,7 @@
   .team-hero__main {
     display: grid;
     grid-template-columns: 1fr;
-
+    margin-top: 2rem;
     gap: 3rem;
     text-align: left;
     padding: 1.5rem;
