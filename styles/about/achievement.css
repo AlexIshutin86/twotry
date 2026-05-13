@@ -12,13 +12,20 @@
 .achievementItem {
   display: grid;
   grid-template-columns: 80% 1fr;
-
+  background-color: var(--color-bg-lighter);
   gap: 1rem;
   padding: 1rem;
   border: solid 0.5px rgb(243, 243, 243);
   border-radius: 2rem;
   min-width: 8rem;
   margin-bottom: 3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.achievementItem:hover {
+  transform: scale(1.1);
+  background-color: var(--color-bg-lighter-hover);
 }
 
 .achievement h1 {
