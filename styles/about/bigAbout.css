@@ -1,0 +1,207 @@
+.bigAbout-section {
+  width: 100%;
+  min-height: 10rem;
+  padding: 2rem 0rem 7rem 0rem;
+  background: var(--color-bg-dark);
+  border-radius: 0rem 0rem 2rem 2rem;
+  z-index: 10;
+}
+.bigAbout-section h2,
+.bigAbout-section p {
+  color: #fff;
+  line-height: 1.7rem;
+}
+
+.bigAbout-title {
+  text-align: start;
+  position: relative;
+}
+
+.bigAbout-container {
+  display: grid;
+  grid-template-columns: 19rem 1fr;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1300px;
+  gap: 5rem;
+}
+
+.bigAbout-description {
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.bigAbout-text h2 {
+  padding-bottom: 1rem;
+  color: #fff;
+}
+
+.bigAbout-text p {
+  color: #fff;
+}
+
+.bigAbout-description .full-text {
+  display: none;
+  color: #fff;
+}
+
+.bigAbout-description.expanded .full-text {
+  display: block;
+  color: #fff;
+}
+
+.read-more-btn-bigAbout {
+  color: rgb(255, 255, 255);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: linear-gradient(90deg, #03b103, #1bc405);
+  border: none;
+  border-radius: 2rem;
+  padding: 0.4rem 1rem;
+
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ========== АДАПТИВНОСТЬ ДЛЯ DETAILS SECTION ========== */
+
+/* Для ноутбуков (1024px - 1200px) */
+@media (max-width: 1200px) {
+  .bigAbout-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .bigAbout-container {
+    grid-template-columns: 25rem 1fr;
+    gap: 2rem;
+  }
+
+  .bigAbout-title {
+    font-size: 2.2rem;
+  }
+
+  .bigAbout-text h2 {
+    font-size: 1.3rem;
+  }
+
+  .bigAbout-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+/* Для планшетов (768px - 1024px) */
+@media (max-width: 1024px) {
+  .bigAbout-section {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .bigAbout-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-left: 1rem;
+  }
+
+  .bigAbout-title {
+    text-align: left;
+
+    font-size: 2rem;
+    position: static;
+    margin-bottom: 0;
+  }
+
+  .bigAbout-text h2 {
+    text-align: left;
+    padding-bottom: 0.9rem;
+    font-size: 1.3rem;
+  }
+
+  .bigAbout-description {
+    margin-right: 3rem;
+    padding-bottom: 0.2rem;
+
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .bigAbout-container {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+  }
+}
+
+/* Для мобильных устройств (577px - 768px) */
+@media (max-width: 768px) {
+  .bigAbout-section {
+    padding: 1rem 0.2rem;
+    margin: 1.5rem 0;
+    border-radius: 1.8rem;
+    margin-top: -1rem;
+  }
+
+  .bigAbout-title {
+    font-size: 1.8rem;
+  }
+
+  .bigAbout-text h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .bigAbout-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+  }
+
+  .bigAbout-description p {
+    margin-bottom: 0.8rem;
+  }
+
+  .read-more-btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+    gap: 0.6rem;
+  }
+}
+
+/* Для маленьких мобильных устройств (481px - 576px) */
+@media (max-width: 576px) {
+  .bigAbout-section {
+    padding: 1.5rem 0.8rem;
+    border-radius: 1.5rem;
+  }
+
+  .bigAbout-title {
+    font-size: 1.5rem;
+  }
+
+  .bigAbout-text h2 {
+    font-size: 1.1rem;
+  }
+
+  .bigAbout-description {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .read-more-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    gap: 1rem;
+  }
+
+  .read-more-btn i {
+    font-size: 0.8rem;
+  }
+}

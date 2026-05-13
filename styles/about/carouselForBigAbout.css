@@ -1,0 +1,73 @@
+/* Container - NO clip-path here */
+.carouselForBigAbout2,
+.carouselForBigAbout1 {
+  position: relative;
+  width: 100%;
+  height: 50rem;
+  overflow: hidden;
+  margin-top: -4rem;
+  border-radius: 2rem;
+  z-index: 45;
+}
+
+/* Each slide starts hidden */
+.carouselForBigAbout2 .carouselForBigAboutSlide2,
+.carouselForBigAbout1 .carouselForBigAboutSlide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(0% at 0 50%); /* Move clip-path here */
+  transition-property: clip-path;
+  z-index: 1;
+}
+
+/* Active slide becomes visible */
+.carouselForBigAbout2 .carouselForBigAboutSlide2.active2,
+.carouselForBigAbout1 .carouselForBigAboutSlide.active {
+  clip-path: circle(150% at 0 50%); /* Use 150% to ensure full coverage */
+  z-index: 2;
+  transition: 2s;
+  transition-property: clip-path;
+}
+
+/* Images */
+.carouselForBigAbout2 .carouselForBigAboutSlide2 img,
+.carouselForBigAbout1 .carouselForBigAboutSlide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Navigation */
+.navForBigAbout2,
+.navForBigAbout {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 99;
+
+  background-color: rgb(255, 255, 255);
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+}
+.bampForBigAbout2,
+.bampForBigAbout {
+  background-color: rgba(10, 10, 10, 0.9);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bampForBigAbout.active2,
+.bampForBigAbout.active {
+  background-color: var(--colorGreen-overlay);
+  transform: scale(1.3);
+}

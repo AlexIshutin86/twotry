@@ -1,12 +1,8 @@
-
-
 @import "./styles/firstPage/about.css";
 @import "./styles/firstPage/carousel-turs.css";
 @import "./styles/firstPage/fotoGallery.css";
 @import "./styles/firstPage/opinionCarousel.css";
 @import "./styles/firstPage/carouselThree.css";
-
-
 
 @import "./styles/shedule/scheduleItems.css";
 @import "./styles/shedule/discriptionSchedule.css";
@@ -14,12 +10,15 @@
 @import "./styles/pohod/contactFormSection.css";
 @import "./styles/pohod/photoSlider.css";
 
+@import "./styles/about/bigAbout.css";
+@import "./heroBigAbout.css";
+@import "./styles/about/carouselForBigAbout.css";
+@import "./styles/about/contactInAbout.css";
+@import "./styles/about/achievement.css";
 
 @import "./styles/pohod/opinionMV.css";
 
-
 @import "./styles/pohod/navForPohod.css";
-
 
 @import "./styles/header.css";
 @import "./styles/footer.css";
@@ -27,157 +26,119 @@
 @import "./styles/scrollUp.css";
 @import "./styles/telegramPlashka.css";
 
-
 @import "./styles/root.css";
-
 
 @import "./styles/foto/foto.css";
 @import "./styles/generalFoto.css";
 
-
-
-
-
 #hero {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Full viewport height */
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
 }
 
 #hero video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* This will crop the video to fill the container */
-    z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This will crop the video to fill the container */
+  z-index: 10;
 }
 
 /* Optional: Adjust for different aspect ratios */
 @media (max-width: 500px) {
-    #hero video {
-        object-fit: cover; /* Good for vertical videos on mobile */
-    }
+  #hero video {
+    object-fit: cover; /* Good for vertical videos on mobile */
+  }
 }
 
 @media (min-width: 601px) {
-    #hero video {
-        object-fit: cover; /* Good for horizontal videos on desktop */
-    }
+  #hero video {
+    object-fit: cover; /* Good for horizontal videos on desktop */
+  }
 }
 
-
-
-
-
-
-
-
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    text-decoration: none;
-    scroll-behavior: smooth;
-    list-style: none;
-    
-    
-    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  list-style: none;
 }
 
-
-
-
-body{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background: rgb(65, 80, 116);
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: rgb(65, 80, 116);
 }
 
-
-
-section{
-    min-height: 50rem;
-    width: 100%;
-    position: relative;
-    
-
-    
+section {
+  min-height: 50rem;
+  width: 100%;
+  position: relative;
 }
 
 .topDescription {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Make section full viewport height */
-     z-index: 1;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Make section full viewport height */
+  z-index: 1;
 }
 
 .topDescription-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    height: 100%; /* Take full height of parent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%; /* Take full height of parent */
 }
 
 .topDescription-container img {
-    width: 100%;
-    height: 90%;
-    object-fit: cover; /* Cover entire area without distortion */
-    display: block;
-    margin-top: -10rem;
-    filter: brightness(0.8) contrast(1.1); /* Darker with slightly more contrast */
+  width: 100%;
+  height: 90%;
+  object-fit: cover; /* Cover entire area without distortion */
+  display: block;
+  margin-top: -10rem;
+  filter: brightness(0.8) contrast(1.1); /* Darker with slightly more contrast */
 }
 
 .info-box {
-    position: absolute;
+  position: absolute;
 
-    gap: 6rem;
-    top: 15%; /* Center vertically */
-    left: 50%;
-    transform: translate(-50%, -50%); /* Perfect centering */
-    text-align: center;
-    z-index: 10;
-    width: 100%;
-    padding: 2rem;
-   
-    
+  gap: 6rem;
+  top: 15%; /* Center vertically */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Perfect centering */
+  text-align: center;
+  z-index: 10;
+  width: 100%;
+  padding: 2rem;
 }
 
-.text2ForFirst h3{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 300;
-    line-height: 2rem;
-    text-align: center;
-
+.text2ForFirst h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 300;
+  line-height: 2rem;
+  text-align: center;
 }
-
-
-
-
-
-
 
 @media (max-width: 360px) {
-    
-    .section{
+  .section {
     max-height: 30rem;
     width: 100%;
     color: blueviolet;
-    
-}
+  }
 }

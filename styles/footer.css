@@ -1,99 +1,78 @@
-
 footer {
-  
-    position: relative;
-    background-color: hsl(215, 31%, 12%);
-    z-index: 2000;
+  position: relative;
+  background-color: hsl(215, 31%, 12%);
+  z-index: 2000;
 }
 
-
-
-    
 .footer-container {
-   background-color: rgb(0, 0, 0);
-  
-    
+  background-color: rgb(0, 0, 0);
 }
 
-.info-footer{
-    
-    padding: 2rem 2rem 2rem 2rem;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 0.5rem;
+.info-footer {
+  padding: 2rem 0rem 2rem 0rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  gap: 0.5rem;
 }
 
 .podsekIcon {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    grid-template-columns: 2rem 2rem 2rem 2rem;
-    
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  grid-template-columns: 2rem 2rem 2rem 2rem;
 }
 
-
+.podsek {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
 
 .podsek2 {
-    
-    display: grid;
-    gap: 1rem;
-    margin-top: -1rem;
-    
-    padding-left: 2rem;
-    padding-bottom: 2rem;
-    position: relative;
-    
-}
+  display: grid;
+  gap: 1rem;
 
+  padding-bottom: 2rem;
+}
 
 .podsek2 h3 {
-    font-size: 1rem;
-     text-align: left;
-
+  font-size: 1rem;
+  text-align: left;
 }
 
-.info-footer h3{
-    font-size: 1rem;
+.info-footer h3 {
+  font-size: 1rem;
 }
 
 @media (max-width: 800px) {
-    .info-footer {
-        gap: 1rem;
-        display: grid;
-        grid-template-columns: 10px ;
-        grid-row: 10px 10px ;
-      
-    } 
+  .info-footer {
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: 10px;
+    grid-row: 10px 10px;
+  }
 
-
-    .footer-container h3{
+  .footer-container h3 {
     font-size: 1.3rem;
     line-height: 1rem;
-    }
+  }
 }
 
-
 @media (max-width: 600px) {
-  
-
-.podsekIcon {
+  .podsekIcon {
     display: grid;
-    grid-template-rows: 1rem ;
+    grid-template-rows: 1rem;
     padding-left: 6rem;
     align-items: start;
     justify-content: center;
     gap: 1rem;
-    
-    
-}
+  }
 
-.footer-container h3{
+  .footer-container h3 {
     font-size: 1rem;
     line-height: 0.9rem;
+  }
 }
-
-}
-
-   
