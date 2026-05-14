@@ -1,38 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VolgaMore</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <link rel="stylesheet" href="../style.css">
-        <link rel="stylesheet" href="../styles/telegramPlashka.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
 
-    
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../styles/telegramPlashka.css" />
+  </head>
 
-
-
-</head>
-
-
-<body>
-    <div class="telegramPlashka">
+  <body>
+    <div class="wrapper">
+      <div class="telegramPlashka" id="telegramPlashka">
         <div class="container-telegramPlashka">
-            <div class="telegramPlashka-avatar">
+          <i class="fa-brands fa-telegram"></i>
+          <i class="fa-brands fa-telegram"></i>
+          <i class="fa-brands fa-telegram"></i>
 
-                <i class="fa-brands fa-telegram"></i>
-                <img class="img" src="../foto/wolgaMore/vladimer.jpg" alt="Павел Руденко" draggable="false">
-            </div>
-            
-            
-            
-            <div class="telegramPlashka-deskr">
-                <h3>Остались вопросы? <span>Напишите мне в Telegram</span></h3>
-                <p>Отвечаю быстро ✨</p>
-            </div>
+          <div class="telegramPlashka-deskr">
+            <h3>Остались вопросы? Напишите мне</h3>
+          </div>
         </div>
+      </div>
     </div>
-</body>
 
+    <script src="./js/script.js" defer></script>
+    <script src="./js/telegramOnScroll.js"></script>
+  </body>
 </html>

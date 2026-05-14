@@ -3,11 +3,11 @@
   max-width: 100%;
   width: 100%;
   max-height: fit-content;
-  background: rgb(65, 80, 116);
+  background: var(--backgroundColor);
   border-radius: 3rem;
   position: relative;
   overflow: hidden; /* изменено с visible для лучшего контроля */
-
+  padding: 1rem 0rem 1rem 1rem;
   /* Скрыть скроллбар во всех браузерах */
   -ms-overflow-style: none; /* IE и Edge */
   scrollbar-width: none; /* Firefox */

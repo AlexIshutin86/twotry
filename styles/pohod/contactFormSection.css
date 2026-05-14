@@ -31,7 +31,7 @@ button {
   align-items: start;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 3rem;
+  padding: 1rem;
   background-color: var(--yellowLight);
   border-radius: 2rem;
 }
