@@ -16,6 +16,8 @@
   --light-teal: hsl(186, 15%, 59%);
   --dark-teal: hsl(187, 24%, 22%);
   --ff-base: "Karla", sans-serif;
+
+  --backgroundColor: rgb(48, 59, 87);
 }
 
 .wrapper {

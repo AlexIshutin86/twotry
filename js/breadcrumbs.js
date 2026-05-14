@@ -32,10 +32,23 @@
         url: "./volgaMore.html",
       },
       autumnCaucases: {
-        display: "Осенний Кавказ",
+        display: "Узоры Времён",
         parent: "tours",
         url: "./autumnCaucases.html",
       },
+
+      tropaImperatora: {
+        display: "Тропа Императора",
+        parent: "tours",
+        url: "./tropaImperatora.html",
+      },
+
+      mountansOfMasters: {
+        display: "Горы Мастеров",
+        parent: "tour",
+        url: "./mountansOfMasters.html",
+      },
+
       tours: {
         display: "Походы",
         parent: null,

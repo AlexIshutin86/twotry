@@ -4,6 +4,7 @@
   margin: 1rem auto 0;
   max-width: 1400px;
   background: transparent;
+  z-index: 2000;
 }
 
 .breadcrumb ol {

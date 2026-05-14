@@ -77,7 +77,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: rgb(65, 80, 116);
+  background: var(--backgroundColor);
 }
 
 section {

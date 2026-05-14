@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./style.css">
    
     <link rel="stylesheet" href="./styles/footer.css">
+
+    <link rel="stylesheet" href="./styles/breadcrumbs.css">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
    
@@ -718,6 +720,99 @@
             </div>
         </section>
 
+        <section class="contakt">
+            <div class="wrapper">
+                
+                <div class="contactForm" id="contactFormSection">
+            
+                    <div class="contactFormContainer">
+
+                        <div class="contactFormContainerLeftPart">
+                            <h1>Поход: Волга море</h1>
+                            <ul class="itemsContactForm">
+                                <li>
+                                    <i class="fa-solid fa-clock"></i>
+                                    <span>Даты:</span>
+                                    <h4 class="">11-19 июня 2026</h4>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-route"></i>
+                                    <span>Расстояние</span>
+                                    <h4 class="">73 км</h4>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-signal"></i>
+                                    <span>Сложность</span>
+                                    <h4 class="">3/5</h4>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-user-check"></i>
+                                    <span>Свободные места</span>
+                                    <h4 class="">1/5</h4>
+                                </li>
+                            </ul>
+                        
+                        </div>
+
+                        <div class="contactFormContainerRightPart">
+
+                                <div class="warningContact">
+                                <h4>
+                                    Отправив заявку, вы получите анкету для заполнения данных участника.
+                                    Далее анкета рассматривается, и мы созваниваемся для собеседования, обсуждаем детали по походу.
+                                </h4>
+                                </div>
+
+
+                            <form id="contactFormElement">
+                                <div class="form-group">
+                                    <label for="fName">Имя</label>
+                                    <input type="text" id="fName" name="first_name" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="lName">Фамилия</label>
+                                    <input type="text" id="lName" name="last_name" required>
+                                </div>
+
+                                <div class="form-group span-all">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+
+                                <fieldset class="span-all">
+                                    <legend>Тип запроса</legend>
+                                    <div class="radio-group">
+                                        <input type="radio" id="general" name="query" value="General Enquiry" required>
+                                        <label for="general">Общий вопрос</label>
+                                    </div>
+                                    <div class="radio-group">
+                                        <input type="radio" id="support" name="query" value="Support Request" required>
+                                        <label for="support">Заявка на поход</label>
+                                    </div>
+                                </fieldset>
+
+                                <div class="form-group span-all">
+                                    <label for="message">Сообщение</label>
+                                    <textarea id="message" name="message" rows="4" required></textarea>
+                                </div>
+
+                                <div class="form-group span-all checkbox-group">
+                                    <input type="checkbox" id="consent" name="consent" required>
+                                    <label for="consent">Я согласен(на) на обработку моих персональных данных</label>
+                                </div>
+
+                                <button type="submit" class="span-all">Отправить заявку</button>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+            
+
         <section class="faq-section" id="faq-section">
             <div class="wrapper">
                 <div class="faq-container">
@@ -846,6 +941,16 @@
         </section>
 
 
+      
+
+        <div class="wrapper">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <ol id="breadcrumb-list">
+                    <!-- JavaScript will fill this automatically -->
+                </ol>
+            </nav>
+        </div>
+
 
 
     <div class="scrollUp" id="scrollUpBtn">
@@ -874,6 +979,7 @@
 
     <script src="./js/volgaMore/opinionVM.js" defer></script>
     <script src="./js/photoSlider.js" defer></script>
+    <script src="./js/breadcrumbs.js" defer></script>
 
 
 

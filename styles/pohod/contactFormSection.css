@@ -10,9 +10,10 @@
 
 .contakt {
   background-color: var(--yellow);
-  margin-top: -4rem;
   border-radius: 3rem;
-  padding: 2rem 0;
+  margin-top: 0rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   width: 100%;
   min-height: fit-content;
 }
@@ -233,7 +234,7 @@ button[type="submit"]:hover {
 
 @media (max-width: 768px) {
   .contakt {
-    margin-top: -12rem;
+    margin-top: 0rem;
     border-radius: 2rem;
   }
 

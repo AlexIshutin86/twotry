@@ -57,10 +57,9 @@
             </div>
         </div>
     </div>
-</section>
+        </section>
 
-       
-
+    
         <ul class="nav-linksPoxod">
             <li><a href="#about">О походе</a></li>
             <li><a href="#carouselDlyDney">Программа</a></li>
@@ -71,8 +70,7 @@
             <li><a href="#contactForm">Бронирование</a></li>
     
         </ul>
-
-        
+ 
         <section id="info-boxForPoxod"  class="info-boxForPoxod">
 
             <div class="wrapper">
@@ -149,8 +147,7 @@
             </div>
 
         </section>
-
-      
+ 
         <section id="photo-slider1" class="photo-slider">
 
              <button class="prev" onclick="prevSlide()">&#10094</button>
@@ -206,7 +203,6 @@
 
         </div>
         </section>
-
 
            <section id="carouselDlyDney" class="carouselDlyDney">
 
@@ -402,6 +398,31 @@
         </ul>
         </section>
 
+         <section class="provodniki" id="provodniki">
+             
+            <div class="provodniki-container">
+
+                <div class="wrapper">
+
+                    <h1 class="provodniki-title">Проводники</h1>
+                    
+                    <div class="provodnik">
+                        <img class="provodnikImg" src="./foto/placeholder/vladimer 1.jpg" alt="Владимир">
+                        
+                        <div class="provodnik-info">
+
+                            <h2>Владимир Сергиенко</h2>
+                            <p>Сертифицированный инструктор проводник. Два года прожил в Якутской тайге. На протяжении 4 лет принимал участие в создании Кавказской тропы. Прошёл пешком по горам Кавказа более 3500 км. Создатель пешеходной тропы Волга море.</p>
+                        
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+             
+        </section>
+
          <section class="bezopasnost-grid" id="bezopasnost-grid">
 
             <div class="wrapper">
@@ -470,213 +491,99 @@
             </div>
         </section>
 
+        <section class="contakt">
+            <div class="wrapper">
+                
+                <div class="contactForm" id="contactFormSection">
+            
+                    <div class="contactFormContainer">
 
-         <section class="provodniki" id="provodniki">
-             
-            <div class="provodniki-container">
-
-                <div class="wrapper">
-
-                    <h1 class="provodniki-title">Проводники</h1>
-                    
-                    <div class="provodnik">
-                        <img class="provodnikImg" src="./foto/placeholder/vladimer 1.jpg" alt="Владимир">
-                        
-                        <div class="provodnik-info">
-
-                            <h2>Владимир Сергиенко</h2>
-                            <p>Сертифицированный инструктор проводник. Два года прожил в Якутской тайге. На протяжении 4 лет принимал участие в создании Кавказской тропы. Прошёл пешком по горам Кавказа более 3500 км. Создатель пешеходной тропы Волга море.</p>
+                        <div class="contactFormContainerLeftPart">
+                            <h1>Поход: Волга море</h1>
+                            <ul class="itemsContactForm">
+                                <li>
+                                    <i class="fa-solid fa-clock"></i>
+                                    <span>Даты:</span>
+                                    <h4 class="">11-19 июня 2026</h4>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-route"></i>
+                                    <span>Расстояние</span>
+                                    <h4 class="">73 км</h4>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-signal"></i>
+                                    <span>Сложность</span>
+                                    <h4 class="">3/5</h4>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-user-check"></i>
+                                    <span>Свободные места</span>
+                                    <h4 class="">1/5</h4>
+                                </li>
+                            </ul>
                         
                         </div>
+
+                        <div class="contactFormContainerRightPart">
+
+                                <div class="warningContact">
+                                <h4>
+                                    Отправив заявку, вы получите анкету для заполнения данных участника.
+                                    Далее анкета рассматривается, и мы созваниваемся для собеседования, обсуждаем детали по походу.
+                                </h4>
+                                </div>
+
+
+                            <form id="contactFormElement">
+                                <div class="form-group">
+                                    <label for="fName">Имя</label>
+                                    <input type="text" id="fName" name="first_name" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="lName">Фамилия</label>
+                                    <input type="text" id="lName" name="last_name" required>
+                                </div>
+
+                                <div class="form-group span-all">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+
+                                <fieldset class="span-all">
+                                    <legend>Тип запроса</legend>
+                                    <div class="radio-group">
+                                        <input type="radio" id="general" name="query" value="General Enquiry" required>
+                                        <label for="general">Общий вопрос</label>
+                                    </div>
+                                    <div class="radio-group">
+                                        <input type="radio" id="support" name="query" value="Support Request" required>
+                                        <label for="support">Заявка на поход</label>
+                                    </div>
+                                </fieldset>
+
+                                <div class="form-group span-all">
+                                    <label for="message">Сообщение</label>
+                                    <textarea id="message" name="message" rows="4" required></textarea>
+                                </div>
+
+                                <div class="form-group span-all checkbox-group">
+                                    <input type="checkbox" id="consent" name="consent" required>
+                                    <label for="consent">Я согласен(на) на обработку моих персональных данных</label>
+                                </div>
+
+                                <button type="submit" class="span-all">Отправить заявку</button>
+                            </form>
+                        </div>
+
                     </div>
 
                 </div>
-
             </div>
-             
         </section>
 
-
-        <section id="opinionCarouselVM" class="opinionCarouselVM">
-
-        <div class="wrapper">
-
-            <div class="carousel-headerVM">
-
-                <div class="text1">
-                    <h1>Отзывы участников</h1>
-                </div>
-
-        
-                <div class="carouselVM-buttons">
-                    <i id="scrollLeftOpinionVM" class="fa-solid fa-arrow-left"></i>
-                    <i id="scrollRightOpinionVM" class="fa-solid fa-arrow-right"></i>
-                </div>
-                
-            </div>
-
-        </div>
-
-        <ul class="opinionCarouselVM-container">
-
-            <li class="card-OpinionVM">
-
-                <div class="opinion">
-
-                    <h1 class="h1Opinion">Волга-Море</h1>
-
-                    <p>На Кольском полуострове и в осеннем походе я была впервые. Полюбить и проникнуться Севером удалось благодаря Паше и Ане. Организация всех этапов похода уровня профи. Полное сопровождение и вовлеченность от момента планирования личных сборов, консультации по снаряжению до финального ужина путешествия.</p>
-                    
-                    <div class="button-wrapper" style="pointer-events: auto;"> 
-
-                        <button class="buttonOpinionVM" id="buttonOpinionVM"><h4>Читать полностью</h4></button>
-                        </div>
-                    </div>
-
-
-                <div class="avatarDiskr">
-
-                    <img class="avatar" src="./foto/wolgaMore/ruslan.jpg" alt="Отзыв 3" draggable="false">
-                    
-                    <div class="diskr">
-                        <h3>Михаил, 2025</h3>
-                        <i class="fa-brands fa-telegram"></i>
-                    </div>
-                
-                </div>
-
-            </li>
-
-
-            <li class="card-OpinionVM">
-
-                <div class="opinion">
-
-                    <h1 class="h1Opinion">Волга-Море</h1>
-
-                    <p>На Кольском полуострове и в осеннем походе я была впервые. Полюбить и проникнуться Севером удалось благодаря Паше и Ане. Организация всех этапов похода уровня профи. Полное сопровождение и вовлеченность от момента планирования личных сборов, консультации по снаряжению до финального ужина путешествия.</p>
-                    
-                    <div class="button-wrapper" style="pointer-events: auto;"> 
-
-                        <button class="buttonOpinion" id="buttonOpinion2"><h4>Читать полностью</h4></button>
-                        </div>
-                    </div>
-
-
-                <div class="avatarDiskr">
-
-                    <img class="avatar" src="./foto/wolgaMore/vladimer.jpg" alt="Отзыв 3" draggable="false">
-                    
-                    <div class="diskr">
-                        <h3>Михаил, 2025</h3>
-                        <i class="fa-brands fa-telegram"></i>
-                    </div>
-                
-                </div>
-
-            </li>
-
-            <li class="card-OpinionVM">
-
-                <div class="opinion">
-
-                    <h1>Волга-Море</h1>
-
-                    <p>На Кольском полуострове и в осеннем походе я была впервые. Полюбить и проникнуться Севером удалось благодаря Паше и Ане. Организация всех этапов похода уровня профи. Полное сопровождение и вовлеченность от момента планирования личных сборов, консультации по снаряжению до финального ужина путешествия.</p>
-                    
-                    <div class="button-wrapper" style="pointer-events: auto;"> 
-
-                        <button class="buttonOpinion" id="buttonOpinion3"><h4>Читать полностью</h4></button>
-                        </div>
-                    </div>
-
-
-                <div class="avatarDiskr">
-
-                    <img class="avatar" src="./video/three.jpg" alt="Отзыв 3" draggable="false">
-                    
-                    <div class="diskr">
-                        <h3>Михаил, 2025</h3>
-                        <i class="fa-brands fa-telegram"></i>
-                    </div>
-                
-                </div>
-
-            </li>
-
-            <li class="card-OpinionVM">
-
-                <div class="opinion">
-
-                    <h1>Волга-Море</h1>
-
-                    <p>На Кольском полуострове и в осеннем походе я была впервые. Полюбить и проникнуться Севером удалось благодаря Паше и Ане. Организация всех этапов похода уровня профи. Полное сопровождение и вовлеченность от момента планирования личных сборов, консультации по снаряжению до финального ужина путешествия.</p>
-                    
-                    <div class="button-wrapper" style="pointer-events: auto;"> 
-
-                        <button class="buttonOpinion" id="buttonOpinion4"><h4>Читать полностью</h4></button>
-                        </div>
-                    </div>
-
-
-                <div class="avatarDiskr">
-
-                    <img class="avatar" src="./video/three.jpg" alt="Отзыв 3" draggable="false">
-                    
-                    <div class="diskr">
-                        <h3>Михаил, 2025</h3>
-                        <i class="fa-brands fa-telegram"></i>
-                    </div>
-                
-                </div>
-
-            </li>
-
-
-            <li class="card-OpinionVM">
-
-                <div class="opinion">
-
-                    <h1>Волга-Море</h1>
-
-                    <p>На Кольском полуострове и в осеннем походе я была впервые. Полюбить и проникнуться Севером удалось благодаря Паше и Ане. Организация всех этапов похода уровня профи. Полное сопровождение и вовлеченность от момента планирования личных сборов, консультации по снаряжению до финального ужина путешествия.</p>
-                    
-                    <div class="button-wrapper" style="pointer-events: auto;"> 
-
-                        <button class="buttonOpinion" id="buttonOpinion5"><h4>Читать полностью</h4></button>
-                        </div>
-                    </div>
-
-
-                <div class="avatarDiskr">
-
-                    <img class="avatar" src="./video/three.jpg" alt="Отзыв 3" draggable="false">
-                    
-                    <div class="diskr">
-                        <h3>Михаил, 2025</h3>
-                        <i class="fa-brands fa-telegram"></i>
-                    </div>
-                
-                </div>
-
-            </li>
-
-        </ul>
-
-        <div class="wrapper">
-
-            <div class="btnOpinionVM">
-                <i class="fa-solid fa-arrow-down"></i>
-                <h3>Смотреть все отзывы</h3>
-            </div>
-
-        </div>
-
-        </section>
-
-
-
-        <section class="price" id="price">
+         <section class="price" id="price">
 
             <div class="wrapper">
         
@@ -735,8 +642,6 @@
             </div>
 
         </section>
-
-
 
         <section class="faq-section" id="faq-section">
 
