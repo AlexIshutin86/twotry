@@ -7,7 +7,7 @@
   border-radius: 3rem;
   position: relative;
   overflow: hidden; /* изменено с visible для лучшего контроля */
-  padding: 1rem 0rem 1rem 1rem;
+  padding: 1rem 0rem 1rem 0rem;
   /* Скрыть скроллбар во всех браузерах */
   -ms-overflow-style: none; /* IE и Edge */
   scrollbar-width: none; /* Firefox */
