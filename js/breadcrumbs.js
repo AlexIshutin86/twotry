@@ -45,7 +45,7 @@
 
       mountansOfMasters: {
         display: "Горы Мастеров",
-        parent: "tour",
+        parent: "tours",
         url: "./mountansOfMasters.html",
       },
 
