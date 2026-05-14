@@ -1,0 +1,65 @@
+/* Breadcrumbs Styling - Matches Your Site */
+.breadcrumb {
+  padding: 1rem 0rem;
+  margin: 1rem auto 0;
+  max-width: 1400px;
+  background: transparent;
+}
+
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem;
+}
+
+.breadcrumb li {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumb li:not(:last-child)::after {
+  content: "›";
+  margin-left: 0.5rem;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 1.1rem;
+}
+
+.breadcrumb a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.breadcrumb a:hover {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+.breadcrumb [aria-current="page"] {
+  color: #ffd700;
+  font-weight: 500;
+}
+
+/* Home icon option */
+.breadcrumb .home-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .breadcrumb {
+    padding: 0.75rem 1rem;
+  }
+
+  .breadcrumb li {
+    font-size: 0.75rem;
+  }
+}

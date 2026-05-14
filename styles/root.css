@@ -6,7 +6,16 @@
   --color-bg-overlay: rgba(0, 0, 0, 0.7);
 
   --colorGreen-overlay: rgba(3, 173, 17, 1);
-  --yellow: rgb(239, 255, 22);
+  --yellow: rgb(252, 227, 9);
+  --yellowLight: rgb(246, 255, 125);
+
+  --pale-green: hsl(148, 38%, 91%);
+  --green: hsl(169, 82%, 27%);
+  --red: hsl(0, 0%, 54%);
+  --white: hsl(0, 0%, 100%);
+  --light-teal: hsl(186, 15%, 59%);
+  --dark-teal: hsl(187, 24%, 22%);
+  --ff-base: "Karla", sans-serif;
 }
 
 .wrapper {

@@ -1,21 +1,20 @@
-:root {
-  --pale-green: hsl(148, 38%, 91%);
-  --green: hsl(169, 82%, 27%);
-  --red: hsl(0, 0%, 54%);
-  --white: hsl(0, 0%, 100%);
-  --light-teal: hsl(186, 15%, 59%);
-  --dark-teal: hsl(187, 24%, 22%);
-  --ff-base: "Karla", sans-serif;
-}
-
 * {
   accent-color: var(--green);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   text-decoration: none;
   list-style: none;
+}
+
+.contakt {
+  background-color: var(--yellow);
+  margin-top: -4rem;
+  border-radius: 3rem;
+  padding: 2rem 0;
+  width: 100%;
+  min-height: fit-content;
 }
 
 input,
@@ -23,28 +22,91 @@ button {
   font: inherit;
 }
 
-/* Стили для формы */
-.contactForm {
-  background: var(--white);
-  padding: 2rem;
+/* Main container - fixed grid */
+.contactFormContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem;
+  background-color: var(--yellowLight);
   border-radius: 2rem;
-  max-width: 700px;
-  margin: 2rem auto;
-  min-height: auto;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.contactForm h1 {
+/* Left part styles */
+.contactFormContainerLeftPart h1 {
+  color: var(--dark-teal);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.contactFormContainerLeftPart h4 {
+  color: var(--dark-teal);
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+/* Contact info list */
+.itemsContactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin-top: 6rem;
+}
+
+.itemsContactForm li {
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+  color: var(--dark-teal);
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.itemsContactForm li i {
+  width: 1.5rem;
+  color: var(--green);
+  font-size: 1.2rem;
+}
+
+.warningContact {
+  padding-bottom: 1rem;
+}
+
+/* Right part styles */
+.contactFormContainerRightPart h1 {
   text-align: center;
   margin-bottom: 2rem;
   color: var(--dark-teal);
   font-size: 1.8rem;
 }
 
-fieldset {
-  padding: 0;
-  border: 0;
+.contactFormContainerRightPart h4 {
+  text-align: left;
+  margin-bottom: 2rem;
+  color: var(--dark-teal);
+  font-size: 1.2rem;
+}
+
+/* Form styles */
+.contactForm {
+  border-radius: 2rem;
+  max-width: 1700px;
+  margin: 0 auto;
+  min-height: auto;
+}
+
+/* Form layout - fixed grid */
+form {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
@@ -58,15 +120,48 @@ fieldset {
   color: var(--dark-teal);
 }
 
-/* Входы и текстarea */
+.span-all {
+  grid-column: span 2;
+}
+
+/* Radio and checkbox groups */
+fieldset {
+  padding: 0;
+  border: 0;
+  display: grid;
+  gap: 0.8rem;
+  grid-column: span 2;
+}
+
+fieldset legend {
+  font-weight: 500;
+  color: var(--dark-teal);
+  margin-bottom: 0.5rem;
+}
+
+.radio-group,
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.radio-group label,
+.checkbox-group label {
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+/* Inputs and textarea */
 input[type="text"],
 input[type="email"],
 textarea {
   border: 1px solid var(--dark-teal);
   border-radius: 6px;
   padding: 0.75em 1.5em;
-  width: 100%; /* Занимает всю ширину ячейки сетки */
+  width: 100%;
   transition: border-color 0.3s ease;
+  background: white;
 }
 
 textarea {
@@ -81,30 +176,23 @@ textarea:focus {
   box-shadow: 0 0 0 2px rgba(3, 155, 3, 0.2);
 }
 
-/* Радиокнопки и чекбоксы */
-.form-group:has([type="radio"], [type="checkbox"]) {
-  display: flex;
-  align-items: center;
-  gap: 1.5ch;
-}
-
+/* Radio and checkbox inputs */
 [type="radio"],
 [type="checkbox"] {
   width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  accent-color: var(--green);
 }
 
-/* Валидация (звёздочка) */
-.form-group label::after {
-  content: "";
-}
-
+/* Required field indicator */
 .form-group:has([required]) label::after {
   content: "*";
-  color: #039b03;
+  color: var(--green);
   margin-left: 0.25rem;
 }
 
-/* Кнопка отправки */
+/* Submit button */
 button[type="submit"] {
   background: linear-gradient(90deg, #039b03, #05c405);
   border: none;
@@ -115,7 +203,9 @@ button[type="submit"] {
   font-weight: 500;
   cursor: pointer;
   width: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 button[type="submit"]:hover {
@@ -123,45 +213,110 @@ button[type="submit"]:hover {
   box-shadow: 0 5px 15px rgba(3, 155, 3, 0.4);
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
-  .contactForm {
-    padding: 1.5rem;
-    max-width: 95%;
-  }
-
-  .contactForm h1 {
-    font-size: 1.6rem;
-  }
-
-  /* Делаем "Имя" и "Фамилию" в столбик на мобильных */
-  fieldset {
+/* Responsive */
+@media (max-width: 1024px) {
+  .contactFormContainer {
     grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 2rem;
   }
 
-  input,
+  .contactFormContainerLeftPart {
+    text-align: center;
+  }
+
+  .itemsContactForm {
+    max-width: 400px;
+    margin: 0 auto 1rem auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .contakt {
+    margin-top: -12rem;
+    border-radius: 2rem;
+  }
+
+  .contactFormContainer {
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+
+  .contactFormContainerLeftPart h1 {
+    font-size: 1.5rem;
+  }
+
+  .contactFormContainerLeftPart h4 {
+    font-size: 0.9rem;
+  }
+
+  .contactFormContainerRightPart h1 {
+    font-size: 1.5rem;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .span-all {
+    grid-column: span 1;
+  }
+
+  fieldset {
+    grid-column: span 1;
+  }
+
+  input[type="text"],
+  input[type="email"],
   textarea {
-    font-size: 0.95rem;
-    padding: 0.6rem 1.2rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
   }
 
   button[type="submit"] {
     padding: 0.7rem 1.5rem;
     font-size: 0.9rem;
   }
-}
 
-@media (max-width: 480px) {
-  .contactForm {
+  .itemsContactForm {
     padding: 1rem;
   }
 
-  .contactForm h1 {
-    font-size: 1.5rem;
+  .itemsContactForm li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactFormContainer {
+    padding: 1rem;
   }
 
-  input,
+  .contactFormContainerLeftPart h1 {
+    font-size: 1.3rem;
+  }
+
+  .contactFormContainerRightPart h1 {
+    font-size: 1.3rem;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
   textarea {
-    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .itemsContactForm li {
+    font-size: 0.8rem;
+  }
+
+  .itemsContactForm li i {
+    font-size: 1rem;
   }
 }
