@@ -334,8 +334,7 @@
   min-height: 10rem;
   padding: 3rem 2rem;
   background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
-  border-radius: 3rem;
-  margin-top: -5rem;
+  border-radius: 2rem;
 }
 .details-section h2,
 .details-section p {
