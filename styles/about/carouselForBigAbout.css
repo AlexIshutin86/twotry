@@ -1,74 +1,138 @@
-/* Container - NO clip-path here */
-.carouselForBigAbout2,
+/* Carousel Container */
 .carouselForBigAbout1 {
   position: relative;
   width: 100%;
-  height: 50rem;
+  height: 60vh;
+  min-height: 400px;
+  max-height: 600px;
   overflow: hidden;
-  margin-top: -4rem;
-
-  border-radius: 2rem;
-  z-index: 45;
+  border-radius: 1.5rem;
 }
 
-/* Each slide starts hidden */
-.carouselForBigAbout2 .carouselForBigAboutSlide2,
-.carouselForBigAbout1 .carouselForBigAboutSlide {
+/* Slides */
+.carouselForBigAboutSlide {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  clip-path: circle(0% at 0 50%); /* Move clip-path here */
-  transition-property: clip-path;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
   z-index: 1;
 }
 
-/* Active slide becomes visible */
-.carouselForBigAbout2 .carouselForBigAboutSlide2.active2,
-.carouselForBigAbout1 .carouselForBigAboutSlide.active {
-  clip-path: circle(150% at 0 50%); /* Use 150% to ensure full coverage */
+.carouselForBigAboutSlide.active {
+  opacity: 1;
   z-index: 2;
-  transition: 2s;
-  transition-property: clip-path;
 }
 
 /* Images */
-.carouselForBigAbout2 .carouselForBigAboutSlide2 img,
-.carouselForBigAbout1 .carouselForBigAboutSlide img {
+.carouselForBigAboutSlide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-/* Navigation */
-.navForBigAbout2,
+/* Navigation Dots */
 .navForBigAbout {
   position: absolute;
-  bottom: 2rem;
+  bottom: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 1rem;
-  z-index: 99;
-
-  background-color: rgb(255, 255, 255);
-  padding: 1rem 1.5rem;
-  border-radius: 1rem;
+  gap: 0.75rem;
+  z-index: 10;
 }
-.bampForBigAbout2,
+
 .bampForBigAbout {
-  background-color: rgba(10, 10, 10, 0.9);
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.bampForBigAbout.active2,
 .bampForBigAbout.active {
-  background-color: var(--colorGreen-overlay);
-  transform: scale(1.3);
+  background: #ffd700;
+  width: 24px;
+  border-radius: 5px;
+}
+
+.bampForBigAbout:hover {
+  background: #ffd700;
+  transform: scale(1.2);
+}
+
+/* Navigation Arrows */
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-prev {
+  left: 1rem;
+}
+
+.carousel-next {
+  right: 1rem;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carouselForBigAbout1 {
+    height: 40vh;
+    min-height: 300px;
+    border-radius: 1rem;
+  }
+
+  .carousel-prev,
+  .carousel-next {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+
+  .bampForBigAbout {
+    width: 8px;
+    height: 8px;
+  }
+
+  .bampForBigAbout.active {
+    width: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carouselForBigAbout1 {
+    height: 35vh;
+    min-height: 250px;
+  }
+
+  .navForBigAbout {
+    bottom: 1rem;
+    gap: 0.5rem;
+  }
 }

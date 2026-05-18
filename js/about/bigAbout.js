@@ -1,183 +1,76 @@
-//Carousel
+// Carousel functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const slides = document.querySelectorAll(".carouselForBigAboutSlide");
+  const dots = document.querySelectorAll(".bampForBigAbout");
+  const prevBtn = document.querySelector(".carousel-prev");
+  const nextBtn = document.querySelector(".carousel-next");
+  let currentIndex = 0;
+  let autoplayInterval;
 
-const slidesAbout = document.querySelectorAll(".carouselForBigAboutSlide");
-const bumps = document.querySelectorAll(".bampForBigAbout");
-let currentslidesAbout = 0; // Start at 0, not 1
-let autoplayInterval = null;
+  function showSlide(index) {
+    // Remove active class from all slides and dots
+    slides.forEach((slide) => slide.classList.remove("active"));
+    dots.forEach((dot) => dot.classList.remove("active"));
 
-// Manual navigation function
-const manualNav = function (manual) {
-  // Remove active class from all slides
-  slidesAbout.forEach((slide) => {
-    slide.classList.remove("active");
-  });
-
-  // Remove active class from all bumps
-  bumps.forEach((bump) => {
-    bump.classList.remove("active");
-  });
-
-  // Add active class to selected slide and bump
-  slidesAbout[manual].classList.add("active");
-  bumps[manual].classList.add("active");
-  currentslidesAbout = manual;
-};
-
-// Next slide function
-function nextSlide() {
-  let nextIndex = currentslidesAbout + 1;
-  if (nextIndex >= slidesAbout.length) {
-    nextIndex = 0;
+    // Add active class to current slide and dot
+    slides[index].classList.add("active");
+    dots[index].classList.add("active");
+    currentIndex = index;
   }
-  manualNav(nextIndex);
-}
 
-// Previous slide function
-function prevSlide() {
-  let prevIndex = currentslidesAbout - 1;
-  if (prevIndex < 0) {
-    prevIndex = slidesAbout.length - 1;
+  function nextSlide() {
+    let nextIndex = currentIndex + 1;
+    if (nextIndex >= slides.length) nextIndex = 0;
+    showSlide(nextIndex);
   }
-  manualNav(prevIndex);
-}
 
-// Start autoplay
-function startAutoplay() {
-  if (autoplayInterval) {
-    clearInterval(autoplayInterval);
+  function prevSlide() {
+    let prevIndex = currentIndex - 1;
+    if (prevIndex < 0) prevIndex = slides.length - 1;
+    showSlide(prevIndex);
   }
-  autoplayInterval = setInterval(() => {
-    nextSlide();
-  }, 5000); // Change slide every 5 seconds
-}
 
-// Stop autoplay
-function stopAutoplay() {
-  if (autoplayInterval) {
-    clearInterval(autoplayInterval);
-    autoplayInterval = null;
+  function startAutoplay() {
+    autoplayInterval = setInterval(nextSlide, 5000);
   }
-}
 
-// Add click events to bumps/dots
-bumps.forEach((bampForBigAbout, i) => {
-  bampForBigAbout.addEventListener("click", () => {
-    manualNav(i);
-    stopAutoplay();
-    startAutoplay(); // Restart autoplay after manual click
-  });
-});
-
-// Initialize carousel
-/*document.addEventListener("DOMContentLoaded", () => {
-  if (slidesAbout.length > 0) {
-    manualNav(0); // Show first slide
-    startAutoplay();
-
-    // Optional: Pause autoplay on hover
-    const carousel = document.querySelector(".carouselForBigAbout1");
-    if (carousel) {
-      carousel.addEventListener("mouseenter", stopAutoplay);
-      carousel.addEventListener("mouseleave", startAutoplay);
-    }
+  function stopAutoplay() {
+    if (autoplayInterval) clearInterval(autoplayInterval);
   }
-});  */
 
-// Optional: Keyboard navigation
-document.addEventListener("keydown", (e) => {
-  if (e.key === "ArrowLeft") {
-    prevSlide();
-    stopAutoplay();
-    startAutoplay();
-  } else if (e.key === "ArrowRight") {
-    nextSlide();
-    stopAutoplay();
-    startAutoplay();
-  }
-});
+  // Event listeners
+  if (prevBtn)
+    prevBtn.addEventListener("click", () => {
+      prevSlide();
+      stopAutoplay();
+      startAutoplay();
+    });
 
-//Carousel 2
+  if (nextBtn)
+    nextBtn.addEventListener("click", () => {
+      nextSlide();
+      stopAutoplay();
+      startAutoplay();
+    });
 
-// ========== CAROUSEL 2 (FIXED) ==========
-const slidesAbout2 = document.querySelectorAll(".carouselForBigAboutSlide2");
-const bumps2 = document.querySelectorAll(".bampForBigAbout2");
-let currentslidesAbout2 = 0;
-let autoplayInterval2 = null;
-
-// Manual navigation function for Carousel 2
-const manualNav2 = function (manual) {
-  // Remove active class from all slides in Carousel 2
-  slidesAbout2.forEach((slide) => {
-    slide.classList.remove("active2");
-  });
-
-  // Remove active class from all bumps in Carousel 2
-  bumps2.forEach((bump) => {
-    bump.classList.remove("active2");
-  });
-
-  // Add active class to selected slide and bump
-  slidesAbout2[manual].classList.add("active2");
-  bumps2[manual].classList.add("active2");
-  currentslidesAbout2 = manual;
-};
-
-// Next slide function for Carousel 2
-function nextSlide2() {
-  let nextIndex = currentslidesAbout2 + 1;
-  if (nextIndex >= slidesAbout2.length) {
-    nextIndex = 0;
-  }
-  manualNav2(nextIndex);
-}
-
-// Previous slide function for Carousel 2
-function prevSlide2() {
-  let prevIndex = currentslidesAbout2 - 1;
-  if (prevIndex < 0) {
-    prevIndex = slidesAbout2.length - 1;
-  }
-  manualNav2(prevIndex);
-}
-
-// Add click events to bumps/dots for Carousel 2
-if (bumps2.length > 0) {
-  bumps2.forEach((bump, i) => {
-    bump.addEventListener("click", () => {
-      manualNav2(i);
-      stopAutoplay2();
-      startAutoplay2();
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      showSlide(index);
+      stopAutoplay();
+      startAutoplay();
     });
   });
-}
 
-// Initialize Carousel 2
-document.addEventListener("DOMContentLoaded", () => {
-  if (slidesAbout2.length > 0) {
-    manualNav2(0);
-    startAutoplay2();
-
-    // Pause autoplay on hover
-    const carousel2 = document.querySelector(".carouselForBigAbout2");
-    if (carousel2) {
-      carousel2.addEventListener("mouseenter", stopAutoplay2);
-      carousel2.addEventListener("mouseleave", startAutoplay2);
-    }
+  // Pause autoplay on hover
+  const carousel = document.querySelector(".carouselForBigAbout1");
+  if (carousel) {
+    carousel.addEventListener("mouseenter", stopAutoplay);
+    carousel.addEventListener("mouseleave", startAutoplay);
   }
-});
 
-// Keyboard navigation for Carousel 2 (only when hovering over Carousel 2)
-document.addEventListener("keydown", (e) => {
-  const carousel2 = document.querySelector(".carouselForBigAbout2");
-  if (carousel2 && carousel2.matches(":hover")) {
-    if (e.key === "ArrowLeft") {
-      prevSlide2();
-      stopAutoplay2();
-      startAutoplay2();
-    } else if (e.key === "ArrowRight") {
-      nextSlide2();
-      stopAutoplay2();
-      startAutoplay2();
-    }
+  // Start carousel
+  if (slides.length > 0) {
+    showSlide(0);
+    startAutoplay();
   }
 });
