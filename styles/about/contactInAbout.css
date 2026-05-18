@@ -1,10 +1,15 @@
 .contactInAbout {
   background-color: var(--color-bg-dark);
   min-height: fit-content;
-  padding: 3rem 1rem;
+
   margin-top: 0;
   z-index: 55;
   clear: both;
+}
+
+.contactInAbout ul {
+  padding: 0rem 0rem;
+  margin: 0;
 }
 
 .contactInAbout .wrapper {
