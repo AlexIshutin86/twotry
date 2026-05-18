@@ -5,7 +5,7 @@
   min-height: 40rem;
   padding: 1rem 2rem;
   background-color: hsl(215, 31%, 12%);
-  margin-top: -11rem;
+
   position: relative;
   z-index: 2;
   border-radius: 3rem;
@@ -141,7 +141,7 @@
 @media (max-width: 768px) {
   .shortAbout {
     padding: 2rem 1rem;
-    margin-top: -15rem;
+
     border-radius: 2rem;
     min-height: auto;
   }
