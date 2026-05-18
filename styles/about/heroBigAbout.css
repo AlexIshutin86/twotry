@@ -58,7 +58,7 @@
 .team-hero__badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem;
+  gap: 1.8rem;
   padding-top: 2rem;
 }
 
