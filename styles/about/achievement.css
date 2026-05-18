@@ -2,10 +2,10 @@
 .achievementItems {
   display: flex;
   flex-direction: column;
+  min-height: auto;
   gap: 3rem;
   list-style: none;
   padding: 0;
-  max-height: fit-content;
 }
 
 .achievementItem {
