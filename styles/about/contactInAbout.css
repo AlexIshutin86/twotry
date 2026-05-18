@@ -2,8 +2,7 @@
   background-color: var(--color-bg-dark);
   min-height: fit-content;
   padding: 1rem;
-  padding-bottom: 4rem;
-  margin-top: -3rem;
+
   z-index: 55;
 }
 
@@ -15,7 +14,7 @@
   width: 100%;
   max-width: 1300px;
   min-height: fit-content;
-  gap: 4rem;
+  gap: 1rem;
   cursor: pointer;
 }
 
