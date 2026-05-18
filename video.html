@@ -18,14 +18,23 @@
     <main>
       <section id="topDescription" class="topDescription">
         <div class="topDescription-container">
-          <div id="hero">
-            <video autoplay loop muted>
-              <source
-                src="./video/tumbnailForSection/firstTry_cropped.mp4"
-                type="video/mp4"
-              />
-            </video>
-          </div>
+          <img
+            src="./foto/wolgaMore/header/1.webp"
+            srcset="
+              .\video\tumbnailForSection\1.2.webp 1024w,
+              .\video\tumbnailForSection\1.webp   1500w
+            "
+            sizes="
+    (max-width: 768px) 768px,
+    (max-width: 1024px) 1024px,
+    1500px
+  "
+            alt="Волга море - живописный вид"
+            width="1500"
+            height="600"
+            fetchpriority="high"
+            loading="eager"
+          />
 
           <div class="info-box">
             <div class="text">
