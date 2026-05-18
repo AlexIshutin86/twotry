@@ -1,9 +1,15 @@
 .contactInAbout {
   background-color: var(--color-bg-dark);
   min-height: fit-content;
-  padding: 1rem;
-
+  padding: 3rem 1rem;
+  margin-top: 0;
   z-index: 55;
+  clear: both;
+}
+
+.contactInAbout .wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .contactInAboutItems {
@@ -14,56 +20,103 @@
   width: 100%;
   max-width: 1300px;
   min-height: fit-content;
-  gap: 1rem;
+  gap: 4rem;
   cursor: pointer;
+  margin: 0 auto;
 }
 
 .contactInAboutItem {
-  background-color: var(--color-bg-lighter);
+  list-style: none;
+  transition: all 0.3s ease;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 1rem;
   padding: 1rem;
-  display: grid;
+  text-decoration: none;
   transition: all 0.3s ease;
-  gap: 1rem;
   min-height: 4rem;
 }
 
-.contactInAboutItem:hover {
-  transform: scale(1.1);
-  background-color: var(--color-bg-lighter-hover);
-}
-
-.contactInAboutItem h2 {
-  font-size: 1.7rem;
-  color: rgb(243, 243, 243);
-  font-weight: 300;
-}
-
-.contactInAboutItem i {
-  color: black;
+.contact-link:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 215, 0, 0.3);
 }
 
 .sticker {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: rem;
-  background-color: var(--yellow);
+  background: #ffd700;
   width: 2rem;
   height: 2rem;
   border-radius: 2rem;
+  flex-shrink: 0;
 }
 
+.sticker i {
+  color: #1a1a2e;
+  font-size: 1rem;
+}
+
+.contact-link h2 {
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 500;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover h2 {
+  color: #ffd700;
+}
+
+/* Responsive */
 @media (max-width: 900px) {
   .contactInAboutItems {
-    display: grid;
     grid-template-columns: 1fr;
-    align-items: center;
-    justify-content: start;
+    gap: 1rem;
+    justify-items: center;
+  }
+
+  .contactInAboutItem {
     width: 100%;
-    max-width: 1300px;
-    min-height: fit-content;
-    gap: 4rem;
-    cursor: pointer;
+    max-width: 300px;
+  }
+
+  .contact-link {
+    padding: 0.8rem;
+  }
+
+  .contact-link h2 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactInAbout {
+    padding: 2rem 0.5rem;
+  }
+
+  .contact-link {
+    padding: 0.7rem;
+  }
+
+  .sticker {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .sticker i {
+    font-size: 0.9rem;
+  }
+
+  .contact-link h2 {
+    font-size: 0.9rem;
   }
 }
