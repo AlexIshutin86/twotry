@@ -32,6 +32,8 @@
 @import "./styles/foto/foto.css";
 @import "./styles/generalFoto.css";
 
+@import "./styles/video/video1";
+
 #hero {
   position: relative;
   width: 100%;
