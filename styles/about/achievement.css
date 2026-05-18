@@ -8,6 +8,10 @@
   padding: 0;
 }
 
+.titleSertificat {
+  padding-bottom: 2.5rem;
+}
+
 .achievementItem {
   display: flex;
   justify-content: space-between;
@@ -149,6 +153,10 @@
 
   .achievementItem h2 {
     font-size: 0.9rem;
+  }
+
+  .titleSertificat {
+    padding-bottom: 1.5rem;
   }
 
   .achievementIcon {
