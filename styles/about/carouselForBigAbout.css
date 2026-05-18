@@ -154,6 +154,8 @@
     height: 40vh;
     min-height: 300px;
     border-radius: 1rem;
+    padding: 0;
+    margin: 0;
   }
 
   .carousel-prev,
@@ -189,14 +191,8 @@
   .carouselForBigAbout2 {
     height: 35vh;
     min-height: 250px;
-  }
-}
-
-/* Большие экраны (от 1440px) */
-@media (min-width: 1440px) {
-  .carouselForBigAbout1,
-  .carouselForBigAbout2 {
-    aspect-ratio: 21 / 9;
+    padding: 0;
+    margin: 0;
   }
 }
 
