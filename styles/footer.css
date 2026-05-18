@@ -6,6 +6,7 @@ footer {
 
 .footer-container {
   background-color: rgb(0, 0, 0);
+  border-radius: 3rem 3rem 0rem 0rem;
 }
 
 .info-footer {
