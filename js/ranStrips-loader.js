@@ -25,7 +25,7 @@
       <li class="minus"><span class="advantages">•Гостеприимство и национальный колорит</span></li>
     `;
 
-    fetch("../elements/ranStrips-placeholder.html")
+    fetch("./elements/ranStrips-placeholder.html")
       .then((response) => response.text())
       .then((html) => {
         placeholder.innerHTML = html;
