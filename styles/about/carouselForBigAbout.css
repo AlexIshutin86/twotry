@@ -1,13 +1,24 @@
-/* Carousel Container */
-.carouselForBigAbout1 {
+/* ========== ОБЩИЕ СТИЛИ ДЛЯ КАРУСЕЛЕЙ ========== */
+
+/* Carousel Container - общий стиль */
+.carouselForBigAbout1,
+.carouselForBigAbout2 {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9; /* Соотношение сторон 16:9 как у большинства фото */
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 1.5rem;
+  margin: 0;
+  padding: 0;
 }
-/* Slides */
-.carouselForBigAboutSlide {
+
+.carouselForBigAbout2 {
+  margin: 0rem 0;
+}
+
+/* Slides - общий стиль */
+.carouselForBigAboutSlide,
+.carouselForBigAboutSlide2 {
   position: absolute;
   top: 0;
   left: 0;
@@ -18,21 +29,26 @@
   z-index: 1;
 }
 
-.carouselForBigAboutSlide.active {
+/* Active slides */
+.carouselForBigAboutSlide.active,
+.carouselForBigAboutSlide2.active2 {
   opacity: 1;
   z-index: 2;
 }
 
 /* Images */
-.carouselForBigAboutSlide img {
+.carouselForBigAboutSlide img,
+.carouselForBigAboutSlide2 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-/* Navigation Dots */
-.navForBigAbout {
+/* ========== НАВИГАЦИОННЫЕ ТОЧКИ ========== */
+
+.navForBigAbout,
+.navForBigAbout2 {
   position: absolute;
   bottom: 1.5rem;
   left: 50%;
@@ -42,6 +58,7 @@
   z-index: 10;
 }
 
+/* Точки для первой карусели */
 .bampForBigAbout {
   width: 10px;
   height: 10px;
@@ -62,122 +79,7 @@
   transform: scale(1.2);
 }
 
-/* Navigation Arrows */
-.carousel-prev,
-.carousel-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 10;
-  transition: all 0.3s ease;
-  font-size: 1.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.carousel-prev {
-  left: 1rem;
-}
-
-.carousel-next {
-  right: 1rem;
-}
-
-.carousel-prev:hover,
-.carousel-next:hover {
-  background: rgba(0, 0, 0, 0.8);
-  transform: translateY(-50%) scale(1.1);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .carouselForBigAbout1 {
-    height: 40vh;
-    min-height: 300px;
-    border-radius: 1rem;
-  }
-
-  .carousel-prev,
-  .carousel-next {
-    width: 32px;
-    height: 32px;
-    font-size: 1rem;
-  }
-
-  .bampForBigAbout {
-    width: 8px;
-    height: 8px;
-  }
-
-  .bampForBigAbout.active {
-    width: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .carouselForBigAbout1 {
-    height: 35vh;
-    min-height: 250px;
-  }
-
-  .navForBigAbout {
-    bottom: 1rem;
-    gap: 0.5rem;
-  }
-}
-
-/* Вторая карусель */
-.carouselForBigAbout2 {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border-radius: 1.5rem;
-  margin: 2rem 0;
-}
-
-.carouselForBigAboutSlide2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  z-index: 1;
-}
-
-.carouselForBigAboutSlide2.active2 {
-  opacity: 1;
-  z-index: 2;
-}
-
-.carouselForBigAboutSlide2 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Навигация для второй карусели */
-.navForBigAbout2 {
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 0.75rem;
-  z-index: 10;
-}
-
+/* Точки для второй карусели */
 .bampForBigAbout2 {
   width: 10px;
   height: 10px;
@@ -193,7 +95,15 @@
   border-radius: 5px;
 }
 
-/* Стрелки для второй карусели */
+.bampForBigAbout2:hover {
+  background: #ffd700;
+  transform: scale(1.2);
+}
+
+/* ========== НАВИГАЦИОННЫЕ СТРЕЛКИ ========== */
+
+.carousel-prev,
+.carousel-next,
 .carousel-prev2,
 .carousel-next2 {
   position: absolute;
@@ -214,22 +124,40 @@
   justify-content: center;
 }
 
+/* Левые стрелки */
+.carousel-prev,
 .carousel-prev2 {
   left: 1rem;
 }
 
+/* Правые стрелки */
+.carousel-next,
 .carousel-next2 {
   right: 1rem;
 }
 
+/* Hover эффекты для стрелок */
+.carousel-prev:hover,
+.carousel-next:hover,
 .carousel-prev2:hover,
 .carousel-next2:hover {
   background: rgba(0, 0, 0, 0.8);
   transform: translateY(-50%) scale(1.1);
 }
 
-/* Адаптивность */
+/* ========== АДАПТИВНОСТЬ ========== */
+
+/* Планшеты (до 768px) */
 @media (max-width: 768px) {
+  .carouselForBigAbout1,
+  .carouselForBigAbout2 {
+    height: 40vh;
+    min-height: 300px;
+    border-radius: 1rem;
+  }
+
+  .carousel-prev,
+  .carousel-next,
   .carousel-prev2,
   .carousel-next2 {
     width: 32px;
@@ -237,12 +165,61 @@
     font-size: 1rem;
   }
 
+  .bampForBigAbout,
   .bampForBigAbout2 {
     width: 8px;
     height: 8px;
   }
 
+  .bampForBigAbout.active,
   .bampForBigAbout2.active2 {
     width: 20px;
+  }
+
+  .navForBigAbout,
+  .navForBigAbout2 {
+    bottom: 1rem;
+    gap: 0.5rem;
+  }
+}
+
+/* Мобильные устройства (до 480px) */
+@media (max-width: 480px) {
+  .carouselForBigAbout1,
+  .carouselForBigAbout2 {
+    height: 35vh;
+    min-height: 250px;
+  }
+}
+
+/* Большие экраны (от 1440px) */
+@media (min-width: 1440px) {
+  .carouselForBigAbout1,
+  .carouselForBigAbout2 {
+    aspect-ratio: 21 / 9;
+  }
+}
+
+/* Для touch-устройств убираем hover эффекты */
+@media (hover: none) and (pointer: coarse) {
+  .bampForBigAbout:hover,
+  .bampForBigAbout2:hover {
+    transform: none;
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  .carousel-prev:hover,
+  .carousel-next:hover,
+  .carousel-prev2:hover,
+  .carousel-next2:hover {
+    transform: translateY(-50%);
+  }
+}
+
+/* Анимация для плавного переключения */
+@media (prefers-reduced-motion: reduce) {
+  .carouselForBigAboutSlide,
+  .carouselForBigAboutSlide2 {
+    transition: none;
   }
 }
