@@ -272,30 +272,49 @@
 
             <div class="wrapper">
 
-                <h1>Сертификаты и дипломы</h1>
+              <h1>Сертификаты и дипломы</h1>
 
-                <ul class="achievementItems">
+<ul class="achievementItems">
+  <li class="achievementItem" data-certificate="./about/sertificat/1.webp">
+    <h2>Сертификат инструктора</h2>
+    <div class="achievementIcon">
+      <i class="fa-solid fa-file-pdf"></i>
+      <span>PDF</span>
+    </div>
+  </li>
 
-                    <li class="achievementItem">
-                        <h2>Сертификат</h2>
-                        <div class="achievementIcon">PDF</i></div>
-                    </li>
+  <li class="achievementItem" data-certificate="./about/sertificat/2.webp">
+    <h2>Диплом о первой помощи</h2>
+    <div class="achievementIcon">
+      <i class="fa-solid fa-file-pdf"></i>
+      <span>PDF</span>
+    </div>
+  </li>
 
-                    <li class="achievementItem">
-                        <h2>Сертификат</h2>
-                        <div class="achievementIcon">PDF</i></div>
-                    </li>
+  <li class="achievementItem" data-certificate="./about/sertificat/3.webp">
+    <h2>Сертификат проводника</h2>
+    <div class="achievementIcon">
+      <i class="fa-solid fa-file-pdf"></i>
+      <span>PDF</span>
+    </div>
+  </li>
 
-                    <li class="achievementItem">
-                        <h2>Сертификат</h2>
-                        <div class="achievementIcon">PDF</i></div>
-                    </li>
-                    
+   <li class="achievementItem" data-certificate="./about/sertificat/4.webp">
+    <h2>Сертификат проводника</h2>
+    <div class="achievementIcon">
+      <i class="fa-solid fa-file-pdf"></i>
+      <span>PDF</span>
+    </div>
+  </li>
+</ul>
 
-                </ul>
-                 
-            </div>
-        </section>
+<!-- Модальное окно для показа сертификата -->
+<div id="certificateModal" class="certificate-modal">
+  <div class="certificate-modal-content">
+    <span class="certificate-modal-close">&times;</span>
+    <img id="certificateImage" src="" alt="Сертификат">
+  </div>
+</div>
 
         
         
@@ -385,6 +404,7 @@
     <script src="./js/about/bigAbout.js" defer></script>
     <script src="./js/footer-loader.js" defer></script>
     <script src="./js/breadcrumbs.js" defer></script>
+     <script src="./js/about/achivment.js" defer></script>
    
 
     <script src="./js/scrollUp.js" defer></script>
