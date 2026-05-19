@@ -1,6 +1,6 @@
 :root {
   --color-bg-dark: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
-  --color-bg-lighter: #1d1d31;
+  --color-bg-lighter: #2b2b47;
   --color-bg-lighter-hover: #2a2a47;
   --color-bg-card: rgba(255, 255, 255, 0.08);
   --color-bg-overlay: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
@@ -9,7 +9,7 @@
   --yellow: rgb(252, 227, 9);
   --yellowLight: rgb(246, 255, 125);
 
-  --pale-green: hsl(148, 38%, 91%);
+  --pale-green: hsl(144, 32%, 9%);
   --green: hsl(169, 82%, 27%);
   --red: hsl(0, 0%, 54%);
   --white: hsl(0, 0%, 100%);
@@ -19,7 +19,7 @@
 
   --ff-base: "Karla", sans-serif;
 
-  --backgroundColor: rgb(48, 71, 87);
+  --backgroundColor: rgb(43, 57, 82);
 }
 
 .wrapper {
