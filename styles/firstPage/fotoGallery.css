@@ -4,7 +4,7 @@
   width: 100%;
   padding: 2rem 4rem;
   background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
-  border-radius: 2rem;
+  border-radius: 2rem 2rem 0rem 0rem;
   position: relative;
   z-index: 6;
 }

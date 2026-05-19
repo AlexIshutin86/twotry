@@ -13,17 +13,19 @@
   --green: hsl(169, 82%, 27%);
   --red: hsl(0, 0%, 54%);
   --white: hsl(0, 0%, 100%);
+
   --light-teal: hsl(186, 15%, 59%);
   --dark-teal: hsl(187, 24%, 22%);
+
   --ff-base: "Karla", sans-serif;
 
-  --backgroundColor: rgb(48, 59, 87);
+  --backgroundColor: rgb(48, 71, 87);
 }
 
 .wrapper {
   max-inline-size: 1420px;
   margin-inline: auto;
-  padding-inline: 0.2rem;
+  padding-inline: 0rem;
   /*border: 5px dotted red;*/
 }
 
@@ -134,7 +136,7 @@ h3 {
   font-size: 1.3rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 100;
-  line-height: 1.5rem;
+  line-height: 1.6rem;
 }
 
 @media (max-width: 560px) {

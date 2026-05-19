@@ -2,14 +2,18 @@
   background-color: var(--color-bg-dark);
 }
 
+/* ========== BIG ABOUT СЕКЦИЯ ========== */
 .bigAbout-section {
   width: 100%;
   min-height: 10rem;
-
   background: var(--color-bg-dark);
-  border-radius: 0rem 0rem 2rem 2rem;
+  border-radius: 2rem;
+
   z-index: 10;
+  position: relative;
+  padding: 1rem;
 }
+
 .bigAbout-section h2,
 .bigAbout-section p {
   color: #fff;
@@ -19,15 +23,19 @@
 .bigAbout-title {
   text-align: start;
   position: relative;
+  font-size: 2rem;
+  color: #ffd700;
+  margin-bottom: 1rem;
 }
 
+/* ИСПРАВЛЕНО: убран flex-direction, оставлен только grid */
 .bigAbout-container {
   display: grid;
   grid-template-columns: 19rem 1fr;
-  flex-direction: row;
   width: 100%;
   max-width: 1300px;
   gap: 5rem;
+  margin: 0 auto;
 }
 
 .bigAbout-description {
@@ -37,155 +45,106 @@
 
 .bigAbout-text h2 {
   padding-bottom: 1rem;
-  color: #fff;
+  color: #ffd700;
+  font-size: 1.3rem;
 }
 
 .bigAbout-text p {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 1rem;
 }
 
 .bigAbout-description .full-text {
   display: none;
-  color: #fff;
 }
 
 .bigAbout-description.expanded .full-text {
   display: block;
-  color: #fff;
 }
 
+/* Кнопка */
 .read-more-btn-bigAbout {
-  color: rgb(255, 255, 255);
+  color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background: linear-gradient(90deg, #03b103, #1bc405);
   border: none;
   border-radius: 2rem;
-  padding: 0.4rem 1rem;
-
-  font-size: 1.5rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.6rem;
   transition: all 0.3s ease;
 }
 
-.read-more-btn:hover {
+.read-more-btn-bigAbout:hover {
   transform: scale(1.05);
+  box-shadow: 0 3px 10px rgba(3, 155, 3, 0.3);
 }
 
+/* Runer */
 .runer {
-  padding: 3rem 0rem 3rem 0rem;
+  padding: 3rem 0;
   background-color: var(--color-bg-dark);
   max-height: fit-content;
 }
-/* ========== АДАПТИВНОСТЬ ДЛЯ DETAILS SECTION ========== */
 
-/* Для ноутбуков (1024px - 1200px) */
+/* ========== АДАПТИВНОСТЬ ========== */
+
+/* Ноутбуки (до 1200px) */
 @media (max-width: 1200px) {
   .bigAbout-section {
-    padding: 1rem 0.5rem;
+    padding: 1rem;
   }
 
   .bigAbout-container {
-    grid-template-columns: 25rem 1fr;
+    grid-template-columns: 22rem 1fr;
     gap: 2rem;
   }
 
   .bigAbout-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .bigAbout-text h2 {
-    font-size: 1.3rem;
-  }
-
-  .bigAbout-description {
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 1.2rem;
   }
 }
 
-/* Для планшетов (768px - 1024px) */
+/* Планшеты (до 1024px) */
 @media (max-width: 1024px) {
   .bigAbout-section {
-    padding: 2.5rem 1.5rem;
+    padding: 1.5rem;
   }
 
   .bigAbout-container {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    margin-left: 1rem;
-  }
-
-  .bigAbout-title {
-    text-align: left;
-
-    font-size: 2rem;
-    position: static;
-    margin-bottom: 0;
-  }
-
-  .bigAbout-text h2 {
-    text-align: left;
-    padding-bottom: 0.3rem;
-    font-size: 1.3rem;
-  }
-
-  .bigAbout-description {
-    margin-right: 3rem;
-
-    font-size: 0.95rem;
-    text-align: left;
-  }
-
-  .bigAbout-container {
-    display: flex;
-    flex-direction: column;
-
-    width: 100%;
-  }
-}
-
-/* Для мобильных устройств (577px - 768px) */
-@media (max-width: 768px) {
-  .bigAbout-section {
-    padding: 1rem 0.2rem;
-    margin: 1.5rem 0;
-    border-radius: 1.8rem;
-    margin-top: 0rem;
   }
 
   .bigAbout-title {
     font-size: 1.8rem;
+    margin-bottom: 0;
   }
 
   .bigAbout-text h2 {
+    padding-bottom: 0.5rem;
     font-size: 1.2rem;
-    margin-bottom: 0.5rem;
   }
 
   .bigAbout-description {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin-bottom: 0.2rem;
-  }
-
-  .bigAbout-description p {
-    margin-bottom: 0.8rem;
-  }
-
-  .read-more-btn {
-    padding: 0.4rem 0.5rem;
-    font-size: 0.9rem;
-    gap: 0.6rem;
+    margin-right: 0;
+    font-size: 0.95rem;
   }
 }
 
-/* Для маленьких мобильных устройств (481px - 576px) */
-@media (max-width: 576px) {
+/* Мобильные устройства (до 768px) */
+@media (max-width: 768px) {
   .bigAbout-section {
+    padding: 1rem;
+
     border-radius: 1.5rem;
   }
 
@@ -200,5 +159,30 @@
   .bigAbout-description {
     font-size: 0.85rem;
     line-height: 1.5;
+  }
+
+  .read-more-btn-bigAbout {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+    gap: 0.5rem;
+  }
+}
+
+/* Маленькие телефоны (до 480px) */
+@media (max-width: 480px) {
+  .bigAbout-section {
+    border-radius: 1rem;
+  }
+
+  .bigAbout-title {
+    font-size: 1.3rem;
+  }
+
+  .bigAbout-text h2 {
+    font-size: 1rem;
+  }
+
+  .bigAbout-description {
+    font-size: 0.8rem;
   }
 }
