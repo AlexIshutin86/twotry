@@ -1,8 +1,12 @@
+#aboutBG {
+  background-color: var(--color-bg-lighter);
+}
+
 /* team-hero section - base styles */
 
 .team-hero {
   padding: 2rem 1rem;
-  background: var(--color-bg-dark);
+
   min-height: fit-content;
   z-index: 88;
 }
