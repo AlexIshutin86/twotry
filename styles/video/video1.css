@@ -1,5 +1,9 @@
 /* ========== VIDEO SECTION ========== */
 
+main {
+  background: var(--color-bg-dark);
+}
+
 .video-section {
   width: 100%;
   padding: 3rem 2rem;
@@ -11,7 +15,7 @@
 }
 
 .video-container {
-  max-width: 1200px;
+  max-width: 1800px;
   margin: 0 auto;
 }
 

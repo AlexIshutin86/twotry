@@ -1,9 +1,9 @@
 :root {
-  --color-bg-dark: #0f0f1a;
+  --color-bg-dark: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
   --color-bg-lighter: #1d1d31;
   --color-bg-lighter-hover: #2a2a47;
   --color-bg-card: rgba(255, 255, 255, 0.08);
-  --color-bg-overlay: rgba(0, 0, 0, 0.7);
+  --color-bg-overlay: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
 
   --colorGreen-overlay: rgb(2, 122, 12);
   --yellow: rgb(252, 227, 9);

@@ -45,81 +45,83 @@
       </section>
 
       <section class="video-section">
-        <div class="video-container">
-          <!-- Main Video -->
-          <div class="video-wrapper">
-            <div class="video-player">
-              <iframe
-                src="https://vkvideo.ru/video_ext.php?oid=-45599639&id=456243920&hash=5bf45201eb71a515&hd=4"
-                width="1920"
-                height="1080"
-                allow="
-                  autoplay;
-                  encrypted-media;
-                  fullscreen;
-                  picture-in-picture;
-                  screen-wake-lock;
-                "
-                frameborder="0"
-                allowfullscreen
-              ></iframe>
-            </div>
+        <div class="wrapper">
+          <div class="video-container">
+            <!-- Main Video -->
+            <div class="video-wrapper">
+              <div class="video-player">
+                <iframe
+                  src="https://vkvideo.ru/video_ext.php?oid=-45599639&id=456243920&hash=5bf45201eb71a515&hd=4"
+                  width="1920"
+                  height="1080"
+                  allow="
+                    autoplay;
+                    encrypted-media;
+                    fullscreen;
+                    picture-in-picture;
+                    screen-wake-lock;
+                  "
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
 
-            <div class="video-info">
-              <h1 class="video-title">
-                Волга море. Пешая тропа вдоль величайшей реки Европы
-              </h1>
-            </div>
-          </div>
-
-          <!-- Comments Section -->
-          <div class="comments-section" id="comments">
-            <div class="comments-header">
-              <h2 class="comments-title">
-                <i class="fa-regular fa-comment"></i> Комментарии
-                <span class="comments-count">(0)</span>
-              </h2>
-              <div class="comments-sort">
-                <select class="sort-select" id="sortSelect">
-                  <option value="DATE_DESC">Сначала новые</option>
-                  <option value="DATE_ASC">Сначала старые</option>
-                  <option value="LIKES">По популярности</option>
-                </select>
+              <div class="video-info">
+                <h1 class="video-title">
+                  Волга море. Пешая тропа вдоль величайшей реки Европы
+                </h1>
               </div>
             </div>
 
-            <!-- Add Comment Form -->
-            <div class="add-comment">
-              <div class="comment-avatar">
-                <img
-                  src="./foto/placeholder/avatar-placeholder.jpg"
-                  alt="Аватар"
-                />
+            <!-- Comments Section -->
+            <div class="comments-section" id="comments">
+              <div class="comments-header">
+                <h2 class="comments-title">
+                  <i class="fa-regular fa-comment"></i> Комментарии
+                  <span class="comments-count">(0)</span>
+                </h2>
+                <div class="comments-sort">
+                  <select class="sort-select" id="sortSelect">
+                    <option value="DATE_DESC">Сначала новые</option>
+                    <option value="DATE_ASC">Сначала старые</option>
+                    <option value="LIKES">По популярности</option>
+                  </select>
+                </div>
               </div>
-              <div class="comment-form-wrapper">
-                <textarea
-                  id="commentText"
-                  class="comment-input"
-                  placeholder="Напишите комментарий..."
-                  rows="3"
-                  maxlength="1000"
-                ></textarea>
-                <div class="comment-actions">
-                  <button class="comment-submit" id="submitComment">
-                    <i class="fa-regular fa-paper-plane"></i> Отправить
-                  </button>
-                  <div class="comment-char-counter">
-                    <span id="charCount">0</span>/1000
+
+              <!-- Add Comment Form -->
+              <div class="add-comment">
+                <div class="comment-avatar">
+                  <img
+                    src="./foto/placeholder/avatar-placeholder.jpg"
+                    alt="Аватар"
+                  />
+                </div>
+                <div class="comment-form-wrapper">
+                  <textarea
+                    id="commentText"
+                    class="comment-input"
+                    placeholder="Напишите комментарий..."
+                    rows="3"
+                    maxlength="1000"
+                  ></textarea>
+                  <div class="comment-actions">
+                    <button class="comment-submit" id="submitComment">
+                      <i class="fa-regular fa-paper-plane"></i> Отправить
+                    </button>
+                    <div class="comment-char-counter">
+                      <span id="charCount">0</span>/1000
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Comments List -->
-            <div class="comments-list" id="commentsList">
-              <div class="no-comments">
-                <i class="fa-regular fa-message"></i>
-                <p>Пока нет комментариев. Будьте первым!</p>
+              <!-- Comments List -->
+              <div class="comments-list" id="commentsList">
+                <div class="no-comments">
+                  <i class="fa-regular fa-message"></i>
+                  <p>Пока нет комментариев. Будьте первым!</p>
+                </div>
               </div>
             </div>
           </div>
