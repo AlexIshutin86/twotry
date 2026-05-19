@@ -418,6 +418,10 @@
   }
 }
 
+#readMoreBtn2 {
+  margin-top: 1.5rem;
+}
+
 .read-more-btn {
   color: rgb(255, 255, 255);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
