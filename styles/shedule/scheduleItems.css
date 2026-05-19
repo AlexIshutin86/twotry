@@ -47,7 +47,7 @@
   grid-template-rows: subgrid;
 
   list-style: none;
-  background: hsl(0, 0%, 90%);
+  background: var(--white);
   border-radius: 2rem;
   padding: 1rem;
   scroll-snap-align: center;
@@ -82,7 +82,7 @@
 }
 
 .sheduls-days {
-  background-color: #bbbbbb;
+  background-color: var(--yellow);
   color: rgb(10, 10, 10);
   padding: 0.3rem 0.8rem;
   border-radius: 2rem;
@@ -95,7 +95,7 @@
   color: #181818;
   align-items: start;
   text-align: left;
-  background-color: #5eff13;
+  background-color: var(--yellow);
   max-width: fit-content;
   border-radius: 3rem;
   padding: 0rem 1rem 0rem 1rem;
@@ -125,7 +125,7 @@
 }
 
 .cardScheduleItems-container::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(194, 26, 26, 0.2);
   border-radius: 0px;
 }
 
