@@ -1,13 +1,18 @@
 /* ========== СТАТЬЯ ========== */
-
+.textArticles-wrapper {
+  border-radius: 3rem 3rem 0rem 0rem;
+  z-index: 1900;
+  background-color: var(--backgroundDarkColor);
+  padding-top: 3rem;
+}
 .textArticle {
   display: flex;
   flex-direction: column;
-  margin-top: -5rem;
-  max-width: 1800px;
+  margin-top: -15rem;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 1rem;
+  border-radius: 3rem 3rem 0rem 0rem;
 }
 
 .textArticle p,
@@ -17,12 +22,13 @@
 }
 
 .textArticle h1 {
-  color: #ffd700;
+  color: var(--white);
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
 .textArticle h2 {
+  color: var(--yellow);
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
   font-weight: normal;
