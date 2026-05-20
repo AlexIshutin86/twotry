@@ -12,6 +12,7 @@
   border-radius: 2rem 2rem 0rem 0rem;
   margin-top: -10rem;
   z-index: 900;
+  border-radius: 3rem;
 }
 
 .articles-section h2 {

@@ -1,9 +1,10 @@
 /* ========== СТАТЬЯ ========== */
+.generalArticlBG {
+  background-color: var(--backgroundDarkColor);
+}
+
 .textArticles-wrapper {
   border-radius: 3rem 3rem 0rem 0rem;
-  z-index: 1900;
-  background-color: var(--backgroundDarkColor);
-  padding-top: 3rem;
 }
 .textArticle {
   display: flex;
@@ -13,6 +14,8 @@
   margin-left: auto;
   margin-right: auto;
   border-radius: 3rem 3rem 0rem 0rem;
+  background-color: var(--backgroundDarkColor);
+  z-index: 1900;
 }
 
 .textArticle p,
