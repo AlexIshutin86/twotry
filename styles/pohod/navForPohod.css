@@ -204,7 +204,7 @@
 
   .info-boxForPoxod {
     padding: 2rem 5%;
-    transform: translateY(-8rem);
+
     min-height: 35rem;
   }
 
@@ -283,7 +283,7 @@
     align-items: stretch;
     padding: 1rem;
     gap: 0.1rem;
-    transform: translateY(4rem);
+    transform: translateY(12rem);
   }
 
   .nav-linksPoxod li {
