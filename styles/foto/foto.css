@@ -1,184 +1,127 @@
-
-
-
-
-
 .topDescription {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Make section full viewport height */
-     z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Make section full viewport height */
+  z-index: 1;
 }
 
 .topDescription .topDescription-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    height: 100%; /* Take full height of parent */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%; /* Take full height of parent */
 }
 
 .topDescription-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Cover entire area without distortion */
-    display: block;
-    margin-top: -10rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover entire area without distortion */
+  display: block;
+  margin-top: -10rem;
 }
 
-
-
-
 .info-box {
-    position: absolute;
-    top: 10%; /* Center vertically */
-    left: 50%;
-    transform: translate(-50%, -50%); /* Perfect centering */
-    text-align: center;
-    z-index: 10;
-    width: 100%;
-    padding: 2rem;
+  position: absolute;
+  top: 10%; /* Center vertically */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Perfect centering */
+  text-align: center;
+  z-index: 10;
+  width: 100%;
+  padding: 2rem;
 }
 
 .info-box .text h1 {
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .btn-group {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
-
-
-
-
 
 .fotoItemsMain {
-    display: grid;
-    margin-top: -10rem;
-    z-index: 10;
-    height: auto;
-    max-width: 100%;
-    width: 100%;
-    position: relative;
-    background-color: rgb(16, 51, 44);
-    padding: 1rem;
-     border-radius: 3rem;
-    
- 
+  display: grid;
+  margin-top: -10rem;
+  z-index: 10;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  background-color: rgb(16, 51, 44);
+  padding: 1rem;
+  border-radius: 3rem;
 }
-
 
 .fotoItemsMain-container {
-    
-    display: grid;
-    grid-auto-flow: dense;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  display: grid;
+  grid-auto-flow: dense;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 
-    grid-auto-rows: 400px auto 100px;
-
-    
-    
-    
-  
+  grid-auto-rows: 400px auto 100px;
 }
-
 
 /* Карточки */
 
 .fotoItemsMain-container .cardFotoMain {
-    
-    grid-row: span 3;
-    display: grid;
-    grid-template-rows: subgrid;
-  
-    overflow: hidden;
-    border-radius: 1rem;
+  grid-row: span 3;
+  display: grid;
+  grid-template-rows: subgrid;
 
-    list-style: none;
-    background: #ffffff;
-    border-radius: 2rem;
-    padding: 1rem;
-    scroll-snap-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    will-change: transform;
-    transform: translateZ(0);
-   
+  overflow: hidden;
+  border-radius: 1rem;
+
+  list-style: none;
+  background: #ffffff;
+  border-radius: 2rem;
+  padding: 1rem;
+  scroll-snap-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  will-change: transform;
+  transform: translateZ(0);
 }
-
-
-
 
 .fotoItemsMain-container .cardFotoMain:hover {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
 }
-
-
 
 /* Изображения */
 .cardFotoMain .img {
-    width: 100%;
-    height:  100%;
+  width: 100%;
+  height: 100%;
 
-    object-fit: cover;
-    overflow: hidden;
+  object-fit: cover;
+  overflow: hidden;
 
-    border-radius: 1rem;
-    
+  border-radius: 1rem;
 }
 
 .cardFotoMain .img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 .cardFotoMain .img img:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
-
-
-
-
-
 
 @media (min-width: 300px) {
-   .fotoItemsMain-container .cardFotoMain{
+  .fotoItemsMain-container .cardFotoMain {
     min-height: 17rem;
     max-height: 15rem;
-   
+  }
 }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

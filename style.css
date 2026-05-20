@@ -34,6 +34,8 @@
 
 @import "./styles/video/video1";
 
+@import "./styles/articles/textArticle.css";
+
 #hero {
   position: relative;
   width: 100%;

@@ -37,6 +37,12 @@
         url: "./autumnCaucases.html",
       },
 
+      kaspiy: {
+        display: "Каспийские ворота",
+        parent: "Статьи",
+        url: "./autumnCaucases.html",
+      },
+
       tropaImperatora: {
         display: "Тропа Императора",
         parent: "tours",

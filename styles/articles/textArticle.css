@@ -1,0 +1,10 @@
+.textArticle {
+  display: flex;
+  flex-direction: column;
+  margin-top: -10rem;
+}
+
+p,
+.textArticle h2 {
+  color: aliceblue;
+}
