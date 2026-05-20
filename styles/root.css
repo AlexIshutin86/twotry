@@ -20,6 +20,7 @@
   --ff-base: "Karla", sans-serif;
 
   --backgroundColor: rgb(43, 57, 82);
+  --backgroundDarkColor: rgb(12, 18, 29);
 }
 
 .wrapper {

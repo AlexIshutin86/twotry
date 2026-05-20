@@ -1,7 +1,10 @@
 /* ========== ARTICLES SECTION - BENTO GRID ========== */
 
+.mainArticlesBG {
+  background-color: var(--backgroundDarkColor);
+}
 .articles-section {
-  background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+  background: var(--backgroundDarkColor);
   padding-top: 0;
   padding-bottom: 0;
   margin-top: 0;
@@ -9,6 +12,10 @@
   border-radius: 2rem 2rem 0rem 0rem;
   margin-top: -10rem;
   z-index: 900;
+}
+
+.articles-section h2 {
+  color: white;
 }
 
 .articles-header {
@@ -76,7 +83,7 @@
   left: 0;
   right: 0;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
-  padding: 1.5rem;
+  padding: 1.5rem 1.5rem 3rem 1.5rem;
   color: white;
   transform: translateY(20px);
   transition: transform 0.3s ease;
