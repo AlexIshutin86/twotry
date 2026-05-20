@@ -35,6 +35,7 @@
 @import "./styles/video/video1";
 
 @import "./styles/articles/textArticle.css";
+@import "./styles/articles/mainArticlesItems.css";
 
 #hero {
   position: relative;
