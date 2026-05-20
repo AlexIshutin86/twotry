@@ -15,10 +15,22 @@
 
     // Define your page hierarchy with display names
     const pageHierarchy = {
+      video: {
+        display: "Видео",
+        parent: null,
+        url: "./about.html",
+      },
+
       about: {
         display: "Обо мне",
         parent: null,
         url: "./about.html",
+      },
+
+      articles: {
+        display: "Статьи",
+        parent: null,
+        url: "./articles.html",
       },
 
       uzorVremeni: {
@@ -39,7 +51,7 @@
 
       kaspiy: {
         display: "Каспийские ворота",
-        parent: "Статьи",
+        parent: "articles",
         url: "./autumnCaucases.html",
       },
 
