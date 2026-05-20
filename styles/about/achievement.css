@@ -2,10 +2,9 @@
 .achievementItems {
   display: flex;
   flex-direction: column;
-
+  padding-bottom: 3rem;
   gap: 2rem;
   list-style: none;
-  padding-bottom: 0;
 }
 
 .titleSertificat {
@@ -20,6 +19,7 @@
   backdrop-filter: blur(10px);
   border-radius: 1rem;
   padding: 1rem 1.5rem;
+
   border: 1px solid rgba(255, 255, 255, 0.15);
   transition: all 0.3s ease;
   cursor: pointer;
