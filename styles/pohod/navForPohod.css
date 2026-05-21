@@ -234,7 +234,7 @@
     padding: 1.5rem 4%;
     min-height: auto;
     border-radius: 2rem;
-    margin-top: -28rem;
+    margin-top: -15rem;
   }
 
   .info-boxForPoxod-container {
@@ -351,26 +351,6 @@
 /* ========== КНОПКА READ MORE ========== */
 #readMoreBtn2 {
   margin-top: 1.5rem;
-}
-
-.read-more-btn {
-  color: rgb(255, 255, 255);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background: linear-gradient(90deg, #03b103, #1bc405);
-  border: none;
-  border-radius: 2rem;
-  padding: 0.4rem 1rem;
-  font-size: 1.5rem;
-  font-weight: 500;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.8rem;
-  transition: all 0.3s ease;
-}
-
-.read-more-btn:hover {
-  transform: scale(1.05);
 }
 
 /* ========== АДАПТИВНОСТЬ ДЛЯ FULL-TEXT ========== */
