@@ -78,35 +78,28 @@
 }
 
 /* Main navigation container */
+/* Main navigation container - ИСПРАВЛЕНО */
 .nav-linksPoxod {
-  /* Sticky positioning */
   position: sticky;
-  top: 200px; /* Adjust based on your header height */
+  top: 3.4rem; /* ← Измените с 200px на 0 */
   z-index: 998;
 
-  /* Layout */
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; /* Allows wrapping on mobile */
+  flex-wrap: wrap;
   gap: 0.5rem;
 
-  /* Styling */
-  background: rgba(224, 224, 224, 0.85);
+  background: rgba(0, 0, 0, 0.85); /* ← Темнее для лучшей видимости */
   backdrop-filter: blur(10px);
   border-radius: 3rem;
   padding: 0.75rem 1.5rem;
   margin: 0 auto;
-
-  /* Width */
   width: fit-content;
   max-width: 100%;
-
-  /* Transition for smooth scroll effect */
   transition: all 0.3s ease;
 }
-
 /* Navigation items */
 .nav-linksPoxod li {
   list-style: none;
