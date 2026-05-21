@@ -1,0 +1,73 @@
+/* ========== ARTICLE NAVIGATION SECTION ========== */
+
+.article-nav-section {
+  padding: 3rem 0;
+  background: var(--backgroundDarkColor);
+  margin-top: -8rem;
+  z-index: 40;
+}
+
+.article-nav-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Две колонки */
+  gap: 0.75rem 2rem; /* вертикальный и горизонтальный отступы */
+  max-width: 800px;
+}
+
+.article-nav-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.article-nav-item:hover {
+  transform: translateX(5px);
+  border-bottom-color: rgba(255, 215, 0, 0.3);
+}
+
+.nav-number {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffd700;
+  min-width: 2rem;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nav-link:hover {
+  color: #ffd700;
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 768px) {
+  .article-nav-container {
+    gap: 0.5rem 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .nav-number {
+    font-size: 0.8rem;
+    min-width: 1.8rem;
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+  }
+}
+
+/* На мобильных - одна колонка */
+@media (max-width: 560px) {
+  .article-nav-container {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}

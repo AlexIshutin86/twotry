@@ -36,6 +36,7 @@
 
 @import "./styles/articles/textArticle.css";
 @import "./styles/articles/mainArticlesItems.css";
+@import "./styles/articles/articleNavSection.css";
 
 #hero {
   position: relative;

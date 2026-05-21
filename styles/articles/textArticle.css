@@ -5,18 +5,18 @@
 
 .textArticles-wrapper {
   border-radius: 3rem 3rem 0rem 0rem;
-  padding: 3rem 0rem 0rem 0rem;
+  padding: 0.5rem 0rem 0rem 0rem;
 }
 .textArticle {
   display: flex;
   flex-direction: column;
-  margin-top: -15rem;
+
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 3rem 3rem 0rem 0rem;
   background-color: var(--backgroundDarkColor);
-  z-index: 1900;
+  z-index: 50;
 }
 
 .textArticle p {
