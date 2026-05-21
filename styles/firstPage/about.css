@@ -19,7 +19,7 @@
   width: 100%;
   max-width: 1900px;
   margin: 0 auto; /* Добавлено auto для центрирования */
-  padding: 3rem 2rem;
+  padding: 3rem 0rem;
 }
 
 .info-boxAbout {
@@ -156,14 +156,14 @@
 /* Mobile (576px - 768px) */
 @media (max-width: 768px) {
   .shortAbout {
-    margin-top: -3rem;
+    margin-top: -16rem;
     border-radius: 1.5rem;
     padding: 1rem;
   }
 
   .shortAbout-container {
-    padding: 1rem;
     gap: 1.5rem;
+    padding: 0rem 0rem;
   }
 
   .info-boxAbout h1 {
@@ -196,14 +196,14 @@
     text-align: right;
     margin: 0;
   }
+
+  .grid-card h1 {
+    margin-bottom: 1rem;
+  }
 }
 
 /* Small phones (до 480px) */
 @media (max-width: 480px) {
-  .shortAbout {
-    margin-top: -3rem;
-  }
-
   .grid-card {
     flex-direction: column;
     text-align: center;
