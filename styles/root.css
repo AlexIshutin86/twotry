@@ -24,6 +24,10 @@
   --backgroundDarkColor: rgb(12, 18, 29);
 }
 
+.pusher2Small {
+  height: 3rem;
+}
+
 .wrapper {
   max-inline-size: 1420px;
   margin-inline: auto;

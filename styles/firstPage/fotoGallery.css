@@ -1,10 +1,9 @@
 /* ========== СЕКЦИЯ ФОТОГАЛЕРЕЯ ========== */
 .photo-gallery {
-  padding: 1rem;
   width: 100%;
   padding: 2rem 4rem;
   background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
-  border-radius: 2rem 2rem 0rem 0rem;
+  border-radius: 2rem 2rem 2rem 2rem;
   position: relative;
   z-index: 6;
 }
@@ -13,12 +12,12 @@
   max-width: 1700px;
   width: 100%;
 
-  margin: 1rem auto;
+  margin: 1.5rem auto;
 }
 
 .gallery-title {
   text-align: start;
-  margin-bottom: 4rem;
+  margin-bottom: 3cap;
   position: relative;
 }
 
@@ -168,6 +167,10 @@
 @media (max-width: 450px) {
   .gallery-info {
     padding: 1rem;
+  }
+
+  .gallery-title {
+    margin-bottom: 1.5rem;
   }
 
   .gallery-year {
