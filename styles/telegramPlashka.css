@@ -12,10 +12,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 3rem;
   background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
   border-radius: 3rem;
-  padding: 0.6rem 1.5rem 0.6rem 1rem;
+  padding: 0.6rem 1.5rem 0.6rem 1.5rem;
   transition: all 0.3s ease;
   cursor: pointer;
   border: 1px solid rgba(255, 215, 0, 0.2);
@@ -31,7 +31,7 @@
 /* Иконки - исправлено центрирование */
 .telegram-icons {
   display: flex;
-  gap: 0.8rem;
+  gap: 1.5rem;
 }
 
 .telegram-icons a {
