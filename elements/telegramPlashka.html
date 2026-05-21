@@ -8,28 +8,30 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../styles/telegramPlashka.css" />
   </head>
 
   <body>
-    <div class="wrapper">
-      <div class="telegramPlashka" id="telegramPlashka">
-        <div class="container-telegramPlashka">
-          <div class="telegramPlashka-avatar">
-            <img src="./foto/wolgaMore/vladimer.jpg" alt="Владимир Сергиенко" />
-          </div>
-          <i class="fa-brands fa-telegram telegram-icon"></i>
-          <div class="telegramPlashka-deskr">
-            <h3>Остались вопросы? <span>Напишите мне</span></h3>
-          </div>
-          <button class="telegram-close" aria-label="Закрыть">×</button>
+    <!-- Telegram плашка - простая кнопка, всегда видна -->
+    <div class="telegramPlashka">
+      <div class="container-telegramPlashka">
+        <div class="telegram-icons">
+          <a
+            href="https://t.me/volgamore64"
+            target="_blank"
+            class="telegram-link"
+          >
+            <i class="fa-brands fa-telegram"></i>
+          </a>
+          <a href="https://vk.com/volgamore64" target="_blank" class="vk-link">
+            <i class="fa-brands fa-vk"></i>
+          </a>
+        </div>
+        <div class="telegramPlashka-deskr">
+          <h3>Остались вопросы? <span>Напишите мне</span></h3>
         </div>
       </div>
     </div>
-
-    <script src="./js/script.js" defer></script>
-    <script src="./js/telegramOnScroll.js"></script>
   </body>
 </html>

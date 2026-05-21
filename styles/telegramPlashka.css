@@ -1,13 +1,10 @@
-/* ========== TELEGRAM ПЛАШКА - СТИЛЬ САЙТА ========== */
+/* ========== TELEGRAM ПЛАШКА - КАК ОБЫЧНАЯ КНОПКА ========== */
 
 .telegramPlashka {
   position: relative;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: slideUp 0.5s ease-out;
   width: fit-content;
   max-width: 90vw;
+  margin: 2rem auto;
 }
 
 .container-telegramPlashka {
@@ -18,65 +15,77 @@
   gap: 1.5rem;
   background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
   border-radius: 3rem;
-  padding: 1rem 1.5rem;
-  margin-top: 4rem;
+  padding: 0.6rem 1.5rem 0.6rem 1rem;
   transition: all 0.3s ease;
   cursor: pointer;
   border: 1px solid rgba(255, 215, 0, 0.2);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .container-telegramPlashka:hover {
   transform: scale(1.02);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
   border-color: rgba(255, 215, 0, 0.4);
 }
 
-/* Аватар */
-.telegramPlashka-avatar {
-  width: 70px;
-  height: 70px;
+/* Иконки - исправлено центрирование */
+.telegram-icons {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.telegram-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  overflow: hidden;
-  flex-shrink: 0;
-  border: 2px solid #ffd700;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
-.telegramPlashka-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.telegram-icons i {
+  font-size: 1.4rem;
   transition: transform 0.3s ease;
+  line-height: 1;
 }
 
-.container-telegramPlashka:hover .telegramPlashka-avatar img {
+.telegram-link i {
+  color: var(--yellow);
+}
+
+.telegram-link:hover {
+  background: var(--yellow);
+  transform: scale(1.05);
+}
+
+.telegram-link:hover i {
+  color: var(--black);
   transform: scale(1.1);
 }
 
-/* Иконка Telegram */
-.container-telegramPlashka .telegram-icon {
-  font-size: 60px;
-  color: #0088cc;
-  flex-shrink: 0;
-  transition: transform 0.3s ease;
+.vk-link i {
+  color: var(--yellow);
 }
 
-.container-telegramPlashka:hover .telegram-icon {
+.vk-link:hover {
+  background: var(--yellow);
+  transform: scale(1.05);
+}
+
+.vk-link:hover i {
+  color: var(--black);
   transform: scale(1.1);
 }
 
 /* Текст */
-.telegramPlashka-deskr {
-  display: flex;
-  flex-direction: column;
-}
-
 .telegramPlashka-deskr h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #ffffff;
   margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #ffffff;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -85,79 +94,24 @@
   font-weight: 700;
 }
 
-.telegramPlashka-deskr p {
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.7);
-  margin: 0.3rem 0 0 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-/* Кнопка закрытия */
-.telegram-close {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 1.2rem;
-  margin-left: 0.5rem;
-  flex-shrink: 0;
-}
-
-.telegram-close:hover {
-  background: rgba(255, 255, 255, 0.2);
-  color: #ffd700;
-  transform: scale(1.1);
-}
-
-/* Анимация появления */
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateX(-50%) translateY(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
-}
-
-/* ========== АДАПТИВ ========== */
-
+/* Адаптивность */
 @media (max-width: 768px) {
   .container-telegramPlashka {
-    gap: 0.8rem;
-    padding: 0.6rem 1.5rem 0.6rem 0.6rem;
-    border-radius: 2rem;
+    gap: 1rem;
+    padding: 0.5rem 1rem 0.5rem 0.8rem;
   }
 
-  .telegramPlashka-avatar {
-    width: 50px;
-    height: 50px;
+  .telegram-icons a {
+    width: 38px;
+    height: 38px;
   }
 
-  .container-telegramPlashka .telegram-icon {
-    font-size: 40px;
+  .telegram-icons i {
+    font-size: 1.2rem;
   }
 
   .telegramPlashka-deskr h3 {
-    font-size: 0.9rem;
-  }
-
-  .telegramPlashka-deskr p {
-    font-size: 0.7rem;
-  }
-
-  .telegram-close {
-    width: 28px;
-    height: 28px;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -167,22 +121,14 @@
     justify-content: center;
     gap: 0.8rem;
     padding: 1rem;
-    margin-top: 2rem;
   }
 
   .telegramPlashka-deskr {
     text-align: center;
-  }
-
-  .telegramPlashka-deskr h3 {
-    font-size: 0.85rem;
+    width: 100%;
   }
 
   .telegramPlashka-deskr span {
-    display: block;
-  }
-
-  .telegramPlashka {
-    bottom: 1rem;
+    display: inline-block;
   }
 }
