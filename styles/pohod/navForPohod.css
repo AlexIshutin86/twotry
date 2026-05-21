@@ -81,7 +81,7 @@
 .nav-linksPoxod {
   /* Sticky positioning */
   position: sticky;
-  top: 60px; /* Adjust based on your header height */
+  top: 70px; /* Adjust based on your header height */
   z-index: 998;
 
   /* Layout */
@@ -277,12 +277,12 @@
   }
 
   .nav-linksPoxod {
-    top: 5px;
+    top: 20px;
     flex-direction: row;
     align-items: stretch;
     padding: 1rem;
     gap: 0.1rem;
-    transform: translateY(3rem);
+    transform: translateY(14rem);
   }
 
   .nav-linksPoxod li {
