@@ -175,11 +175,11 @@ body {
   .carouselPoxod1-container {
     grid-auto-columns: 260px; /* Smaller cards on mobile */
     gap: 1rem;
-    padding: 1rem;
+    padding: 1.5rem 0rem;
   }
 
   .carouselPoxod1-container .card {
     min-width: 240px;
-    min-height: 27rem;
+    min-height: 20rem;
   }
 }
