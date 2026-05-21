@@ -4,7 +4,7 @@
   align-items: center;
   background-color: rgb(22, 36, 49);
   z-index: 1;
-  padding: 2rem 2rem 4rem 2rem;
+  padding: 3rem 2rem 0rem 2rem;
   position: relative;
 }
 
@@ -153,16 +153,14 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  background-color: rgb(10, 92, 77);
-  padding: 4rem 2rem 2rem 2rem;
+
+  padding: 3rem 2rem 2rem 2rem;
   border-radius: 2rem;
   width: 90%;
   max-width: 1300px;
   align-items: center;
   justify-content: flex-start;
-  margin: 0px auto 0 auto;
-  margin-top: -3rem;
-  margin-bottom: 5rem;
+  margin-top: 3rem;
   z-index: 5;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
@@ -206,6 +204,7 @@
 
   .features-container {
     min-height: 500px;
+    max-width: 1700px;
   }
 
   .cardfeature {
