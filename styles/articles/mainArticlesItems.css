@@ -171,11 +171,17 @@
 /* Mobile */
 @media (max-width: 768px) {
   .articles-section {
-    padding: 2rem 0;
+    padding: 1rem 0;
   }
 
   .articles-title {
     font-size: 1.8rem;
+  }
+
+  .articles-header {
+    text-align: left;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
   }
 
   .articles-bento-grid {
