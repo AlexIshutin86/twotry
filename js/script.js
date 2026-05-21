@@ -1,44 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // ========== КАРУСЕЛЬ ==========
   const carousel = document.querySelector(".carouselPoxod1-container");
-  const arrowBtns = document.querySelectorAll("#scrollLeft, #scrollRight");
-  let cardWidth;
-  let isDragging = false;
-  let startX;
-  let scrollLeft;
 
   if (!carousel) {
     console.error("Карусель не найдена!");
     return;
   }
 
-  const firstCard = carousel.querySelector(".card");
-  if (firstCard) {
-    cardWidth = firstCard.offsetWidth;
-  }
+  let startX, startY, scrollLeft;
+  let isDragging = false;
+  let isHorizontalScroll = false;
 
-  // Пересчёт ширины карточки
-  window.addEventListener("resize", () => {
-    if (firstCard) {
-      cardWidth = firstCard.offsetWidth;
-    }
-  });
-
-  // Кнопки навигации
-  arrowBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const scrollAmount = btn.id === "scrollLeft" ? -cardWidth : cardWidth;
-      carousel.scrollBy({
-        left: scrollAmount,
-        behavior: "smooth",
-      });
-    });
-  });
-
-  // ========== TOCH СОБЫТИЯ (исправлено) ==========
+  // Touch для мобильных
   carousel.addEventListener("touchstart", (e) => {
     isDragging = true;
-    startX = e.touches[0].pageX - carousel.offsetLeft;
+    isHorizontalScroll = false;
+    startX = e.touches[0].pageX;
+    startY = e.touches[0].pageY;
     scrollLeft = carousel.scrollLeft;
   });
 
@@ -46,10 +23,23 @@ document.addEventListener("DOMContentLoaded", () => {
     "touchmove",
     (e) => {
       if (!isDragging) return;
-      e.preventDefault();
-      const x = e.touches[0].pageX - carousel.offsetLeft;
-      const walk = (x - startX) * 2;
-      carousel.scrollLeft = scrollLeft - walk;
+
+      const x = e.touches[0].pageX;
+      const y = e.touches[0].pageY;
+      const deltaX = Math.abs(x - startX);
+      const deltaY = Math.abs(y - startY);
+
+      // Определяем направление скролла
+      if (!isHorizontalScroll && (deltaX > 5 || deltaY > 5)) {
+        isHorizontalScroll = deltaX > deltaY;
+      }
+
+      // Блокируем только горизонтальный скролл
+      if (isHorizontalScroll) {
+        e.preventDefault();
+        const walk = (startX - x) * 1.5;
+        carousel.scrollLeft = scrollLeft + walk;
+      }
     },
     { passive: false },
   );
@@ -58,21 +48,36 @@ document.addEventListener("DOMContentLoaded", () => {
     isDragging = false;
   });
 
-  // ========== МЫШЬ ==========
+  // Мышь для десктопа
   let isMouseDown = false;
-  let startMouseX;
-  let scrollMouseLeft;
+  let mouseStartX, mouseStartY;
+  let mouseScrollLeft;
+  let isMouseHorizontal = false;
 
   carousel.addEventListener("mousedown", (e) => {
     isMouseDown = true;
-    startMouseX = e.pageX - carousel.offsetLeft;
-    scrollMouseLeft = carousel.scrollLeft;
+    isMouseHorizontal = false;
+    mouseStartX = e.pageX;
+    mouseStartY = e.pageY;
+    mouseScrollLeft = carousel.scrollLeft;
     carousel.style.cursor = "grabbing";
   });
 
-  carousel.addEventListener("mouseleave", () => {
-    isMouseDown = false;
-    carousel.style.cursor = "grab";
+  carousel.addEventListener("mousemove", (e) => {
+    if (!isMouseDown) return;
+
+    const deltaX = Math.abs(e.pageX - mouseStartX);
+    const deltaY = Math.abs(e.pageY - mouseStartY);
+
+    if (!isMouseHorizontal && (deltaX > 3 || deltaY > 3)) {
+      isMouseHorizontal = deltaX > deltaY;
+    }
+
+    if (isMouseHorizontal) {
+      e.preventDefault();
+      const walk = (mouseStartX - e.pageX) * 1.5;
+      carousel.scrollLeft = mouseScrollLeft + walk;
+    }
   });
 
   carousel.addEventListener("mouseup", () => {
@@ -80,12 +85,9 @@ document.addEventListener("DOMContentLoaded", () => {
     carousel.style.cursor = "grab";
   });
 
-  carousel.addEventListener("mousemove", (e) => {
-    if (!isMouseDown) return;
-    e.preventDefault();
-    const x = e.pageX - carousel.offsetLeft;
-    const walk = (x - startMouseX) * 2;
-    carousel.scrollLeft = scrollMouseLeft - walk;
+  carousel.addEventListener("mouseleave", () => {
+    isMouseDown = false;
+    carousel.style.cursor = "grab";
   });
 
   carousel.style.cursor = "grab";
