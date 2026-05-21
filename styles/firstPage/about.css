@@ -156,7 +156,7 @@
 /* Mobile (576px - 768px) */
 @media (max-width: 768px) {
   .shortAbout {
-    margin-top: -16rem;
+    margin-top: -10rem;
     border-radius: 1.5rem;
     padding: 1rem;
   }
@@ -177,6 +177,10 @@
 
   .grid {
     gap: 1rem;
+  }
+
+  .topDescription .read-more-btn {
+    transform: translateY(27rem);
   }
 
   .grid-card {
