@@ -5,13 +5,14 @@
   min-height: 2rem;
   overflow-x: hidden;
   background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
-  padding: 0.3rem 0;
 }
 /* Альтернатива - с использованием flexbox */
 .ranStrips {
   width: 100%;
   overflow: hidden;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .ranStrips ul {
@@ -29,7 +30,7 @@
 
 .ranStrips ul li {
   flex-shrink: 0; /* Запрещаем сжатие элементов */
-  margin: 0 1.5rem;
+
   font-size: 0.9rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   white-space: nowrap;
@@ -62,6 +63,9 @@
 
 /* Responsive - текст не переносится, только уменьшается */
 @media (max-width: 768px) {
+  .ranStrips-section {
+  }
+
   .ranStrips ul li {
     margin: 0 1rem;
     font-size: 0.8rem;
@@ -72,9 +76,5 @@
   .ranStrips ul li {
     margin: 0 0.7rem;
     font-size: 0.7rem;
-  }
-
-  .ranStrips-section {
-    padding: 0.8rem 0;
   }
 }
