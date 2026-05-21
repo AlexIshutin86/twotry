@@ -81,7 +81,7 @@
 .nav-linksPoxod {
   /* Sticky positioning */
   position: sticky;
-  top: 70px; /* Adjust based on your header height */
+  top: 200px; /* Adjust based on your header height */
   z-index: 998;
 
   /* Layout */
