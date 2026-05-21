@@ -85,7 +85,7 @@
 /* Адаптивность */
 @media (max-width: 768px) {
   .textArticle {
-    margin-top: -2rem;
+    margin-top: 4rem;
     padding: 0 0.5rem;
   }
 

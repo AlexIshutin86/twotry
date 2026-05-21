@@ -33,6 +33,12 @@
         url: "./articles.html",
       },
 
+      report2Kubachi: {
+        display: "Кубачи - сокровищница за облаками.",
+        parent: "articles",
+        url: "./report2Kubachi.html",
+      },
+
       uzorVremeni: {
         display: "Узоры Времён",
         parent: "tours",
