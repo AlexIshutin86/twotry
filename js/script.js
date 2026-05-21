@@ -1,11 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // ========== ПЕРВАЯ КАРУСЕЛЬ (carouselPoxod) ==========
+  // ========== КАРУСЕЛЬ ==========
   const carousel = document.querySelector(".carouselPoxod1-container");
-  const arrowBtns = document.querySelectorAll("#scrollLeft, #scrollRight");
+  const arrowBtns = document.querySelectorAll(
+    "#scrollLeftPohod, #scrollRightPohod",
+  );
   let cardWidth;
   let isDragging = false;
-  let startX;
+  let startX, startY;
   let scrollLeft;
+  let isHorizontalScroll = false;
 
   if (!carousel) {
     console.error("Карусель не найдена!");
@@ -17,71 +20,100 @@ document.addEventListener("DOMContentLoaded", () => {
     cardWidth = firstCard.offsetWidth;
   }
 
-  // Пересчёт ширины карточки при изменении размера окна
   window.addEventListener("resize", () => {
     if (firstCard) {
       cardWidth = firstCard.offsetWidth;
     }
   });
 
-  // Обработчики для кнопок навигации
+  // Кнопки
   arrowBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
-      const scrollAmount = btn.id === "scrollLeft" ? -cardWidth : cardWidth;
-      carousel.scrollBy({
-        left: scrollAmount,
-        behavior: "smooth",
-      });
+      const scrollAmount =
+        btn.id === "scrollLeftPohod" ? -cardWidth : cardWidth;
+      carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
     });
   });
 
-  // Обработчики жестов касания
-  carousel.addEventListener(
-    "touchstart",
-    (e) => {
-      isDragging = true;
-      startX = e.touches[0].pageX - carousel.offsetLeft;
-      scrollLeft = carousel.scrollLeft;
-    },
-    { passive: true },
-  ); // passive: true — здесь preventDefault не вызывается
-
-  carousel.addEventListener("touchend", () => {
-    isDragging = false;
+  // ========== TOUCH (мобильные) ==========
+  carousel.addEventListener("touchstart", (e) => {
+    isDragging = true;
+    isHorizontalScroll = false;
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    scrollLeft = carousel.scrollLeft;
   });
+
   carousel.addEventListener(
     "touchmove",
     (e) => {
       if (!isDragging) return;
-      e.preventDefault(); // Теперь это допустимо, т. к. обработчик не пассивный
-      const x = e.touches[0].pageX - carousel.offsetLeft;
-      const walk = (x - startX) * 2; // Коэффициент для плавности
-      carousel.scrollLeft = scrollLeft - walk;
+
+      const x = e.touches[0].clientX;
+      const y = e.touches[0].clientY;
+      const deltaX = Math.abs(x - startX);
+      const deltaY = Math.abs(y - startY);
+
+      // Определяем направление после первого движения
+      if (!isHorizontalScroll && (deltaX > 5 || deltaY > 5)) {
+        isHorizontalScroll = deltaX > deltaY;
+      }
+
+      // Блокируем только горизонтальный скролл
+      if (isHorizontalScroll) {
+        e.preventDefault();
+        const walk = (startX - x) * 1.5;
+        carousel.scrollLeft = scrollLeft + walk;
+      }
     },
     { passive: false },
-  ); // Ключевое исправление: passive: false
+  );
 
-  // Альтернатива: обработка мыши для десктопа
+  carousel.addEventListener("touchend", () => {
+    isDragging = false;
+  });
+
+  // ========== МЫШЬ (десктоп) ==========
   let isMouseDown = false;
-  let startMouseX;
-  let scrollMouseLeft;
+  let mouseStartX, mouseStartY;
+  let mouseScrollLeft;
+  let isMouseHorizontal = false;
 
   carousel.addEventListener("mousedown", (e) => {
     isMouseDown = true;
-    startMouseX = e.pageX - carousel.offsetLeft;
-    scrollMouseLeft = carousel.scrollLeft;
+    isMouseHorizontal = false;
+    mouseStartX = e.clientX;
+    mouseStartY = e.clientY;
+    mouseScrollLeft = carousel.scrollLeft;
+    carousel.style.cursor = "grabbing";
   });
-  carousel.addEventListener("mouseleave", () => {
-    isMouseDown = false;
-  });
-  carousel.addEventListener("mouseup", () => {
-    isMouseDown = false;
-  });
+
   carousel.addEventListener("mousemove", (e) => {
     if (!isMouseDown) return;
-    e.preventDefault();
-    const x = e.pageX - carousel.offsetLeft;
-    const walk = (x - startMouseX) * 2;
-    carousel.scrollLeft = scrollMouseLeft - walk;
+
+    const deltaX = Math.abs(e.clientX - mouseStartX);
+    const deltaY = Math.abs(e.clientY - mouseStartY);
+
+    if (!isMouseHorizontal && (deltaX > 3 || deltaY > 3)) {
+      isMouseHorizontal = deltaX > deltaY;
+    }
+
+    if (isMouseHorizontal) {
+      e.preventDefault();
+      const walk = (mouseStartX - e.clientX) * 1.5;
+      carousel.scrollLeft = mouseScrollLeft + walk;
+    }
   });
+
+  carousel.addEventListener("mouseup", () => {
+    isMouseDown = false;
+    carousel.style.cursor = "grab";
+  });
+
+  carousel.addEventListener("mouseleave", () => {
+    isMouseDown = false;
+    carousel.style.cursor = "grab";
+  });
+
+  carousel.style.cursor = "grab";
 });
