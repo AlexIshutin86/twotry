@@ -216,6 +216,9 @@
     justify-content: space-between;
   }
 
+  .nav-linksPoxod {
+  }
+
   .nav-linksPoxod a {
     color: #fff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -234,7 +237,7 @@
     padding: 1.5rem 4%;
     min-height: auto;
     border-radius: 2rem;
-    margin-top: -15rem;
+    margin-top: -27rem;
   }
 
   .info-boxForPoxod-container {
