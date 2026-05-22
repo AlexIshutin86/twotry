@@ -32,6 +32,7 @@
   max-inline-size: 1420px;
   margin-inline: auto;
   padding-inline: 0rem;
+  overflow-x: hidden;
   /*border: 5px dotted red;*/
 }
 
