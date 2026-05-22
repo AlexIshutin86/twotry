@@ -5,12 +5,12 @@
 
 .textArticles-wrapper {
   border-radius: 3rem 3rem 0rem 0rem;
-  padding: 0.5rem 0rem 0rem 0rem;
+  padding: 0.5rem;
 }
+
 .textArticle {
   display: flex;
   flex-direction: column;
-
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -19,15 +19,36 @@
   z-index: 50;
 }
 
+article {
+  margin: 0.5em 0;
+  padding: 0.5em 0em;
+}
+
 .textArticle p {
   color: var(--white);
   font-size: 1.2rem;
   font-weight: 100;
-  line-height: 1.3;
+  line-height: 1.7;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
-.textArticle h2 {
-  color: aliceblue;
-  line-height: 1.3;
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--yellow), transparent);
+  border: none;
+  margin: 0.5rem auto;
+  width: 50%;
+  max-width: 300px;
+}
+
+.textArticle p.alignByCentr {
+  text-align: center;
+  font-style: italic;
+  color: #e6bc7e;
+  margin: 1rem auto;
+  max-width: 85%;
+  display: block;
 }
 
 .textArticle h1 {
@@ -39,13 +60,10 @@
 .textArticle h2 {
   color: var(--yellow);
   font-size: 1.2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   font-weight: normal;
   font-style: italic;
-}
-
-.textArticle p {
-  margin-bottom: 1.5rem;
+  line-height: 1.3;
 }
 
 /* Изображения в статье */
@@ -53,7 +71,6 @@
   width: 100%;
   height: auto;
   border-radius: 2rem;
-  margin: 2rem 0;
   display: block;
   transition:
     transform 0.3s ease,
@@ -65,23 +82,63 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Контейнер для изображения */
-.imgForArticle {
-  border-radius: 2rem;
-  overflow: hidden;
-  margin: 2rem 0;
+/* Image Container - for floated images */
+.image-container {
+  margin: 1rem 0;
 }
 
-.imgForArticle img {
-  margin: 0;
-  border-radius: 0;
-  transition: transform 0.3s ease;
+.image-container2 {
+  margin: 1rem 0;
+}
+
+.image-container_left-container2 {
+  float: left;
+  width: 100%; /* Container width */
+  max-width: 720px;
+  min-width: 150px;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+
+.image-container_left-container {
+  float: left;
+  width: 50%; /* Container width */
+  max-width: 720px;
+  min-width: 150px;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+
+.image-container_left-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 1.5rem;
+}
+
+/* Clearfix for container to prevent layout issues */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Optional: Add clearfix to the parent paragraph or article */
+.kubachi {
+  overflow: auto; /* Simple clearfix */
 }
 
 .imgForArticle:hover img {
   transform: scale(1.05);
 }
+.vertical-line-wrapper {
+  border-left: 1px solid var(--yellow);
+  padding-left: 1rem;
+}
 
+.vertical-line-wrapper p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
 /* Адаптивность */
 @media (max-width: 768px) {
   .textArticle {
@@ -91,24 +148,64 @@
 
   .textArticles-wrapper {
     border-radius: 3rem 3rem 0rem 0rem;
-    padding: 0rem 0rem 0rem 0rem;
+    padding: 0rem;
     margin-top: -6rem;
   }
 
   .textArticle h1 {
     font-size: 1.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .textArticle h2 {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 
   .textArticle p {
-    font-size: 0.9rem;
+    font-size: 0.5rem;
   }
 
   .textArticle img,
   .imgForArticle {
-    border-radius: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .image-container_left-container {
+    float: left;
+    width: 50%; /* Container width */
+    max-width: 720px;
+    min-width: 150px;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .image-container.left-container img {
+    width: 70%; /* Control image size inside container */
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  article {
+    margin: 0;
+    padding: 0.3rem 0rem 0.3rem 0rem;
+    box-shadow: 0 0 1em -0.5rem;
+  }
+
+  .divider {
+    margin: 0.4rem auto;
+  }
+
+  .textArticle p.alignByCentr {
+    text-align: center;
+    font-style: italic;
+    color: #e6bc7e;
+    margin: 0.5rem auto;
+    max-width: 85%;
+    display: block;
+  }
+
+  .textArticles-wrapper {
+    border-radius: 1.5rem 1.5rem 0rem 0rem;
+    padding: 0.2rem;
   }
 }
