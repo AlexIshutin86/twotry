@@ -1,512 +1,273 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
-    <title>Магия балхарской керамики · Дагестанское наследие</title>
+    <title>Balhar</title>
     <meta
       name="description"
-      content="Древнее гончарное ремесло села Балхар — традиции, легенды, магия глины и огня. Статья о балхарской керамике."
+      content="Кубачи — легендарный аул в Дагестане, столица государства Зирихгеран. История, башни, традиции и легенды горного народа."
     />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        background: #f6efe5; /* теплый, землистый фон */
-        font-family: "Georgia", "Times New Roman", Times, serif;
-        color: #2c241a;
-        line-height: 1.5;
-        scroll-behavior: smooth;
-      }
-
-      /* основной контейнер — узкая колонка для удобного чтения */
-      .container {
-        max-width: 880px;
-        margin: 0 auto;
-        padding: 2rem 1.8rem 4rem;
-        background: #fffef7;
-        box-shadow:
-          0 0 0 1px rgba(0, 0, 0, 0.03),
-          0 12px 28px rgba(0, 0, 0, 0.08);
-      }
-
-      /* акценты и текстура глины */
-      .ceramic-border {
-        height: 6px;
-        background: linear-gradient(
-          90deg,
-          #bc9a6c,
-          #e2c7a7,
-          #9e7b54,
-          #c9aa82,
-          #7a5a3a
-        );
-        width: 100%;
-        margin-bottom: 2rem;
-      }
-
-      /* заголовок */
-      h1 {
-        font-size: 2.7rem;
-        letter-spacing: -0.01em;
-        font-weight: normal;
-        font-family: "Playfair Display", "Georgia", serif;
-        color: #4a2e1e;
-        margin-bottom: 0.65rem;
-        line-height: 1.2;
-        border-left: 5px solid #c1976b;
-        padding-left: 1.2rem;
-      }
-
-      .sub {
-        display: flex;
-        gap: 1rem;
-        align-items: center;
-        color: #856e50;
-        font-size: 0.85rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 2rem;
-        border-bottom: 1px dashed #e2cfb5;
-        padding-bottom: 0.8rem;
-      }
-
-      .sub span {
-        background: #efe2d2;
-        padding: 0.2rem 0.7rem;
-        border-radius: 30px;
-        font-size: 0.75rem;
-      }
-
-      /* вступление / первая цитата */
-      .hero-quote {
-        background: #faf3ea;
-        padding: 1.5rem 2rem;
-        border-radius: 32px 12px 32px 12px;
-        margin: 1.8rem 0 2.2rem;
-        font-style: italic;
-        font-size: 1.2rem;
-        font-weight: 400;
-        color: #5c3f28;
-        border-left: 4px solid #c1976b;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
-        font-family: "Times New Roman", serif;
-      }
-
-      .hero-quote p {
-        margin-bottom: 0.5rem;
-      }
-
-      .hero-quote small {
-        display: block;
-        font-style: normal;
-        font-size: 0.8rem;
-        color: #a1815c;
-        margin-top: 0.5rem;
-      }
-
-      /* основной текст */
-      p {
-        margin-bottom: 1.25rem;
-        font-size: 1.05rem;
-        color: #2f2a24;
-        text-align: justify;
-      }
-
-      /* иллюстративный раздел с элементами керамики (без реальных картинок, но стилизация) */
-      .ceramic-showcase {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1.5rem;
-        margin: 2rem 0 2rem;
-        justify-content: center;
-      }
-
-      .ceramic-card {
-        background: #fff6ed;
-        border-radius: 48px 24px 48px 24px;
-        flex: 1;
-        min-width: 150px;
-        padding: 1.5rem 0.8rem;
-        text-align: center;
-        transition: all 0.2s ease;
-        border: 1px solid #eedbc8;
-        box-shadow: 0 6px 12px -8px rgba(0, 0, 0, 0.1);
-      }
-
-      .ceramic-card:hover {
-        transform: translateY(-5px);
-        background: #fffcf5;
-        border-color: #dbb786;
-      }
-
-      .ceramic-icon {
-        font-size: 2.8rem;
-        margin-bottom: 0.5rem;
-        display: inline-block;
-      }
-
-      .ceramic-card h4 {
-        font-weight: 600;
-        font-size: 1.1rem;
-        color: #8b5a2e;
-        margin-bottom: 0.3rem;
-      }
-
-      .ceramic-card p {
-        font-size: 0.85rem;
-        text-align: center;
-        margin-bottom: 0;
-        color: #6b4e2e;
-      }
-
-      /* подзаголовки */
-      h2 {
-        font-size: 1.9rem;
-        font-weight: normal;
-        margin: 2rem 0 1rem;
-        color: #583c22;
-        font-family: "Playfair Display", serif;
-        letter-spacing: -0.2px;
-        border-bottom: 2px dotted #efdbc8;
-        padding-bottom: 0.3rem;
-      }
-
-      h3 {
-        font-size: 1.4rem;
-        margin: 1.5rem 0 0.8rem;
-        color: #7a582e;
-        font-weight: 500;
-      }
-
-      /* легенда / цитата */
-      .legend-block {
-        background: #e9dfd2;
-        padding: 1.4rem 2rem;
-        border-radius: 60px 16px 60px 16px;
-        margin: 1.8rem 0;
-        font-style: normal;
-        font-weight: 500;
-        color: #3b2a1c;
-        font-size: 1rem;
-        border-right: 5px solid #b4814a;
-      }
-
-      .legend-block i {
-        font-weight: 400;
-        font-family: "Georgia", serif;
-      }
-
-      /* список изделий */
-      .product-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-        gap: 0.6rem 1rem;
-        margin: 1.5rem 0 2rem;
-        background: #fef9f2;
-        padding: 1.2rem 1.5rem;
-        border-radius: 28px;
-      }
-
-      .product-item {
-        font-size: 1rem;
-        border-bottom: 1px dashed #ecdbba;
-        padding: 0.4rem 0;
-        display: flex;
-        align-items: baseline;
-        gap: 8px;
-      }
-
-      .product-name {
-        font-weight: 700;
-        color: #9b693c;
-        font-family: monospace;
-        font-size: 0.95rem;
-        background: #f2e5d8;
-        padding: 0.1rem 0.4rem;
-        border-radius: 12px;
-      }
-
-      .product-desc {
-        color: #4f3b26;
-        font-size: 0.9rem;
-      }
-
-      /* символ огня и керамические акценты */
-      .fire-symbol {
-        text-align: center;
-        font-size: 2rem;
-        margin: 1rem 0 0.5rem;
-        opacity: 0.7;
-        letter-spacing: 8px;
-      }
-
-      footer {
-        margin-top: 3rem;
-        padding-top: 1.8rem;
-        text-align: center;
-        font-size: 0.8rem;
-        color: #a0896b;
-        border-top: 1px solid #ecddce;
-        font-style: italic;
-      }
-
-      @media (max-width: 620px) {
-        .container {
-          padding: 1.2rem;
-        }
-        h1 {
-          font-size: 2rem;
-          padding-left: 0.8rem;
-        }
-        .hero-quote {
-          padding: 1rem;
-          font-size: 1rem;
-        }
-        p {
-          font-size: 1rem;
-        }
-        h2 {
-          font-size: 1.6rem;
-        }
-      }
-
-      /* декоративный элемент — имитация узора балхарской росписи */
-      .pattern {
-        background: repeating-linear-gradient(
-          45deg,
-          #e7d8c6 0px,
-          #e7d8c6 2px,
-          #faf0e4 2px,
-          #faf0e4 8px
-        );
-        height: 12px;
-        width: 100%;
-        margin: 1rem 0;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="stylesheet" href="./styles/breadcrumbs.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="ceramic-border"></div>
-      <h1>Магия балхарской&nbsp;керамики</h1>
-      <div class="sub">
-        <span>🏺 Дагестан · село Балхар</span>
-        <span>🔥 Глина & огонь</span>
-        <span>👩‍🎨 Женское ремесло</span>
+    <div id="header-placeholder"></div>
+
+    <main class="generalArticlBG">
+      <!-- HERO СЕКЦИЯ -->
+      <section id="topDescription" class="topDescription">
+        <div class="topDescription-container">
+          <img
+            src="./articles/a2Kubachi/7.webp"
+            srcset="
+              ./articles/a2Kubachi/2.webp  768w,
+              ./articles/a2Kubachi/7.webp 1500w
+            "
+            sizes="(max-width: 768px) 768px, 1500px"
+            alt="Кубачи"
+            loading="eager"
+            fetchpriority="high"
+          />
+          <div class="info-box">
+            <div class="text">
+              <h1>«Балкар»</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- НАВИГАЦИЯ СТАТЬИ -->
+      <section class="article-nav-section">
+        <div class="wrapper">
+          <div class="article-nav-container">
+            <div class="article-nav-item">
+              <span class="nav-number">1.</span>
+              <a href="#targetArticle1" class="nav-link"
+                >Магия балхарской керамики.</a
+              >
+            </div>
+            <div class="article-nav-item">
+              <span class="nav-number">2.</span>
+              <a href="#targetArticle2" class="nav-link">Совет старейшин.</a>
+            </div>
+            <div class="article-nav-item">
+              <span class="nav-number">3.</span>
+              <a href="#targetArticle3" class="nav-link">Власть над металлом.</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ОСНОВНОЕ СОДЕРЖАНИЕ СТАТЬИ -->
+      <section class="textArticle">
+        <div class="textArticles-wrapper">
+          <div class="wrapper">
+            <!-- ЧАСТЬ 1 -->
+            <article id="targetArticle1">
+              <h1>Магия балхарской керамики.</h1>
+             
+
+              <div class="image-container_left-container">
+                <img
+                  class="left"
+                  src="./articles/a3Balhar/1.webp"
+                  alt="Кубачинская башня"
+                  loading="lazy"
+                />
+              </div>
+              <p>
+              Республика Дагестан известна своими промыслами, один из самых древних – гончарное производство. Считается, что изготавливать изделия из глины в Дагестане начали еще во времена неолита. По крайней мере, некоторые черепки, которые находят в этих краях, датируются несколькими тысячелетиями до нашей эры. Насчитывается несколько известных центров гончарного дела, среди которых особое место занимает лакское село Балхар и так называемая балхарская керамика.
+              </p>
+              <br />
+              <hr class="divider" />
+              <p class="alignByCentr">
+                 Кубачи объединили под своей властью соседние села (Амузги,
+                Анчибачи, Дацамаже, Дешиже, Кубасана, Сулевкент и Шири) и
+                возвели просто невероятные укрепления, защищая свое небольшое
+                государство.
+              </p>
+              <hr class="divider" />
+              <br />
+              <div class="clearfix"></div>
+            </article>
+
+           
+            <article id="targetArticle2">
+              <div class="image-container_left-container">
+                <img
+                  class="left"
+                  src="./articles/a3Balhar/3.webp"
+                  alt="Кубачинская башня"
+                  loading="lazy"
+                />
+              </div>
+
+              <p>
+               Балхар расположен в нагорной части Дагестана, в Акушинском районе, в 13 километрах от районного центра, села Акуша. Само селение располагается в котловине между двумя большими горными вершинами.
+              </p>
+
+               <p>
+              Территория, которая находится в распоряжении сельского поселения Балхар, включающего два села – собственно Балхар и соседнее Цуликана, составляет около 22 квадратных километров. Но в последние годы эта земля практически не обрабатывается. Есть у каждого жителя огороды, и многие балхарцы содержат крупный рогатый скот. Коров и телят утром выпускают, и они пасутся, не разбирая, где чей участок.
+              </p>
+
+              <div class="clearfix"></div>
+              <br />
+              <hr class="divider" />
+              <p class="alignByCentr">
+                «Всевышний создал людей, и сказал каждому заниматься каким-то делом, вот балхарцам досталась работа с глиной».
+              </p>
+              <hr class="divider" />
+              <br />
+
+             
+                <p>
+                 Возраст древнего высокогорного села Балхар доподлинно не знает никто. И хотя первые упоминания о знаменитой балхарской керамике датируются 13 веком, произведенные в селе археологические раскопки отсылают ученых в куда более давние времена. Сегодня в Балхаре живут около тысячи человек, основным занятием которых по-прежнему остается гончарное ремесло.
+                </p>
+
+               
+                 <br />
+
+              <div class="image-container_left-container3">
+                <img
+                  class="left"
+                  src="./articles/a3Balhar/5.webp"
+                  alt="Кубачинская башня"
+                  loading="lazy"
+                />
+              </div>
+              <br />
+              <p>Несмотря на многовековую историю, гончарный промысел села Балхар сохранил традиционные техники изготовления, а также богатую лексику и мифологические представления, связанные с этим ремеслом.</p>
+              <p>Керамика селения до сегодняшнего дня с XIII–XIV веков сохранила в неприкосновенности все этапы производства. Неприкосновенен и завет предков: гончарным ремеслом занимаются только женщины. Начиная с добычи глины и кончая обжигом посуды, всё выполняют балхарские мастерицы. А вот сбыт, продажа гончарных изделий – это дело балхарских мужчин.</p>
+              <br>
+              <div class="vertical-line-wrapper">
+                <p>
+                  Известна и легенда о первом гончаре Калкуччи, который был настолько беден, что не мог прокормить свою семью. Однажды он, сидя на берегу, увидел, как дети играют на берегу с глиной – и сам сделал глиняный кувшин. Это был первый балхарский кувшин. После этого Калкучичи начал обучать глиняному мастерству своих сельчан – у женщин получалось лучше, поэтому и стал этот промысел «женским».
+                </p>
+              </div>
+              <br>
+              <p>Глину добывают на равнинной местности при въезде в Балхар, и это кропотливый труд. Работают сразу несколько женщин. Сначала они удаляют верхний слой земли — не меньше метра. Местность болотистая, и вырытые ямы оказываются полны воды. Ее женщины вычерпывают ведрами. Затем можно «собирать» глину. Делают это очень тщательно: следят, чтобы не попадались камешки. Затем глину оставляют в воде на пару недель и, когда отлежится, месят ногами на брезенте. Заготовки проминают руками между колен, штабелями ставят. Из правильной глины керамика получается очень тонкая и прочная.</p>
+             <br> <br>
+              <div class="image-container_left-container">
+                <img
+                  class="left"
+                  src="./articles/a3Balhar/6.webp"
+                  alt="Кубачинская башня"
+                  loading="lazy"
+                />
+              </div>
+                 
+              <p>После того, как глину помесили ногами, её мяли в руках. Далее мастерица садилась на скамеечку за гончарный круг. Рядом с хорошо обмятой глиной стоял сосуд с водой. Рождение нового сосуда начиналось с круглой глиняной лепёшки на гончарном круге для донышка. Стенки сосуда росли за счёт глиняных жгутиков. Мастерица при этом время от времени смачивала сосуд куском мокрого войлока.</p>
+
+              <p>Когда появлялось горлышко, кисточкой из овечьей шерсти наносила узор белой или жёлтой глиной, разведённой водой. Если хотели сделать сосуд с ручками, то их приделывали только после росписи всего сосуда.</p>
+
+              <p>После того, как изделие высохнет, его покрывают росписью. В качестве краски выступает разжиженная белая глина, которую наносят с помощью кисточек из гривы молодых осликов. Мастерицы, расписывая свои изделия, пользовались растительным орнаментом, а также магическими знаками плодородия. На днища сосудов наносили знак огня. Согласно поверьям, они помогают при обжиге изделий – ведь это очень капризный процесс, и не всё зависит от мастерства. Затем будущий кувшин или горшок обжигают в больших печах-чарах, вмещающих сразу до 200–300 изделий.</p>
+              <br>
+              <div class="image-container_left-container3">
+                <img
+                  class="left"
+                  src="./articles/a3Balhar/6.webp"
+                  alt="Кубачинская башня"
+                  loading="lazy"
+                />
+                <br>
+              </div>
+              <p>Обжиг- это дело непростое. Недаром мастерицы говорят: «Посуду делаем не мы, а печь». Сразу разожжешь – все кувшины полопаются. Надо потихоньку. Сперва теплым воздухом, дымом, затем горячей золой, дальше – больше. На второй день, когда жар самый сильный, посуда в печи раскаляется.</p>
+              <p>Для растопки есть два вида кизяка. Квадратный стелют и вытаптывают на крыше, а потом зимой режут топором и ставят на просушку. Им надо топить в первую очередь. Потом уже – круглым, который на стены лепят.</p>
+              <p>После обжига жёлтая глина превращалась в красную, но темнее самого сосуда. Вот эта своеобразная окраска балхарских сосудов от розовато-терракотовой до матово-чёрной вместе с кружевной вязью росписи придаёт каждому изделию ощущение рукотворности и неповторимости.</p>
+              <br />
+              <hr class="divider" />
+              <p class="alignByCentr">
+                «У лакцев есть поговорка: «Лучшая невеста в Балхаре – это девушка с большой ступней ног». Восхищались говоря: «У нашей невесты самая большая ступня в ауле!».
+              </p>
+              <hr class="divider" />
+              <br />
+              <p>Иногда случалось, что сосуды лопались в печи и труд многих месяцев пропадал. Но остальные мастерицы давали пострадавшим что-то из своих изделий.</p>
+
+
+              <br>
+              <div class="image-container_left-container">
+                <img
+                  class="left"
+                  src="./articles/a3Balhar/2.webp"
+                  alt="Кубачинская башня"
+                  loading="lazy"
+                />
+              </div>
+             
+              <p>Легко узнаваемый стиль балхарской керамики сформировался 400 лет назад и с тех пор остается практически неизменным. Правда, если раньше здесь делали кувшины самых разных форм, кружки, тарелки и горшки, то теперь к ним добавилась художественная и сувенирная продукция — фигурки людей, животных, сложные жанровые композиции. Размеры изделий самые разные — от крохотных свистулек до внушительных напольных ваз с аппликациями, изображающими историческую часть аула.</p>
+              <div class="clearfix"></div>
+              <br>
+              <h2>Известно несколько основных изделий Балхарской керамики:</h2>
+              <br>
+              <div class="vertical-line-wrapper">
+                
+                <div class="inline-item">
+                 <h2> къякIи </h2> <p>– хозяйственные кувшины для хранения продуктов. Отличаются большим размером и отсутствием ручек;</p></div>
+                 <div class="inline-item">
+                  <h2>бартлаки</h2> <p>– водоносные кувшины с ручкой и длинным горлышком;</p>
+                  </div>
+                  <div class="inline-item">
+                  <h2>вараки и къюнари</h2> <p>– кувшины для воды;</p>
+                  </div>
+                  <div class="inline-item">
+                   <h2>чаччин и кIартташи </h2><p>– кувшины для бузы;</p>
+                   </div>
+                   <div class="inline-item">
+                  <h2>хIяллариту </h2><p>– емкость для процеживания бузы;</p>
+                  </div>
+                  <div class="inline-item">
+                  <h2>нак рищу </h2><p>– маслобойка;</p>
+                  </div>
+                  <div class="inline-item">
+                  <h2>бушкъап </h2><p>– блюдо.</p>
+                  </div>
+                </p>
+              </div>
+              <br>
+            </article>
+
+
+ <div class="clearfix"></div>
+
+
+      <div id="ranStripsPlaceholder" class="ranStrips-section"></div>
+
+      <div class="wrapper">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol id="breadcrumb-list">
+            <li><a href="#">Главная</a></li>
+            <li><span>/</span></li>
+            <li><a href="#">Дагестан</a></li>
+            <li><span>/</span></li>
+            <li><span style="color: var(--yellow)">Кубачи</span></li>
+          </ol>
+        </nav>
       </div>
 
-      <p>
-        <strong>Республика Дагестан</strong> известна своими промыслами, один из
-        самых древних – гончарное производство. Считается, что изготавливать
-        изделия из глины в Дагестане начали еще во времена неолита. По крайней
-        мере, некоторые черепки, которые находят в этих краях, датируются
-        несколькими тысячелетиями до нашей эры. Насчитывается несколько
-        известных центров гончарного дела, среди которых особое место занимает
-        лакское село <strong>Балхар</strong> и так называемая
-        <strong>балхарская керамика</strong>.
-      </p>
-
-      <div class="hero-quote">
-        <p>
-          «Всевышний создал людей, и сказал каждому заниматься каким-то делом,
-          вот балхарцам досталась работа с глиной».
-        </p>
-        <small>— древнее поверье балхарских мастериц</small>
+      <div class="scrollUp" id="scrollUpBtn">
+        <a href="#" class="btn">
+          <i class="fa-solid fa-arrow-up"></i>
+          <span></span>
+        </a>
       </div>
+    </main>
 
-      <p>
-        Балхар расположен в нагорной части Дагестана, в Акушинском районе, в 13
-        километрах от районного центра, села Акуша. Само селение располагается в
-        котловине между двумя большими горными вершинами. Возраст древнего
-        высокогорного села Балхар доподлинно не знает никто. И хотя первые
-        упоминания о знаменитой балхарской керамике датируются
-        <strong>XIII веком</strong>, произведенные в селе археологические
-        раскопки отсылают ученых в куда более давние времена. Сегодня в Балхаре
-        живут около тысячи человек, основным занятием которых по-прежнему
-        остается гончарное ремесло.
-      </p>
+    <div id="footer-placeholder"></div>
 
-      <div class="pattern"></div>
-
-      <h2>✨ Традиции, которые не меркнут</h2>
-      <p>
-        Несмотря на многовековую историю, гончарный промысел села Балхар
-        сохранил традиционные техники изготовления, а также богатую лексику и
-        мифологические представления, связанные с этим ремеслом. Керамика
-        селения до сегодняшнего дня с <strong>XIII–XIV веков</strong> сохранила
-        в неприкосновенности все этапы производства. Неприкосновенен и завет
-        предков: <strong>гончарным ремеслом занимаются только женщины</strong>.
-        Начиная с добычи глины и кончая обжигом посуды, всё выполняют балхарские
-        мастерицы. А вот сбыт, продажа гончарных изделий – это дело балхарских
-        мужчин.
-      </p>
-
-      <div class="legend-block">
-        <i>📖 Легенда о первом гончаре Калкуччи:</i> он был так беден, что не
-        мог прокормить семью. Однажды, сидя на берегу, увидел, как дети играют с
-        глиной – и сам сделал глиняный кувшин. Это был первый балхарский кувшин.
-        Калкуччи начал обучать глиняному мастерству сельчан – у женщин
-        получалось лучше, поэтому промысел стал «женским».
-      </div>
-
-      <h2>🏺 От глины до кувшина: священный процесс</h2>
-      <p>
-        Глину добывают на равнинной местности при въезде в Балхар — кропотливый
-        труд нескольких женщин. Сначала удаляют верхний слой земли (не меньше
-        метра), вычерпывают воду из ям, затем «собирают» глину, следя, чтобы не
-        попадались камешки. Глину оставляют в воде на пару недель, после чего
-        <strong>месят ногами на брезенте</strong>, проминают руками между колен.
-        Из правильной глины керамика получается очень тонкая и прочная.
-      </p>
-
-      <p>
-        Далее мастерица садится за гончарный круг. Рождение сосуда начинается с
-        круглой глиняной лепёшки для донышка. Стенки растут за счёт глиняных
-        жгутиков, мастерица смачивает изделие куском мокрого войлока. Когда
-        появляется горлышко,
-        <strong>кисточкой из овечьей шерсти</strong> наносится узор белой или
-        жёлтой глиной. Ручки приделывают только после росписи.
-      </p>
-
-      <div class="ceramic-showcase">
-        <div class="ceramic-card">
-          <div class="ceramic-icon">🏺</div>
-          <h4>КъякIи</h4>
-          <p>Хозяйственные кувшины для хранения продуктов, без ручек</p>
-        </div>
-        <div class="ceramic-card">
-          <div class="ceramic-icon">💧</div>
-          <h4>Бартлаки</h4>
-          <p>Водоносные кувшины с ручкой и длинным горлышком</p>
-        </div>
-        <div class="ceramic-card">
-          <div class="ceramic-icon">🍶</div>
-          <h4>Чаччин & КIартташи</h4>
-          <p>Кувшины для бузы</p>
-        </div>
-        <div class="ceramic-card">
-          <div class="ceramic-icon">🧈</div>
-          <h4>Нак рищу</h4>
-          <p>Маслобойка</p>
-        </div>
-      </div>
-
-      <h2>🎨 Роспись и магические знаки</h2>
-      <p>
-        После того, как изделие высохнет, его покрывают росписью. В качестве
-        краски выступает разжиженная белая глина, которую наносят с помощью
-        кисточек из гривы молодых осликов. Мастерицы используют
-        <strong>растительный орнамент</strong>, а также
-        <strong>магические знаки плодородия</strong>. На днища сосудов наносят
-        знак огня — согласно поверьям, они помогают при обжиге, ведь это очень
-        капризный процесс. Затем будущий кувшин или горшок обжигают в больших
-        печах-<strong>чарах</strong>, вмещающих до 200–300 изделий.
-      </p>
-
-      <div class="hero-quote" style="background: #ecddcd">
-        <p>
-          «Посуду делаем не мы, а печь». Сразу разожжешь – все кувшины
-          полопаются. Надо потихоньку. Сперва теплым воздухом, дымом, затем
-          горячей золой, дальше – больше.
-        </p>
-        <small>— мастерицы Балхара о таинстве обжига</small>
-      </div>
-
-      <p>
-        Для растопки используют два вида кизяка. После обжига жёлтая глина
-        превращается в красную, темнее самого сосуда. Эта своеобразная окраска —
-        от розовато-терракотовой до матово-чёрной — вместе с кружевной вязью
-        росписи придаёт каждому изделию ощущение рукотворности и неповторимости.
-      </p>
-
-      <div class="fire-symbol">🔥 ◇ 🔥 ◇ 🔥</div>
-
-      <h2>🏺 «Лучшая невеста — с большой ступнёй»</h2>
-      <p>
-        У лакцев есть поговорка:
-        <strong
-          >«Лучшая невеста в Балхаре – это девушка с большой ступней
-          ног»</strong
-        >. Восхищались: «У нашей невесты самая большая ступня в ауле!». Иногда
-        случалось, что сосуды лопались в печи и труд многих дней пропадал. Но
-        остальные мастерицы давали пострадавшим что-то из своих изделий — в селе
-        царит особая взаимопомощь.
-      </p>
-
-      <h2>🏺 Главные изделия балхарской керамики</h2>
-      <div class="product-list">
-        <div class="product-item">
-          <span class="product-name">къякIи</span
-          ><span class="product-desc">хозяйственные кувшины для хранения</span>
-        </div>
-        <div class="product-item">
-          <span class="product-name">бартлаки</span
-          ><span class="product-desc">водоносные кувшины с ручкой</span>
-        </div>
-        <div class="product-item">
-          <span class="product-name">вараки / къюнари</span
-          ><span class="product-desc">кувшины для воды</span>
-        </div>
-        <div class="product-item">
-          <span class="product-name">чаччин / кIартташи</span
-          ><span class="product-desc">кувшины для бузы</span>
-        </div>
-        <div class="product-item">
-          <span class="product-name">хIяллариту</span
-          ><span class="product-desc">ёмкость для процеживания бузы</span>
-        </div>
-        <div class="product-item">
-          <span class="product-name">нак рищу</span
-          ><span class="product-desc">маслобойка</span>
-        </div>
-        <div class="product-item">
-          <span class="product-name">бушкъап</span
-          ><span class="product-desc">блюдо</span>
-        </div>
-      </div>
-
-      <h3>✨ От древности до наших дней</h3>
-      <p>
-        Легко узнаваемый стиль балхарской керамики сформировался
-        <strong>400 лет назад</strong> и с тех пор остается практически
-        неизменным. Правда, если раньше здесь делали кувшины, кружки, тарелки и
-        горшки, то теперь к ним добавилась художественная и сувенирная продукция
-        — фигурки людей, животных, сложные жанровые композиции. Размеры — от
-        крохотных свистулек до внушительных напольных ваз с аппликациями,
-        изображающими историческую часть аула.
-      </p>
-
-      <div class="pattern"></div>
-
-      <p>
-        <strong>В Балхаре сохранили своё древнее ремесло до наших дней</strong>,
-        и сейчас, как и в давние времена, крутится гончарный круг, горят печи,
-        превращая с помощью рук балхарок простую глину в изумительные
-        произведения искусства. Каждая вещь из Балхара, попавшая в ваш дом,
-        несёт частицу доброты.
-      </p>
-
-      <div class="hero-quote" style="margin-top: 2rem; text-align: right">
-        <p>🌾 «Магия балхарской глины — дыхание предков и тепло огня»</p>
-      </div>
-
-      <footer>
-        По материалам сообщества «Магия балхарской керамики» · Дагестан, село
-        Балхар · Наследие гончарного круга
-      </footer>
-    </div>
+    <script src="./js/script.js" defer></script>
+    <script src="./js/header.js" defer></script>
+    <script src="./js/footer-loader.js" defer></script>
+    <script src="./js/breadcrumbs.js" defer></script>
+    <script src="./js/scrollUp.js" defer></script>
+    <script src="./js/ranStrips-loader.js" defer></script>
   </body>
 </html>
