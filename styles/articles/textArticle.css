@@ -45,7 +45,7 @@ article {
 .textArticle p.alignByCentr {
   text-align: center;
   font-style: italic;
-  color: #e6bc7e;
+  color: var(--yellow);
   margin: 1rem auto;
   max-width: 85%;
   display: block;
@@ -72,14 +72,6 @@ article {
   height: auto;
   border-radius: 2rem;
   display: block;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.textArticle img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Image Container - for floated images */
@@ -127,9 +119,6 @@ article {
   overflow: auto; /* Simple clearfix */
 }
 
-.imgForArticle:hover img {
-  transform: scale(1.05);
-}
 .vertical-line-wrapper {
   border-left: 1px solid var(--yellow);
   padding-left: 1rem;
@@ -150,6 +139,15 @@ article {
 .inline-item h2,
 .inline-item p {
   margin: 0;
+}
+
+.image-caption {
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 100;
+  color: var(--yellow) !important; /* Add !important to override */
+  font-style: italic;
+  text-align: center;
 }
 /* Адаптивность */
 @media (max-width: 768px) {
@@ -174,7 +172,12 @@ article {
   }
 
   .textArticle p {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+
+  .br {
+    font-size: 0.2rem;
   }
 
   .textArticle img,
@@ -210,7 +213,7 @@ article {
   .textArticle p.alignByCentr {
     text-align: center;
     font-style: italic;
-    color: #e6bc7e;
+    color: var(--yellow);
     margin: 0.5rem auto;
     max-width: 85%;
     display: block;
@@ -219,5 +222,13 @@ article {
   .textArticles-wrapper {
     border-radius: 1.5rem 1.5rem 0rem 0rem;
     padding: 0.2rem;
+  }
+  .image-caption {
+    margin-top: 0.3rem;
+    font-size: 0.1rem;
+    font-weight: 100;
+    color: var(--yellow);
+    font-style: italic;
+    text-align: center;
   }
 }

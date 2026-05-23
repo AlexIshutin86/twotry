@@ -1,7 +1,7 @@
 /* ========== ARTICLE NAVIGATION SECTION ========== */
 
 .article-nav-section {
-  padding: 3rem 0;
+  padding: 2rem 0;
   background: var(--backgroundDarkColor);
   margin-top: -8rem;
   z-index: 40;
@@ -9,9 +9,9 @@
 
 .article-nav-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Две колонки */
+  grid-template-columns: repeat(4, 1fr); /* Две колонки */
   gap: 0.75rem 2rem; /* вертикальный и горизонтальный отступы */
-  max-width: 800px;
+  max-width: 2000px;
 }
 
 .article-nav-item {

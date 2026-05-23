@@ -34,9 +34,27 @@
       },
 
       report2Kubachi: {
-        display: "Кубачи - сокровищница за облаками.",
+        display: "Кубачи - сокровищница за облаками",
         parent: "articles",
         url: "./report2Kubachi.html",
+      },
+
+      report3Balxar: {
+        display: "Магия балхарской керамики",
+        parent: "articles",
+        url: "./report3Balxar.html",
+      },
+
+      report4KalaKoreysh: {
+        display: "Кала - Корейш",
+        parent: "articles",
+        url: "./report4Kala-Koreysh.html",
+      },
+
+      report5silensOfTea: {
+        display: "Чай- это тишина, которая говорит»",
+        parent: "articles",
+        url: "./report5silensOfTea.html",
       },
 
       uzorVremeni: {
