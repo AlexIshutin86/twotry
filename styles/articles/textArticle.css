@@ -35,7 +35,7 @@ article {
 
 .divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--yellow), transparent);
+  background: linear-gradient(90deg, var(--yellow));
   border: none;
   margin: 0.5rem auto;
   width: 50%;
