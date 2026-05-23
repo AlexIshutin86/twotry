@@ -3,12 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VolgaMore</title>
+    <title>VolgaMore - Статьи о путешествиях</title>
+    <meta
+      name="description"
+      content="Путешествия по Дагестану, история, культура и приключения"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-
     <link rel="stylesheet" href="./style.css" />
   </head>
 
@@ -16,33 +19,31 @@
     <div id="header-placeholder"></div>
 
     <main>
+      <!-- HERO SECTION -->
       <section id="topDescription" class="topDescription">
         <div class="topDescription-container">
           <img
-            src=".\articles\tumbnail\1.webp "
+            src="./articles/tumbnail/1.webp"
             srcset="
-              .\articles\tumbnail\1.2.webp  768w,
-              .\articles\tumbnail\1.webp   1500w
+              ./articles/tumbnail/1.2.webp  768w,
+              ./articles/tumbnail/1.webp   1500w
             "
-            sizes="
-    (max-width: 768px) 768px,
-    (max-width: 1024px) 1024px,
-    1500px
-  "
+            sizes="(max-width: 768px) 768px, (max-width: 1024px) 1024px, 1500px"
             alt="Волга море - живописный вид"
             width="1500"
             height="600"
             fetchpriority="high"
             loading="eager"
           />
-
           <div class="info-box">
             <div class="text">
               <h1>Статьи</h1>
             </div>
           </div>
+        </div>
       </section>
 
+      <!-- ARTICLES GRID SECTION -->
       <section class="articles-section">
         <div class="wrapper">
           <div class="articles-header">
@@ -175,7 +176,10 @@
       </div>
 
       <div class="scrollUp">
-        <a href="#" class="btn">Перемотка вверх</a>
+        <a href="#" class="btn">
+          <i class="fa-solid fa-arrow-up"></i>
+          <span>Перемотка вверх</span>
+        </a>
       </div>
     </main>
 
