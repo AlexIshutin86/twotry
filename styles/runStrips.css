@@ -4,7 +4,6 @@
   width: 100%;
   min-height: 2rem;
   overflow-x: hidden;
-  background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
 }
 /* Альтернатива - с использованием flexbox */
 .ranStrips {
@@ -19,6 +18,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 7rem;
   flex-wrap: nowrap; /* Запрещаем перенос */
   animation: scrollLeft 25s linear infinite;
   list-style: none;
@@ -37,7 +37,7 @@
 }
 
 .ranStrips .advantages {
-  color: #ffd700;
+  color: #ffffff;
   font-weight: 500;
   white-space: nowrap;
 }
@@ -48,7 +48,7 @@
 }
 
 .ranStrips .minus .advantages {
-  color: #ff6b6b;
+  color: #ffffff;
 }
 
 /* Animation */
@@ -63,9 +63,6 @@
 
 /* Responsive - текст не переносится, только уменьшается */
 @media (max-width: 768px) {
-  .ranStrips-section {
-  }
-
   .ranStrips ul li {
     margin: 0 1rem;
     font-size: 0.8rem;
