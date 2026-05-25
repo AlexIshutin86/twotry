@@ -7,7 +7,6 @@
   width: 100%;
   min-height: 10rem;
   background: var(--color-bg-dark);
-  border-radius: 2rem;
 
   z-index: 10;
   position: relative;

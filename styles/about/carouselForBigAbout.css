@@ -1,5 +1,7 @@
 /* ========== ОБЩИЕ СТИЛИ ДЛЯ КАРУСЕЛЕЙ ========== */
-
+body main {
+  background-color: var(--color-bg-dark);
+}
 /* Carousel Container - общий стиль */
 .carouselForBigAbout1,
 .carouselForBigAbout2 {

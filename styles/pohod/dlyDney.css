@@ -106,8 +106,9 @@
   grid-template-rows: subgrid;
 
   list-style: none;
-  background: hsl(214, 31%, 19%);
+  background: hsl(214, 32%, 9%);
   border-radius: 1.5rem;
+
   padding: 1rem;
   scroll-snap-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
