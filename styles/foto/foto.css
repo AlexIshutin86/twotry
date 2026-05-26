@@ -10,20 +10,32 @@
   z-index: 10;
 
   padding: 2rem;
-  border-radius: 3rem;
+  border-radius: 2rem;
 }
 
 .fotoItemsMain-container {
-  padding-top: 5rem;
+  padding-top: 0.5rem;
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(3, 1fr); /* 3 колонки на десктопе */
+  border-radius: 2rem;
+}
+
+.textInsideFotoCard {
+  padding: 1rem;
+}
+
+.fotoMainHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-top: 4rem;
 }
 
 .fotoItemsMain-container .cardFotoMain {
-  background: #ffffff;
+  background: var(--color-bg-card);
   border-radius: 2rem;
-  padding: 1rem;
+  padding: 0rem;
   transition: transform 0.3s ease;
   cursor: pointer;
 }
@@ -36,7 +48,8 @@
   width: 100%;
   height: 250px;
   overflow: hidden;
-  border-radius: 1rem;
+  border-radius: 0rem;
+  border-radius: 1rem 1rem 0rem 0rem;
 }
 
 .cardFotoMain .img img {
@@ -48,6 +61,15 @@
 
 .cardFotoMain .img img:hover {
   transform: scale(1.05);
+}
+
+.fotoItemsMain span {
+  align-items: start;
+  color: var(--yellow);
+}
+.fotoItemsMain h2,
+.fotoItemsMain p {
+  color: var(--white);
 }
 
 /* Адаптивность */

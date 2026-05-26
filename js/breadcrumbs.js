@@ -27,6 +27,18 @@
         url: "./about.html",
       },
 
+      foto1VolgaMore: {
+        display: "Фото с маршрута Волга Море",
+        parent: "foto",
+        url: "./foto1VolgaMore.html",
+      },
+
+      foto: {
+        display: "Фото",
+        parent: null,
+        url: "./foto.html",
+      },
+
       articles: {
         display: "Статьи",
         parent: null,

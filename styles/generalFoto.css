@@ -1,3 +1,7 @@
+#bgFoto {
+  background-color: var(--backgroundDarkColor);
+}
+
 .galleryBento-grid {
   display: grid;
   min-height: 40rem;

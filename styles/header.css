@@ -19,8 +19,9 @@ header {
   gap: 2rem;
 }
 
-.nav-links a:hover {
-  background-color: aqua;
+.nav-links a {
+  height: 100%;
+  padding: 2rem 0;
 }
 
 .contact-btn {
