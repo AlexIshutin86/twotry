@@ -4,7 +4,7 @@
   align-items: center;
   background-color: rgb(22, 36, 49);
   z-index: 1;
-  padding: 3rem 2rem 0rem 2rem;
+  padding: 3rem 0rem 0rem 0rem;
   position: relative;
 }
 
@@ -151,6 +151,8 @@
 .schedule-testimony {
   position: relative;
   display: flex;
+  align-items: start;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 1rem;
 
@@ -158,8 +160,7 @@
   border-radius: 2rem;
   width: 90%;
   max-width: 1300px;
-  align-items: center;
-  justify-content: flex-start;
+
   margin-top: 3rem;
   z-index: 5;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);

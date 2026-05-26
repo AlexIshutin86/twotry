@@ -39,6 +39,12 @@
         url: "./foto.html",
       },
 
+      schedule: {
+        display: "Фото",
+        parent: null,
+        url: "./schedule.html",
+      },
+
       articles: {
         display: "Статьи",
         parent: null,
