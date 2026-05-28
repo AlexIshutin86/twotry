@@ -470,7 +470,7 @@
   background: linear-gradient(90deg, #03b103, #1bc405);
   border: none;
   border-radius: 2rem;
-  padding: 0.4rem 1rem;
+  padding: 0.6rem 1rem;
   font-size: 1.5rem;
   font-weight: 500;
   cursor: pointer;
@@ -478,6 +478,7 @@
   align-items: center;
   gap: 0.8rem;
   transition: all 0.3s ease;
+  margin-top: 3rem;
 }
 
 .read-more-btn:hover {

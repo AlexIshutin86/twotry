@@ -1,441 +1,409 @@
-
-
-
-
 /* Основные стили карусели */
 .video-Carousel {
-    max-width: 100%;
-    width: 100%;
-    background: rgb(65, 80, 116);
-    border-radius: 3rem;
-    position: relative;
-    z-index: 7;
-    padding-bottom: 2rem;
-    overflow: visible;
+  max-width: 100%;
+  width: 100%;
+  background: rgb(65, 80, 116);
+  border-radius: 3rem;
+  position: relative;
+  z-index: 7;
+  padding-bottom: 2rem;
+  overflow: visible;
 }
 
 /* Адаптация содержимого внутри */
 .video-Carousel .carousel-header {
-    max-width: 1700px;
-    width: 100%;
-    justify-content: space-between;
-    margin: 1rem auto;
-    gap: 1.5rem;
-    
-    
+  max-width: 1700px;
+  width: 100%;
+  justify-content: space-between;
+  margin: 1rem auto;
+  gap: 1.5rem;
 }
-
-
-
-
-
 
 /* Контейнер для кнопок */
 .carousel-buttons {
-    display: flex;
-    
-    
-    gap: 1rem;
-    
+  display: flex;
+
+  gap: 1rem;
 }
 
 /* Кнопки навигации */
 .carousel-buttons #scrollLeftThird,
 .carousel-buttons #scrollRightThird {
-    color: #fff;
-    height: 3rem;
-    width: 3rem;
-    background:  hsl(215, 31%, 12%);
-    text-align: center;
-    line-height: 3rem;
-    border-radius: 3rem;
-    cursor: pointer;
-    font-size: 1.25rem;
-    transition: 0.3s ease;
-    box-shadow: 0 3px 6px rgb(18, 18, 26);
-    position: static;
+  color: #fff;
+  height: 3rem;
+  width: 3rem;
+  background: hsl(215, 31%, 12%);
+  text-align: center;
+  line-height: 3rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  font-size: 1.25rem;
+  transition: 0.3s ease;
+  box-shadow: 0 3px 6px rgb(18, 18, 26);
+  position: static;
 }
 
 .carousel-buttons #scrollLeftThird:hover,
 .carousel-buttons #scrollRightThird:hover {
-    background: #ffffff;
-    transform: scale(1.1);
-    color: black;
+  background: #ffffff;
+  transform: scale(1.1);
+  color: black;
 }
 
 /* Контейнер карточек */
 
-
 .video-Carousel-container {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(300px, 1fr);
-    gap: 1.5rem;
-    align-items: center;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding: 3rem 2rem 3rem 2rem;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    
-    /* Улучшение производительности */
-    will-change: scroll-position;
-    transform: translateZ(0);
-    backface-visibility: hidden;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(300px, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 3rem 2rem 3rem 2rem;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  /* Улучшение производительности */
+  will-change: scroll-position;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 /* Стили для dragging */
 .video-Carousel-container.dragging {
-    scroll-behavior: auto;
-    scroll-snap-type: none;
-    cursor: grabbing;
+  scroll-behavior: auto;
+  scroll-snap-type: none;
+  cursor: grabbing;
 }
 
 .video-Carousel-container.dragging .card-Third {
-    cursor: grabbing;
-    user-select: none;
-    pointer-events: none;
-    transition: none;
+  cursor: grabbing;
+  user-select: none;
+  pointer-events: none;
+  transition: none;
 }
 
 /* Карточки */
 
-
 .video-Carousel-container .card-Third {
-    min-height: 35rem;
-    
-    list-style: none;
-    background: #fff;
-    border-radius: 2rem;
-    padding: 1rem;
-    scroll-snap-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    will-change: transform;
-    transform: translateZ(0);
+  min-height: 35rem;
+
+  list-style: none;
+  background: #fff;
+  border-radius: 2rem;
+  padding: 1rem;
+  scroll-snap-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 .video-Carousel-container .card-Third:hover {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
 /* Изображения */
 .card-Third .img {
-    width: 100%;
-    height: 20rem;
-    overflow: hidden;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
 }
 
 .card-Third .img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 .card-Third .img img:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
-
-
-
-
-
-
 
 /* Скрыть скроллбар для красоты */
 .video-Carousel-container::-webkit-scrollbar {
-    height: 0px;
+  height: 0px;
 }
 
 .video-Carousel-container::-webkit-scrollbar-track {
- 
-    border-radius: 0px;
+  border-radius: 0px;
 }
 
 .video-Carousel-container::-webkit-scrollbar-thumb {
-  
-    border-radius: 0px;
+  border-radius: 0px;
 }
 
+.btn {
+  display: flex;
 
+  align-content: center;
+  justify-content: center;
 
-
-
-
-
-
+  background: linear-gradient(to right, rgb(42, 219, 25));
+  font-size: 1.5rem;
+  padding: 0.8rem 2rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-weight: 100;
+  gap: 0.5rem;
+  border: none;
+}
 
 /* ДЛЯ ПЛАНШЕТОВ (769px - 1024px) */
 @media (max-width: 1024px) {
-    .video-Carousel {
-       
-        padding: 1.5rem 1rem ;
-    }
-    
-    .text1 {
-        margin-left: 2rem ;
-        margin-bottom: 2rem ;
-    }
-    
-    
-    
-    .carousel-buttons {
-       
-        gap: 1.5rem ;
-    }
-    
-    .video-Carousel-container {
-        grid-auto-columns: calc(50% - 30px) ;
-        gap: 1.5rem ;
-        padding: 1.5rem 1.5rem 3rem 1.5rem ;
-    }
-    
-    .video-Carousel-container .card {
-        min-height: 30rem;
-        width: auto;
-    }
-    
-    .card .img {
-        height: 16rem;
-    }
+  .video-Carousel {
+    padding: 1.5rem 1rem;
+  }
+
+  .text1 {
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .carousel-buttons {
+    gap: 1.5rem;
+  }
+
+  .video-Carousel-container {
+    grid-auto-columns: calc(50% - 30px);
+    gap: 1.5rem;
+    padding: 1.5rem 1.5rem 3rem 1.5rem;
+  }
+
+  .video-Carousel-container .card {
+    min-height: 30rem;
+    width: auto;
+  }
+
+  .card .img {
+    height: 16rem;
+  }
 }
 
 /* ДЛЯ БОЛЬШИХ ТЕЛЕФОНОВ И ПЛАНШЕТОВ ВЕРТИКАЛЬНО (577px - 768px) */
 @media (max-width: 768px) {
-    .video-Carousel {
-       
-        padding: 1rem 0.8rem; 
-        border-radius: 2rem;
-    }
-    
-    .carousel-header {
-        max-height: 112rem;
-        display: flex;
-        flex-direction: column ;
-        align-items: center;
-        gap: 0rem;
-        text-align: left;
-        
-    }
+  .video-Carousel {
+    padding: 1rem 0.8rem;
+    border-radius: 2rem;
+  }
 
-  
-    
-    .text1 {
-        margin-left: 1rem;
-        margin-bottom: 0.1rem;
-    }
-    
-   
-    
-    .carousel-buttons {
-        
-        height: 3rem;
-        margin: 1rem;
-        gap: 1rem ;
-    }
-    
-    .carousel-buttons #scrollLeft,
-    .carousel-buttons #scrollRight {
-        height: 2rem;
-        width: 2rem;
-        font-size: 1rem;
-        line-height: 2rem;
-    }
-    
-    .video-Carousel-container {
-        grid-auto-columns: calc(85% - 20px) ;
-        gap: 1.2rem ;
-        padding: 1rem 1rem 2rem 1rem ;
-    }
-    
-   
-    
-    .card .img {
-        height: 14rem ;
-    }
-    
-    .card h2 {
-        font-size: 1.1rem ;
-    }
-    
-    .card p {
-        font-size: 0.85rem ;
-    }
-    
-    .btn {
-        padding: 0.6rem 1.5rem ;
-        font-size: 0.9rem ;
-    }
+  .carousel-header {
+    max-height: 112rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0rem;
+    text-align: left;
+  }
+
+  .text1 {
+    margin-left: 1rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .carousel-buttons {
+    height: 3rem;
+    margin: 1rem;
+    gap: 1rem;
+  }
+
+  .carousel-buttons #scrollLeft,
+  .carousel-buttons #scrollRight {
+    height: 2rem;
+    width: 2rem;
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .video-Carousel-container {
+    grid-auto-columns: calc(85% - 20px);
+    gap: 1.2rem;
+    padding: 1rem 1rem 2rem 1rem;
+  }
+
+  .card .img {
+    height: 14rem;
+  }
+
+  .card h2 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
 }
 
 /* ДЛЯ МОБИЛЬНЫХ ТЕЛЕФОНОВ (481px - 576px) */
 @media (max-width: 576px) {
-    .video-Carousel {
-       
-        padding: 0.8rem 0.5rem ;
-    }
-    
-    .text2 {
-        margin-left: 0.5rem ;
-        margin-bottom: 0.8rem ;
-    }
-    
-    .text2 h1 {
-        font-size: 2rem ;
-    }
-    
-    .carousel-buttons {
-       
-        gap: 2rem ;
-    }
-    
-    .carousel-buttons #scrollLeft,
-    .carousel-buttons #scrollRight {
-        height: 3rem ;
-        width: 3rem ;
-        font-size: 0.9rem ;
-    }
-    
-    .video-Carousel-container {
-        grid-auto-columns: calc(92% - 15px) ;
-        gap: 1rem;
-        padding: 0.8rem 0.8rem 1.5rem 0.8rem;
-    }
-    
-   .video-Carousel-container .card-video {
+  .video-Carousel {
+    padding: 0.8rem 0.5rem;
+  }
+
+  .text2 {
+    margin-left: 0.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .text2 h1 {
+    font-size: 2rem;
+  }
+
+  .carousel-buttons {
+    gap: 2rem;
+  }
+
+  .carousel-buttons #scrollLeft,
+  .carousel-buttons #scrollRight {
+    height: 3rem;
+    width: 3rem;
+    font-size: 0.9rem;
+  }
+
+  .video-Carousel-container {
+    grid-auto-columns: calc(92% - 15px);
+    gap: 1rem;
+    padding: 0.8rem 0.8rem 1.5rem 0.8rem;
+  }
+
+  .video-Carousel-container .card-video {
     min-height: 35rem;
     width: 25rem;
     list-style: none;
     background: #fff;
     border-radius: 2rem;
     padding: 0.5rem;
-   
-}
-    
-    .card .img {
-        height: 19rem ;
-        border-radius: 0.8rem ;
-    }
-    
-    .card h2 {
-        font-size: 1rem ;
-        margin-bottom: 0.3rem ;
-    }
-    
-    .card p {
-        font-size: 0.8rem ;
-        line-height: 1.3 ;
-    }
-    
-    .btn2 {
-        padding: 0.5rem 1.2rem ;
-        font-size: 0.85rem ;
-    }
-    
-    .btn2 i {
-        font-size: 0.8rem ;
-    }
+  }
+
+  .card .img {
+    height: 19rem;
+    border-radius: 0.8rem;
+  }
+
+  .card h2 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+
+  .btn2 {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  .btn2 i {
+    font-size: 0.8rem;
+  }
 }
 
 /* ДЛЯ МАЛЕНЬКИХ ТЕЛЕФОНОВ (320px - 480px) */
 @media (max-width: 480px) {
-    .video-Carousel {
-     
-        padding: 0.5rem 0.5rem ;
-    }
-    
-    .text2 h1 {
-        font-size: 1.2rem ;
-    }
-    
-    .video-Carousel-container {
-        grid-auto-columns: calc(95% - 10px) ;
-        gap: 0.8rem ;
-    }
-    
-    .video-Carousel-container .card {
-        min-height: 23rem ;
-        padding: 0.6rem ;
-    }
-    
-    .card .img {
-        height: 10rem ;
-    }
-    
-    .card h2 {
-        font-size: 0.95rem ;
-    }
-    
-    .card p {
-        font-size: 0.75rem ;
-    }
-    
-    .btn2 {
-        padding: 0.4rem 1rem ;
-        font-size: 0.8rem ;
-    }
+  .video-Carousel {
+    padding: 0.5rem 0.5rem;
+  }
+
+  .text2 h1 {
+    font-size: 1.2rem;
+  }
+
+  .video-Carousel-container {
+    grid-auto-columns: calc(95% - 10px);
+    gap: 0.8rem;
+  }
+
+  .video-Carousel-container .card {
+    min-height: 23rem;
+    padding: 0.6rem;
+  }
+
+  .card .img {
+    height: 10rem;
+  }
+
+  .card h2 {
+    font-size: 0.95rem;
+  }
+
+  .card p {
+    font-size: 0.75rem;
+  }
+
+  .btn2 {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+  }
 }
 
 /* ДЛЯ ОЧЕНЬ ШИРОКИХ ЭКРАНОВ (1440px+) */
 @media (min-width: 1440px) {
-    .video-Carousel-container {
-        grid-auto-columns: calc((100% / 3) - 50px) ;
-    }
-    
-    .video-Carousel-container .card {
-        width: 25rem ;
-        min-height: 30rem ;
-    }
-    
-    .card .img {
-        height: 32rem ;
-    }
+  .video-Carousel-container {
+    grid-auto-columns: calc((100% / 3) - 50px);
+  }
+
+  .video-Carousel-container .card {
+    width: 25rem;
+    min-height: 30rem;
+  }
+
+  .card .img {
+    height: 32rem;
+  }
 }
 
 /* ДОПОЛНИТЕЛЬНЫЕ ФИКСЫ ДЛЯ УДОБСТВА */
 @media (max-width: 768px) {
-    /* Скрываем скроллбар на мобильных */
-    .video-Carousel-container::-webkit-scrollbar {
-        height: 3px ;
-    }
-    
-    /* Убираем hover-эффекты на тач-устройствах */
-    .video-Carousel-container .card:hover {
-        transform: translateY(-5px) ;
-    }
-    
-    .card .img img:hover {
-        transform: scale(1.02) ;
-    }
+  /* Скрываем скроллбар на мобильных */
+  .video-Carousel-container::-webkit-scrollbar {
+    height: 3px;
+  }
+
+  /* Убираем hover-эффекты на тач-устройствах */
+  .video-Carousel-container .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card .img img:hover {
+    transform: scale(1.02);
+  }
 }
 
 /* ДЛЯ ТЕЛЕФОНОВ С ВЫСОКИМ ЭКРАНОМ (типа iPhone 12/13/14 Pro) */
 @media (max-width: 390px) and (min-height: 800px) {
-    .video-Carousel-container .card {
-        min-height: 22rem ;
-    }
-    
-    .card .img {
-        height: 9rem ;
-    }
+  .video-Carousel-container .card {
+    min-height: 22rem;
+  }
+
+  .card .img {
+    height: 9rem;
+  }
 }
 
 /* АЛЬТЕРНАТИВНЫЙ ВАРИАНТ ДЛЯ ПОВОРОТА ЭКРАНА (ландшафтный режим на телефонах) */
 @media (max-width: 896px) and (orientation: landscape) {
- 
-    .video-Carousel-container {
-        grid-auto-columns: calc(70% - 20px) ;
-    }
-    
-    .video-Carousel-container .card {
-        min-height: 20rem ;
-    }
-    
-    .card .img {
-        height: 10rem ;
-    }
+  .video-Carousel-container {
+    grid-auto-columns: calc(70% - 20px);
+  }
+
+  .video-Carousel-container .card {
+    min-height: 20rem;
+  }
+
+  .card .img {
+    height: 10rem;
+  }
 }

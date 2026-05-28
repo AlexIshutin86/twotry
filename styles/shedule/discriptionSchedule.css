@@ -1,40 +1,82 @@
+#bgForShedule {
+  background-color: var(--backgroundDarkColor);
+}
+
 .discriptionSchedule {
-  display: grid;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  background-color: rgb(22, 36, 49);
+  justify-content: center;
+  background-color: var(--backgroundDarkColor);
   z-index: 1;
-  padding: 3rem 0rem 0rem 0rem;
+  padding: 3rem 0rem;
   position: relative;
 }
 
 /* Контейнер с карточками */
 .features-container {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  min-height: 450px;
+  max-width: 1300px;
+  height: 700px;
+  overflow: hidden;
 }
 
-/* Карточки - все в одной позиции, разные Z-индексы */
+/* Карточки */
 .cardfeature {
   position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: row;
-  width: 90%;
-  max-width: 1300px;
-  background-color: rgb(31, 57, 97);
+  width: 100%;
+  background: linear-gradient(135deg, rgb(31, 57, 97) 0%, rgb(20, 40, 70) 100%);
   border-radius: 1.5rem;
   overflow: hidden;
-  transition: all 0.5s ease-in-out;
+  transition:
+    opacity 0.5s ease-in-out,
+    visibility 0.5s ease-in-out;
   opacity: 0;
   visibility: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Активная карточка (видимая) */
+/* Активная карточка */
+/* Контейнер с карточками */
+.features-container {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  height: 700px;
+  margin: 0 auto;
+  /* Убираем overflow: hidden, если не нужно */
+  overflow: visible;
+}
+
+/* Карточки */
+.cardfeature {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%; /* Все карточки одинаковой ширины */
+  max-width: 1300px;
+  height: 700px;
+  background: linear-gradient(135deg, rgb(31, 57, 97) 0%, rgb(20, 40, 70) 100%);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition:
+    opacity 0.5s ease-in-out,
+    visibility 0.5s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Активная карточка */
 .cardfeature.active {
   position: relative;
   opacity: 1;
@@ -42,10 +84,11 @@
   z-index: 10;
 }
 
-/* Изображение */
+/* Изображение - фиксированная ширина */
 .cardfeature .img {
-  width: 50%;
-  height: 450px;
+  width: 40%;
+  height: 100%; /* 100% от высоты карточки */
+  flex-shrink: 0;
   overflow: hidden;
 }
 
@@ -55,75 +98,46 @@
   object-fit: cover;
 }
 
-/* Контент */
+/* Контент - фиксированная ширина */
 .left-partD {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   padding: 2rem;
-  width: 50%;
+  width: 60%;
+  flex-shrink: 0;
   background: linear-gradient(135deg, rgb(31, 57, 97) 0%, rgb(20, 40, 70) 100%);
 }
 
 .intPart {
+  padding-top: 6rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 1rem;
+  max-width: 35rem;
 }
 
 .intPart h2 {
-  color: #ffd412;
+  color: #ffd700;
   margin: 0;
-  padding: 0.4rem;
-  font-size: 2.5rem;
+  font-size: 1.4rem;
+  font-weight: 100;
 }
 
 .left-partD p {
-  color: #fff;
-  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.5;
-}
-
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background: var(--colorGreen-overlay);
-  border: none;
-  border-radius: 2rem;
-  padding: 0.8rem 1.5rem;
-
-  font-weight: 100;
-  cursor: pointer;
-  width: auto;
-  align-self: flex-start;
-  transition: transform 0.3s ease;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-}
-
-.btn {
-  width: 100%;
-  text-align: center;
 }
 
 /* Кнопки навигации */
 .carousel-controls {
-  position: absolute;
-  bottom: 3rem;
-  padding-bottom: 25%;
-  transform: translateX(-80%);
+  position: relative;
   display: flex;
-  justify-content: center;
-  gap: 2rem;
-  z-index: 100;
+  justify-content: left;
+  gap: 1.5rem;
+  margin: 2rem 0 2rem 2rem;
+  z-index: 9000;
+  transform: translateY(8rem);
 }
 
 .nav-arrow {
@@ -143,162 +157,87 @@
 
 .nav-arrow:hover {
   background: #ffd700;
-  color: #333;
+  color: #1a1a2e;
   transform: scale(1.05);
 }
 
-/* Schedule Testimony - AT THE BOTTOM */
+.discriptionSchedule > .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(3, 155, 3, 0.3);
+}
+
+/* Schedule Testimony */
 .schedule-testimony {
-  position: relative;
-  display: flex;
-  align-items: start;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  gap: 1rem;
-
-  padding: 3rem 2rem 2rem 2rem;
-  border-radius: 2rem;
-  width: 90%;
+  width: 100%;
   max-width: 1300px;
-
   margin-top: 3rem;
-  z-index: 5;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+
+  border-radius: 1.5rem;
+}
+
+.schedule-testimony h1 {
+  color: #ffd700;
+  margin-bottom: 1rem;
 }
 
 .schedule-testimony p {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
 }
 
 /* ========== АДАПТИВНОСТЬ ========== */
 
-/* Планшеты (768px - 1300px) */
+/* Планшеты */
 @media (max-width: 1024px) {
   .cardfeature {
-    width: 90%;
+    flex-direction: column;
   }
 
   .cardfeature .img {
-    width: 45%;
-    height: 400px;
+    width: 100%;
+    height: 250px;
+    order: 1;
   }
 
   .left-partD {
-    width: 70%;
-    padding: 1.5rem;
+    width: 100%;
+    order: 2;
   }
 
   .intPart h2 {
-    font-size: 1.5rem;
-  }
-
-  .schedule-testimony {
-    width: 90%;
+    font-size: 0.9rem;
   }
 }
 
-/* Мобильные устройства (до 768px) */
-@media (max-width: 768px) {
-  .discriptionSchedule {
-    padding: 1rem;
-  }
-
+/* Маленькие телефоны */
+@media (max-width: 480px) {
   .features-container {
-    min-height: 500px;
-    max-width: 1700px;
-  }
-
-  .cardfeature {
-    flex-direction: column;
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
+    min-height: 400px;
   }
 
   .cardfeature .img {
-    width: 100%;
-    height: 220px;
-    order: -1;
+    height: 460px;
   }
 
   .left-partD {
-    width: 100%;
-    padding: 1rem;
-  }
-
-  .intPart {
-    flex-direction: column;
-    align-items: flex-start;
+    padding: 0.8rem;
   }
 
   .intPart h2 {
-    padding-bottom: 4rem;
-  }
-
-  .btn {
-    width: 100%;
-    text-align: center;
-  }
-
-  .nav-arrow {
-    width: 2.5rem;
-    height: 2.5rem;
     font-size: 1rem;
   }
 
-  .schedule-testimony {
-    width: 97%;
-    padding: 0.3rem 0.8rem;
-
-    padding-top: 5rem;
-  }
-}
-
-/* Маленькие мобильные (до 480px) */
-@media (max-width: 480px) {
-  .features-container {
-    min-height: 450px;
-  }
-
-  .cardfeature .img {
-    height: 180px;
-  }
-
-  .left-partD {
-    padding: 1rem;
-  }
-
-  .intPart h2 {
-    padding-bottom: 4rem;
-    font-size: 1.2rem;
-  }
-
-  .schedule-testimony {
-    margin-top: -5rem;
-    padding: 0.8rem;
-    padding-top: 5rem;
-  }
-
-  .carousel-controls {
-    padding-bottom: 30%;
+  .left-partD p {
+    font-size: 0.8rem;
   }
 
   .schedule-testimony h1 {
-    font-size: 1rem;
-  }
-}
-
-/* Очень маленькие телефоны (до 360px) */
-@media (max-width: 360px) {
-  .cardfeature .img {
-    height: 150px;
-  }
-
-  .left-partD {
-    padding: 1rem;
-  }
-
-  .intPart h2 {
     font-size: 1.1rem;
+  }
+
+  .schedule-testimony p {
+    font-size: 0.8rem;
   }
 }
